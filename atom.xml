@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-21T16:41:25.902Z</updated>
+  <updated>2018-03-22T14:37:34.179Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,17 +17,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>about</title>
-    <link href="http://yoursite.com/2018/03/21/about/"/>
-    <id>http://yoursite.com/2018/03/21/about/</id>
+    <title>wangEditor3上传图片</title>
+    <link href="http://yoursite.com/2018/03/21/wangEditor3/"/>
+    <id>http://yoursite.com/2018/03/21/wangEditor3/</id>
     <published>2018-03-21T04:54:23.000Z</published>
-    <updated>2018-03-21T16:41:25.902Z</updated>
+    <updated>2018-03-22T14:37:34.179Z</updated>
     
     <summary type="html">
     
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt; 我用的是myeclipse 2017,spring boot+thymeleaf项目,wangEditor3与wangeditor2的配置方式不同，切记看文档，最下方是官方文档。 &lt;/strong&gt;&lt;/p&gt;
+&lt;h3
+        
+      
+    
     </summary>
     
-      <category term="Java web" scheme="http://yoursite.com/categories/Java-web/"/>
+      <category term="wangEditor" scheme="http://yoursite.com/categories/wangEditor/"/>
     
     
   </entry>

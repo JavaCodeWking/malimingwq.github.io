@@ -45,7 +45,7 @@
     
     <title>
         
-            about | 
+            wangEditor3上传图片 | 
         
         Jack&#39;s blog
     </title>
@@ -212,7 +212,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jack&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/21/about/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/21/wangEditor3/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jack&#39;s blog">
@@ -231,16 +231,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/03/21/about/">
+    <meta property="og:url" content="http://yoursite.com/2018/03/21/wangEditor3/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="about | Jack&#39;s blog">
+    <meta property="og:title" content="wangEditor3上传图片 | Jack&#39;s blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="This is Jack&#39;s blog">
     
 
     
         <meta property="article:published_time" content="Wed Mar 21 2018 12:54:23 GMT+0800">
-        <meta property="article:modified_time" content="Thu Mar 22 2018 00:41:25 GMT+0800">
+        <meta property="article:modified_time" content="Thu Mar 22 2018 22:37:34 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -248,7 +248,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/03/21/about/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/21/wangEditor3/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -260,10 +260,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/03/21/about/index.html",
-    "headline": "about",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/21/wangEditor3/index.html",
+    "headline": "wangEditor3上传图片",
     "datePublished": "Wed Mar 21 2018 12:54:23 GMT+0800",
-    "dateModified": "Thu Mar 22 2018 00:41:25 GMT+0800",
+    "dateModified": "Thu Mar 22 2018 22:37:34 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "maliming-Jack",
@@ -341,6 +341,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一-下载，创建编辑器以及配置"><span class="post-toc-number">1.</span> <span class="post-toc-text">一.下载，创建编辑器以及配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-下载wangEditor3的GitHub网址："><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.1 下载wangEditor3的GitHub网址：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-选取下载的文件夹中release，导入项目中。"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">1.2 选取下载的文件夹中release，导入项目中。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-3-让编辑器支持全屏功能的准备：下载全屏插件的GitHub网址："><span class="post-toc-number">1.3.</span> <span class="post-toc-text">1.3 让编辑器支持全屏功能的准备：下载全屏插件的GitHub网址：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-4-创建编辑器："><span class="post-toc-number">1.4.</span> <span class="post-toc-text">1.4 创建编辑器：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-5-如果你用的thymeleaf，则执行修改功能时，可使用th-utext给富文本编辑器赋值-你添加到数据库中的编辑器内容"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">1.5 如果你用的thymeleaf，则执行修改功能时，可使用th:utext给富文本编辑器赋值(你添加到数据库中的编辑器内容)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二-Java-上传图片并回显"><span class="post-toc-number">2.</span> <span class="post-toc-text">二.Java 上传图片并回显</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1-返回结果的数据格式"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">2.1 返回结果的数据格式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-根据返回结果制定返回数据类-Result-java-省略无参和有参构造方法以及getter-setter方法"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.2 根据返回结果制定返回数据类 Result.java(省略无参和有参构造方法以及getter,setter方法)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-处理返回结果类-ResultUtil-java-只有成功获得数据的处理方法，如需要其他方法自行添加"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">2.3 处理返回结果类 ResultUtil.java(只有成功获得数据的处理方法，如需要其他方法自行添加)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-4-WangEditorController-java-为了方便，省去了service层，serviceImpl层，dao层"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">2.4 WangEditorController.java (为了方便，省去了service层，serviceImpl层，dao层)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-5-Java对象转json串"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">2.5 Java对象转json串</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-6-wangEditor3官方文档网址：https-www-kancloud-cn-wangfupeng-wangeditor3"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">2.6 wangEditor3官方文档网址：https://www.kancloud.cn/wangfupeng/wangeditor3</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-7-wangEditor的demo例子：wangeditor3"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">2.7 wangEditor的demo例子：wangeditor3</span></a></li></ol></li></ol>
+    </ul>
+    
 
 
 
@@ -357,20 +366,11 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/page/wangEditor3.png)">
     
             <p class="article-headline-p">
-                about
+                wangEditor3上传图片
             </p>
         </div>
 
@@ -411,7 +411,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACXklEQVR42u3a0W7DIAwF0P7/T2+vk6Zm1wacrDp5mipWOFQKyNevr49+Xnh4eHh4eHh4eA/jveLn3fjfn//85O0iLv+3tzY8PDy8Sd4fr9o3Y/Ipk63J570eg4eHhzfJy6dPGNdbcD3j0trw8PDwHsZLLtPJ0vOrNh4eHt4n8XJkfkF/0MGAh4eHt6kYUS1M5C/9fK6DtRY8PDy8mFcNwCb/viHfw8PDw7vklVuaWk0D+aI3N13h4eHhHeD1QqyVF3rvWCoUO/Dw8PAGeb1YK2ks6I3JNxoPDw/vLl4e/PfaBfIWhGohGA8PD2+elxwJCSOPrPJZtgVgeHh4eJt4yXLzaH9lm6pX/EIAhoeHh3eY14u1EtLelqxCvoeHh4c3wksY+WV3pdRbPXLw8PDw7uLtWlA5+G8VOPDw8PAmeT1Y9cBImqh6gRkeHh7ePC9ZVh5c5S/0aoG4sAY8PDy8EV7vgnuuXXVl+/Dw8PBmeEnMXw2xrsfnrVf5j4GHh4c3yatepvOorPxaP9F0hYeHh7eV12vZr7a0VhtSq2Pw8PDwJnkrJYk81uodCfkW4+Hh4d3FyxtGV67avU3JCyh4eHh4p3lJQTZZUMKuHi35jHh4eHiTvPXYqVpo6F2jCyPx8PDwDvOqr+M8lNrbVlUoauDh4eGN8KqHwcq1e4XdbB3Aw8PDO8brhfcrbVjV72/WWvDw8PBu5Z2LynrbioeHh/e/eNXLcXXkzQcDHh4e3tZixEoDQf7NeakCDw8Pb55XDcB6Rdv1sC3aejw8PLzDvM978PDw8PDw8PDwHvB8A6y1ESQ7fBdQAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACYUlEQVR42u3a0W4CMQwEQP7/p9vXShXH2r6EgOaeqhaaTJASs/Hj56ufBx4eHh4eHh4e3mG8R/wkr//7mv+jXP/1+vfJuHh4eHg7eS+22ieTe/beBNBbpmgsPDw8vI283kafTzef4mhueHh4eIfxckCyKJNx8fDw8D6Fl0wrKaZ75TseHh7eabzCF/4gnkjC2Zy3KWvBw8PDi3nVC7CdP7/hfg8PDw/vklduaSpGvfMwd9R0hYeHh7eAd10EV1uv8uJ4cs32omTHw8PDW8xLgtfe8L3wohpk4OHh4Z3Ayy+f8gOgepGWxyJ4eHh47+JNwtZqE0BeyjfHxcPDw1vMq144TQroUcSQx8F4eHh4W3iTdtJ8ctX/n0fAeHh4ePt5vUI2DyzyFoFq4xceHh7eObwckOBzRl7o4+Hh4b2LlzcN3NVOmo/VPHjw8PDwtvAmjQJJQ0ByhFQbBUatA3h4eHg38fIjYTKh3gFQWFY8PDy8xbzq1VSyBPkmPm8mwMPDwzuTl2/i1casasBxc0qNh4eHdyuv1y4wjxWSxXpxaYeHh4e3mLfuUj9pSshhyUGFh4eHt5OXTGseWyTUfKFHrQN4eHh4A969pe08sOgV5Xh4eHg7edVnEiXkpfaohQsPDw9vMe+uEHaC78UZhZIaDw8PbwEvOQx6mNsK5WAUPDw8vP28ZIOuxru9I2dT1oKHh4e3hZeEBclU8ukml2d4eHh45/OqbVj51CdHAh4eHt5+3mg7jlsNegV6ElLg4eHh7eRVg4B5KVxtFMg/Ejw8PLzVvO978PDw8PDw8PDwDnh+AVwoNQC+mSA6AAAAAElFTkSuQmCC">
     
 </ul>
 
@@ -444,7 +444,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=about&url=http://yoursite.com/2018/03/21/about/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=wangEditor3上传图片&url=http://yoursite.com/2018/03/21/wangEditor3/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -453,17 +453,41 @@
 
     <!-- Share Twitter -->
     
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=wangEditor3上传图片&url=http://yoursite.com/2018/03/21/wangEditor3/index.html&via=maliming-Jack" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
 
     <!-- Share Facebook -->
     
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/21/wangEditor3/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
 
     <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/21/wangEditor3/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
     
 
     <!-- Share LinkedIn -->
     
 
     <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=wangEditor3上传图片&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/03/21/wangEditor3/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
     
 
     <!-- Share Telegram -->
@@ -478,7 +502,33 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
+        <p><strong> 我用的是myeclipse 2017,spring boot+thymeleaf项目,wangEditor3与wangeditor2的配置方式不同，切记看文档，最下方是官方文档。 </strong></p>
+<h3 id="一-下载，创建编辑器以及配置"><a href="#一-下载，创建编辑器以及配置" class="headerlink" title="一.下载，创建编辑器以及配置"></a>一.下载，创建编辑器以及配置</h3><h4 id="1-1-下载wangEditor3的GitHub网址："><a href="#1-1-下载wangEditor3的GitHub网址：" class="headerlink" title="1.1 下载wangEditor3的GitHub网址："></a>1.1 下载wangEditor3的GitHub网址：</h4><p><a href="https://github.com/wangfupeng1988/wangEditor/releases" target="_blank" rel="noopener">https://github.com/wangfupeng1988/wangEditor/releases</a></p>
+<h4 id="1-2-选取下载的文件夹中release，导入项目中。"><a href="#1-2-选取下载的文件夹中release，导入项目中。" class="headerlink" title="1.2 选取下载的文件夹中release，导入项目中。"></a>1.2 选取下载的文件夹中release，导入项目中。</h4><h4 id="1-3-让编辑器支持全屏功能的准备：下载全屏插件的GitHub网址："><a href="#1-3-让编辑器支持全屏功能的准备：下载全屏插件的GitHub网址：" class="headerlink" title="1.3 让编辑器支持全屏功能的准备：下载全屏插件的GitHub网址："></a>1.3 让编辑器支持全屏功能的准备：下载全屏插件的GitHub网址：</h4><p><a href="https://github.com/chris-peng/wangEditor-fullscreen-plugin" target="_blank" rel="noopener">https://github.com/chris-peng/wangEditor-fullscreen-plugin</a><br><strong> 把wangEditor-fullscreen-plugin.css和wangEditor-fullscreen-plugin.js两个文件下载下来，再下载jquery-3.2.1.min.js，都放入release文件夹（想放哪里放哪里，引入时路径保证正确就可以）。 </strong></p>
+<h4 id="1-4-创建编辑器："><a href="#1-4-创建编辑器：" class="headerlink" title="1.4 创建编辑器："></a>1.4 创建编辑器：</h4><p><strong> 进入release文件夹下找到wangEditor.js或者wangEditor.min.js，引入任意一个。例子： </strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span> <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 设置全屏功能的css文件 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/release/wangEditor-fullscreen-plugin.css&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">link</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 编辑器编辑后，提交时执行js，获得编辑器的内容，赋值给textarea，用于向后台提交存入数据库 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">	function modifyContent() &#123;</span></span><br><span class="line"><span class="undefined">		var introduce = document.getElementById("introduce");</span></span><br><span class="line"><span class="undefined">		introduce.value = editor.txt.html();</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">form</span> <span class="attr">th:action</span>=<span class="string">"@&#123;/admin/addUser&#125;"</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">onsubmit</span>=<span class="string">"modifyContent()"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="comment">&lt;!-- 编辑器编辑，提交时执行js，获得编辑器的内容，赋值给textarea，用于向后台提交存入数据库 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">textarea</span> <span class="attr">rows</span>=<span class="string">"5"</span> <span class="attr">cols</span>=<span class="string">"35"</span> <span class="attr">name</span>=<span class="string">"usIntroduce"</span> <span class="attr">style</span>=<span class="string">"display:none;"</span> <span class="attr">id</span>=<span class="string">"introduce"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"editor"</span>&gt;</span></span><br><span class="line">			        <span class="tag">&lt;<span class="name">p</span>&gt;</span>欢迎使用 <span class="tag">&lt;<span class="name">b</span>&gt;</span>wangEditor<span class="tag">&lt;/<span class="name">b</span>&gt;</span> 富文本编辑器<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		        <span class="comment">&lt;!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！--&gt;</span></span><br><span class="line">		        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">th:src</span>=<span class="string">"@&#123;/release/wangEditor.min.js&#125;"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">		        <span class="comment">&lt;!-- 设置全屏功能的两个js文件，先引入jquery-3.2.1.min.js，在引入wangEditor-fullscreen-plugin.js --&gt;</span></span><br><span class="line">		        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">th:src</span>=<span class="string">"@&#123;/release/jquery-3.2.1.min.js&#125;"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">		        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">th:src</span>=<span class="string">"@&#123;/release/wangEditor-fullscreen-plugin.js&#125;"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">		        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">		            var E = window.wangEditor</span></span><br><span class="line"><span class="undefined">		            var editor = new E('#editor')</span></span><br><span class="line"><span class="undefined">		            /* 处理上传图片的controller路径 */</span></span><br><span class="line"><span class="undefined">		             editor.customConfig.uploadImgServer = '/admin/uploadImg'</span></span><br><span class="line"><span class="undefined">		             /* 定义上传图片的默认名字 */</span></span><br><span class="line"><span class="undefined">		             editor.customConfig.uploadFileName = 'myFileName'</span></span><br><span class="line"><span class="undefined">		            // 或者 var editor = new E( document.getElementById('editor') )</span></span><br><span class="line"><span class="undefined">		            editor.create()</span></span><br><span class="line"><span class="undefined">		            //初始化全屏插件</span></span><br><span class="line"><span class="undefined">		            E.fullscreen.init('#editor');</span></span><br><span class="line"><span class="undefined">		        </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span><span class="tag">&lt;/<span class="name">input</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="1-5-如果你用的thymeleaf，则执行修改功能时，可使用th-utext给富文本编辑器赋值-你添加到数据库中的编辑器内容"><a href="#1-5-如果你用的thymeleaf，则执行修改功能时，可使用th-utext给富文本编辑器赋值-你添加到数据库中的编辑器内容" class="headerlink" title="1.5 如果你用的thymeleaf，则执行修改功能时，可使用th:utext给富文本编辑器赋值(你添加到数据库中的编辑器内容)"></a>1.5 如果你用的thymeleaf，则执行修改功能时，可使用th:utext给富文本编辑器赋值(你添加到数据库中的编辑器内容)</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"editor"</span> <span class="attr">th:utext</span>=<span class="string">"$&#123;users.usIntroduce&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong> 若是使用的其他，如jsp，则可以使用编辑器的设置内容功能：editor.txt.html(‘${users.usIntroduce}’) </strong></p>
+<h3 id="二-Java-上传图片并回显"><a href="#二-Java-上传图片并回显" class="headerlink" title="二.Java 上传图片并回显"></a>二.Java 上传图片并回显</h3><h4 id="2-1-返回结果的数据格式"><a href="#2-1-返回结果的数据格式" class="headerlink" title="2.1 返回结果的数据格式"></a>2.1 返回结果的数据格式</h4><p><strong> 这是官方文档给我们的数据格式，是json格式，实际使用忽略注释(//以及//后的内容) </strong></p>
+<p><strong> <font color="#FF0033">{<br>    // errno 即错误代码，0 表示没有错误。<br>    //       如果有错误，errno != 0，可通过下文中的监听函数 fail 拿到该错误码进行自定义处理<br>    “errno”: 0,<br>    // data 是一个数组，返回若干图片的线上地址<br>    “data”: [<br>        “图片1地址”,<br>        “图片2地址”,<br>        “……”<br>    ]<br>}</font> </strong></p>
+<h4 id="2-2-根据返回结果制定返回数据类-Result-java-省略无参和有参构造方法以及getter-setter方法"><a href="#2-2-根据返回结果制定返回数据类-Result-java-省略无参和有参构造方法以及getter-setter方法" class="headerlink" title="2.2 根据返回结果制定返回数据类 Result.java(省略无参和有参构造方法以及getter,setter方法)"></a>2.2 根据返回结果制定返回数据类 Result.java(省略无参和有参构造方法以及getter,setter方法)</h4><p><strong> import java.io.Serializable;<br>public class Result<t> implements Serializable {<br>    /<em> 错误码. </em>/<br>    private Integer errno;<br>    /<em> 具体的内容. </em>/<br>    private String [] data;<br>} </t></strong></p>
+<h4 id="2-3-处理返回结果类-ResultUtil-java-只有成功获得数据的处理方法，如需要其他方法自行添加"><a href="#2-3-处理返回结果类-ResultUtil-java-只有成功获得数据的处理方法，如需要其他方法自行添加" class="headerlink" title="2.3 处理返回结果类 ResultUtil.java(只有成功获得数据的处理方法，如需要其他方法自行添加)"></a>2.3 处理返回结果类 ResultUtil.java(只有成功获得数据的处理方法，如需要其他方法自行添加)</h4><p><strong> import java.util.List;<br>public class ResultUtil {<br>    public static Result success(String []object) {<br>        Result result = new Result();<br>        result.setErrno(0);<br>        result.setData(object);<br>        return result;<br>    }<br>    public static Result success() {<br>        return success(null);<br>    }<br>} </strong></p>
+<h4 id="2-4-WangEditorController-java-为了方便，省去了service层，serviceImpl层，dao层"><a href="#2-4-WangEditorController-java-为了方便，省去了service层，serviceImpl层，dao层" class="headerlink" title="2.4 WangEditorController.java (为了方便，省去了service层，serviceImpl层，dao层)"></a>2.4 WangEditorController.java (为了方便，省去了service层，serviceImpl层，dao层)</h4><p><strong> import java.io.File;<br>import java.io.IOException;<br>import java.util.UUID;<br>import javax.servlet.http.HttpServletRequest;<br>import javax.servlet.http.HttpSession;<br>import org.springframework.web.bind.annotation.RequestMapping;<br>import org.springframework.web.bind.annotation.RestController;<br>import org.springframework.web.multipart.MultipartFile;<br>import org.springframework.web.servlet.ModelAndView; </strong></p>
+<p><strong> @RequestMapping(“admin”)<br>@RestController<br>public class WangEditorController {<br>    //转到wangEditor3的界面<br>    @RequestMapping(value = “/wangEditor3”)<br>    public ModelAndView wangEditor(){<br>        return new ModelAndView(“index”);//index.html<br>    }<br>    //上传图片并返回图片路径(json格式)，接收的图片名和wangEditor定义的图片名保持一致<br>    @RequestMapping(“uploadImg”)<br>    public Result uploadImg(MultipartFile myFileName,HttpSession session,HttpServletRequest request) throws IllegalStateException, IOException{<br>        String realName = “”;<br>        if (myFileName != null) {<br>            String fileName = myFileName.getOriginalFilename();<br>            String fileNameExtension = fileName.substring(fileName.indexOf(“.”), fileName.length() - 1);<br>            // 生成实际存储的真实文件名<br>            realName = UUID.randomUUID().toString() + fileNameExtension;<br>// “/upload”是你自己定义的上传目录<br>String realPath = session.getServletContext().getRealPath(“/upload”);<br>    File uploadFile = new File(realPath, realName);<br>    myFileName.transferTo(uploadFile);<br>    }<br>    String [] str = {request.getContextPath() + “/upload/“ + realName};<br>        return ResultUtil.success(str);<br>        }<br>} </strong></p>
+<h4 id="2-5-Java对象转json串"><a href="#2-5-Java对象转json串" class="headerlink" title="2.5 Java对象转json串"></a>2.5 Java对象转json串</h4><p><strong> 我的项目是spring boot项目，由@RestController注解相当于@ResponseBody ＋ @Controller合在一起的作用，@ResponseBody将Java对象转为json串，但是有些初学者用的还是普通Java项目等没有这些自动转换的功能，所以这里是解决方法<br>(1)maven项目在pom.xml中添加 </strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>net.sf.json-lib<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>json-lib<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong> (2)普通Java项目自行下载 json-lib-2.4.jar 导入项目并Build Path </strong></p>
+<p><strong> (3)使用方法，如上文<br>Result result = ResultUtil.success(str);<br>JSONObject object =JSONObject.fromObject(result );<br>response.getWriter().write(object.toString());需要用到HttpServletResponse response </strong></p>
+<h4 id="2-6-wangEditor3官方文档网址：https-www-kancloud-cn-wangfupeng-wangeditor3"><a href="#2-6-wangEditor3官方文档网址：https-www-kancloud-cn-wangfupeng-wangeditor3" class="headerlink" title="2.6 wangEditor3官方文档网址：https://www.kancloud.cn/wangfupeng/wangeditor3"></a>2.6 wangEditor3官方文档网址：<a href="https://www.kancloud.cn/wangfupeng/wangeditor3" target="_blank" rel="noopener">https://www.kancloud.cn/wangfupeng/wangeditor3</a></h4><h4 id="2-7-wangEditor的demo例子：wangeditor3"><a href="#2-7-wangEditor的demo例子：wangeditor3" class="headerlink" title="2.7 wangEditor的demo例子：wangeditor3"></a>2.7 wangEditor的demo例子：<a href="http://www.wangeditor.com/" title="wangeditor3" target="_blank" rel="noopener">wangeditor3</a></h4><p><strong><font color="#FF0033">因为编辑器的缘故Java代码没有层次，所以复制到你用的IDE中,用IDE的代码规范功能规范一下</font><br>若是哪里有理解错误的或写错的地方，望各位读者评论或者私信指正，不胜感激。 </strong></p>
+
         
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            未经作者允许,禁止转载
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://yoursite.com/2018/03/21/wangEditor3/">http://yoursite.com/2018/03/21/wangEditor3/</a>
+                    </p>
+                </blockquote>
         
     
 
@@ -655,7 +705,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Java-web/">Java web<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/wangEditor/">wangEditor<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
