@@ -45,7 +45,7 @@
     
     <title>
         
-            about me | 
+            thymeleaf的简单用法-布局标签 | 
         
         Jack&#39;s blog
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="This is Jack&#39;s blog">
-    <meta name="keywords" content="maliming&#39;s blog">
+    <meta name="keywords" content="maliming&#39;s blog,thymeleaf,布局标签">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -212,7 +212,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jack&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/about/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/23/thymeleaflayout/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jack&#39;s blog">
@@ -231,13 +231,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/about/">
+    <meta property="og:url" content="http://yoursite.com/2018/03/23/thymeleaflayout/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="about me | Jack&#39;s blog">
+    <meta property="og:title" content="thymeleaf的简单用法-布局标签 | Jack&#39;s blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="This is Jack&#39;s blog">
-    
+    <meta property="og:article:tag" content="thymeleaf"> <meta property="og:article:tag" content="布局标签"> 
 
+    
+        <meta property="article:published_time" content="Fri Mar 23 2018 15:54:30 GMT+0800">
+        <meta property="article:modified_time" content="Fri Mar 23 2018 21:41:43 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -245,13 +248,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/about/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/23/thymeleaflayout/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/23/thymeleaflayout/index.html",
+    "headline": "thymeleaf的简单用法-布局标签",
+    "datePublished": "Fri Mar 23 2018 15:54:30 GMT+0800",
+    "dateModified": "Fri Mar 23 2018 21:41:43 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "maliming-Jack",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/maliming.jpg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jack&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",thymeleaf,布局标签maliming&#39;s blog",
+    "description": "This is Jack&#39;s blog",
+}
+</script>
 
 
     
@@ -287,6 +320,39 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一-eclipse或myeclipse-设置HTML模板"><span class="post-toc-number">1.</span> <span class="post-toc-text">一.eclipse或myeclipse 设置HTML模板</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二-使用自定义的HTMl模板"><span class="post-toc-number">2.</span> <span class="post-toc-text">二.使用自定义的HTMl模板</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三-thymeleaf中布局标签的简单用法"><span class="post-toc-number">3.</span> <span class="post-toc-text">三.thymeleaf中布局标签的简单用法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-布局标签：th-fragment-layout-fragment和th-include-th-replace-th-insert-layout-decorator"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">1.布局标签：th:fragment,layout:fragment和th:include,th:replace,th:insert,layout:decorator</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-1-th-fragment和th-include-th-replace-th-insert的用法：定义和引用代码块"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">1.1 th:fragment和th:include,th:replace,th:insert的用法：定义和引用代码块</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-layout-fragment和layout-decorator的用法"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">1.2 layout:fragment和layout:decorator的用法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-3-布局传参（模板传参）"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">1.3 布局传参（模板传参）</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -301,10 +367,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/Anime-aboutme.jpg)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/page/thymeleaf.png)">
     
             <p class="article-headline-p">
-                about me
+                thymeleaf的简单用法-布局标签
             </p>
         </div>
 
@@ -323,7 +389,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>maliming-Jack</strong>
-        <span>3月 21, 2018</span>
+        <span>3月 23, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -345,13 +411,22 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB5klEQVR42u3aSW7DMAwF0Nz/0u22QFH7k1KRWHxeBZnM5wUhDq+vI64XBgYGBgYGBsbHMF7x9fP7v3/716fXd+nFgIGBMZNxk9pawVX/J48BAwNjMiNJsj3AdbjNGDAwMDDi5Jiz80SMgYGBsSvhXodVKEcxMDAwthaxeWma8N5Wi2NgYDyQsTIY2PX6zfMNDAyMD2aUVxyC492uJPuPOyMYGBiPYiTLE9et/14avTn2XUaFgYGBUS1Be0OCHNnsGmJgYBzE2NXWr/KqKbt8wsXAwDiIkY8q8xtUi+HqYREDA2MaI//T68ZZtdGfpN2boyoGBsYwRhJuNU33HkphFIGBgTGGkS+P9hZbe8sczZ0RDAyMMYwkoPUSd6V8xcDAwIjGh8WyNj8UYmBgYOQjzN7r6spF/rAwMDAmM1aOeknxudKkKwwGMDAwjmYkB8FdDbUkERciwcDAGMbIb1ZdqugNALbtjGBgYBzEyK9qqZmXtUsjTAwMjKMZ64e5lRCTgrnQbsPAwDia0RsVrCfWlfcxMDBmMnqLqjeDxuLixbb5BgYGxmBGdUi5axiwOeFiYGAMY+SJMvm00ObDwMAYyVhZsKg2znrfxMDAmMxYX+TKH0c1aAwMDIznXhgYGBgYGBgYb72+AbJ8fYK7oQRsAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACVklEQVR42u3aQZLCMAwEQP7/6d0HUISR7AhDdU4UmMTNQTZjPf5++nrg4eHh4eHh4eEdxnvE18vbPY15Hv/q0+un9OaGh4eHN8N7U2qDB19/63pMcofC3PDw8PAGea8m3RuTLyHJfZLn4uHh4Z3MyxePpMRfb6nx8PDwfoN3HQok7+dhBB4eHt7JvOQPfz6haqhxRNaCh4eHF/PyQ6b516Pne3h4eHgBr9zStGnq1cCi2XSFh4eHdwOvGjT0Ntnr4UWhCQwPDw/vZl4eE6w3V/U208mPhYeHhzfJy6PS3iJRbaKqRsmFdQ8PDw9vE6/KSD5dwfeejoeHh/dZ3kpRTsYn7QIrzQp4eHh4d/PKB/OtxoKkxPdauPDw8PBO4FWnkmyRe2FEb2ONh4eHN8PLN9m9hqrq8pBvuPHw8PDmeXnkmjcZ7IowcjAeHh7eJO++OHUlLM4jYDw8PLx5Xh4c5Idb1YKeN6pGd8bDw8O7mbc+9eTYrHqHXuyLh4eHN8/rMXpHXytzeLM1x8PDwxvkJV+ulvVqO9eGd/Dw8PDGeeuBwt4At9yqhYeHh3cArzq59bg2X2bw8PDwTuD1YoiV+LUa7277x4CHh4fX4lWvaqial/WVnwAPDw9vklct+jkyB/cavwpbajw8PLwbeHn8WijQlyV+b8MWHh4e3qd4u8p9tSmh13CAh4eH94283shqW0B5u4+Hh4d3JG9lI16NeqtPx8PDw5vkJRPNG7DyCDgfg4eHh3cOrxcBJKV/5Tgt+Znw8PDw5nm/d+Hh4eHh4eHh4R1w/QMvnGejy56TLAAAAABJRU5ErkJggg==">
     
 </ul>
 
     
 
     <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/thymeleaf/">thymeleaf</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/布局标签/">布局标签</a>
+    </ul>
     
 
     <!-- Share -->
@@ -378,7 +453,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=about me&url=http://yoursite.com/about/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=thymeleaf的简单用法-布局标签&url=http://yoursite.com/2018/03/23/thymeleaflayout/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -387,7 +462,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=about me&url=http://yoursite.com/about/index.html&via=maliming-Jack" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=thymeleaf的简单用法-布局标签&url=http://yoursite.com/2018/03/23/thymeleaflayout/index.html&via=maliming-Jack" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -396,7 +471,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/23/thymeleaflayout/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -405,7 +480,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/23/thymeleaflayout/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -417,7 +492,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=about me&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=thymeleaf的简单用法-布局标签&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/03/23/thymeleaflayout/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -436,8 +511,60 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="about-me"><a href="#about-me" class="headerlink" title="about me"></a>about me</h2><p><strong>my name is maliming,English is called Jack<br>我比较喜欢宅在一个自己感到温暖的地方,喜欢面食,辣椒<br>喜欢看小说(名著,网文都可以),喜欢听音乐,最喜欢音乐是——Break Me Up: <a href="http://music.163.com/#/song?id=30590268" title="Break Me Up" target="_blank" rel="noopener">Break Me Up</a>。<br>喜欢轻松,自在的感觉,也喜欢跑步,喜欢动漫-龙珠,梦想就是能在夜晚下雨中的小湖上画船听雨眠٩(๑❛ᴗ❛๑)۶</strong></p>
-<h2 id="contact-me-联系我"><a href="#contact-me-联系我" class="headerlink" title="contact me(联系我)"></a>contact me(联系我)</h2><p><strong>email：<a href="mailto:wqmlm1365413148@outlook.com" title="email" target="_blank" rel="noopener">邮箱</a></strong><br><strong>GitHub： <a href="https://github.com/malimingwq/" title="GitHub" target="_blank" rel="noopener">GitHub</a></strong><br><strong>网易云：<a href="http://music.163.com/#/user/home?id=384456184" title="music" target="_blank" rel="noopener">网易云</a></strong><br><strong>QQ：1365413148</strong></p>
+        <p><strong> 最近简单学习使用了thymeleaf模板引擎，现在把一些理解写出来，可能理解的很浅或者有偏差，希望读者理解，并评论对我指正，让我能够有所进步，并改正偏差。</strong></p>
+<h3 id="一-eclipse或myeclipse-设置HTML模板"><a href="#一-eclipse或myeclipse-设置HTML模板" class="headerlink" title="一.eclipse或myeclipse 设置HTML模板"></a>一.eclipse或myeclipse 设置HTML模板</h3><p><strong> Window-&gt;Preferences-&gt;输入templates-&gt;选择HTML下的HTML Source 下的Templates-&gt;New-&gt;Name中填写thymeleaf-&gt;Context-&gt;选择New HTML-&gt;Pattern中填入</strong><br>        <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span> <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong> 接着-&gt;Apply-&gt;OK  一定要在HTML页面引入thymeleaf命名空间<html xmlns:th="http://www.thymeleaf.org"></html>  在html中引入此命名空间，可避免编辑器出现html验证错误。</strong></p>
+<h3 id="二-使用自定义的HTMl模板"><a href="#二-使用自定义的HTMl模板" class="headerlink" title="二.使用自定义的HTMl模板"></a>二.使用自定义的HTMl模板</h3><p><strong> 点击文件夹-&gt;New-&gt;选择html中的（Basic Templates）-&gt;Next到选择模板页面-&gt;页面下方有蓝色的字体HTML Templates-&gt;选择自定义的HTML模板-&gt;OK就可以了</strong></p>
+<h3 id="三-thymeleaf中布局标签的简单用法"><a href="#三-thymeleaf中布局标签的简单用法" class="headerlink" title="三.thymeleaf中布局标签的简单用法"></a>三.thymeleaf中布局标签的简单用法</h3><h4 id="1-布局标签：th-fragment-layout-fragment和th-include-th-replace-th-insert-layout-decorator"><a href="#1-布局标签：th-fragment-layout-fragment和th-include-th-replace-th-insert-layout-decorator" class="headerlink" title="1.布局标签：th:fragment,layout:fragment和th:include,th:replace,th:insert,layout:decorator"></a>1.布局标签：th:fragment,layout:fragment和th:include,th:replace,th:insert,layout:decorator</h4><h5 id="1-1-th-fragment和th-include-th-replace-th-insert的用法：定义和引用代码块"><a href="#1-1-th-fragment和th-include-th-replace-th-insert的用法：定义和引用代码块" class="headerlink" title="1.1 th:fragment和th:include,th:replace,th:insert的用法：定义和引用代码块"></a>1.1 th:fragment和th:include,th:replace,th:insert的用法：定义和引用代码块</h5><p><strong>（1）首先需要注意带有公共使用的代码块（布局标签定义的代码块）最好不要带有<html><body></body></html><br>（2）th:fragment和th:include,th:replace,th:insert的用法和后三个标签的区别<br><!-- school/common.html-->  定义代码块，公共使用</strong></p>
+<pre><code>&lt;header th:fragment=&quot;header&quot;&gt;
+ &lt;div&gt;this is a header&lt;/div&gt;
+&lt;/header&gt;
+
+&lt;div id=&quot;nofragment&quot;&gt; this i a common code&lt;/div&gt;(普通的代码块)
+</code></pre><p><strong> <!--school/index.html -->引用代码块 </strong></p>
+<pre><code>&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;
+    &lt;head&gt;
+     &lt;title&gt;title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;div th:insert=&quot;school/common :: header&quot;&gt; &lt;/div&gt;
+</code></pre><p><strong> <font color="#FF0033"> th:insert保留自己的主标签，保留th:fragment的主标签，作用插入代码块是，则对应的结果为：</font> </strong></p>
+<pre><code>&lt;div&gt;
+ &lt;header&gt;
+  &lt;div&gt;this is a header&lt;/div&gt;
+ &lt;/header&gt;
+&lt;/div&gt;
+
+&lt;div th:include=&quot;school/common :: header&quot;&gt; &lt;/div&gt;
+</code></pre><p><strong> <font color="#FF0033"> th:include保留自己的主标签，舍弃th:fragment的主标签，作用是插入代码块，对应的结果为：</font> </strong></p>
+<pre><code>&lt;div&gt;
+ &lt;div&gt;this is a header&lt;/div&gt;
+&lt;/div&gt;
+
+ &lt;div th:replace=&quot;school/common :: header&quot;&gt; &lt;/div&gt;
+</code></pre><p><strong> <font color="#FF0033"> th:replace舍弃自己的主标签，保留th:fragment的主标签，作用是替换代码块，对应的结果为： </font> </strong></p>
+<pre><code>&lt;header&gt;
+ &lt;div&gt;this is a header&lt;/div&gt;
+&lt;/header&gt;
+</code></pre><p><strong> <font color="#FF0033"> 我们也可以引用不使用定义代码块的布局标签的代码块,引用普通代码块。</font> </strong></p>
+<pre><code>     &lt;div th:include=&quot;header:: #nofragment&quot;&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><strong> 引入代码块的参数格式为templatename::[domselector],其中templatename是模板名（如header），domselector是可选的dom选择器(如#nofragment，是自己定义的模板中的标识)。如果只写templatename，不写domselector，则会加载整个模板。<br>如上文的加载common.html中的模板，我们指定加载header:th:include=”school/common :: header”,若是只有th:include=”school/common”，会加载common.html中所有的模板 </strong></p>
+<p><strong> 我们可以写 </strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">"header:: ($&#123;user.isManager&#125;? #&#123;header.manager&#125; : #&#123;header.noManager&#125;)"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>来做选择,其中${user.isManager}是你传递的参数，header.manager和header.noManager中的后半部分是模板名字</strong></p>
+<h4 id="1-2-layout-fragment和layout-decorator的用法"><a href="#1-2-layout-fragment和layout-decorator的用法" class="headerlink" title="1.2 layout:fragment和layout:decorator的用法"></a>1.2 layout:fragment和layout:decorator的用法</h4><p><strong> school/layout.html模板页面 </strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span> <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">title</span>&gt;</span>title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">"school/common :: header"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">layout:fragment</span>=<span class="string">"content"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">"school/common :: footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong> school/index.html 使用模板页面</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">layout:decorator</span>=<span class="string">"school/layout"</span>  <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">title</span>&gt;</span>title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 这里使用了layout.html,所以头部和尾部使用的layout中的header和footer，中间内容可以自定义--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">layout:fragment</span>=<span class="string">"content"</span>&gt;</span>这里是每个页面自己定义内容的部分，个人理解相当于重写layout中content部分<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong> 这样的话，layout.html中引入的css,js,images之类的都可以在index.html页面使用，同时index.html页面可以引入自己的css,js,images等，只不过index.html使用了layout.html的布局，而content中的内容是每个页面自定义的，不共用 </strong></p>
+<h4 id="1-3-布局传参（模板传参）"><a href="#1-3-布局传参（模板传参）" class="headerlink" title="1.3 布局传参（模板传参）"></a>1.3 布局传参（模板传参）</h4><p><strong> 定义模板同时定义参数 school/common.html </strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:fragment</span>=<span class="string">"content(firstvalue,secondvalue)"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">"$&#123;firstvalue&#125;+'---'+$&#123;secondvalue&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong> 引用模板同时传递参数 school/index.html ,参数从后台传递到前台</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:incluede</span>=<span class="string">"school/common :: content($&#123;onevalue&#125;,$&#123;twovalue&#125;)"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">"school/common :: content(firstvalue=$&#123;onevalue&#125;,secondvalue=$&#123;twovalue&#125;)"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>定义模板的时候签名也可以不包括参数：</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:fragment</span>=<span class="string">"content"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>我们依然可以使用</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">"school/common :: content(firstvalue=$&#123;onevalue&#125;,secondvalue=$&#123;twovalue&#125;)"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>还可以使用</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">"school/common :: content"</span> <span class="attr">th:with</span>=<span class="string">"firstvalue=$&#123;onevalue&#125;,secondvalue=$&#123;twovalue&#125;"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>只要我们引用的模板中需要使用这些属性值，就可使用传参 </strong></p>
+<p><strong> 我们还可以验证模板参数，用标签th:assert 断言 </strong></p>
+<p><strong> 定义模板同时定义参数 school/common.html </strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:fragment</span>=<span class="string">"content(firstvalue,secondvalue)"</span> <span class="attr">th:assert</span>=<span class="string">"$&#123;!#strings.isEmpty(firstvalue,secondvalue)&#125;"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">p</span> <span class="attr">th:text</span>=<span class="string">"$&#123;firstvalue&#125;+'---'+$&#123;secondvalue&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong> 若是哪里有理解错误的或写错的地方，望各位读者评论或者私信指正，不胜感激。</strong></p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -446,7 +573,7 @@
                             未经作者允许,禁止转载
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="http://yoursite.com/about/index.html">http://yoursite.com/about/index.html</a>
+                        <strong>本文链接：</strong><a href="http://yoursite.com/2018/03/23/thymeleaflayout/">http://yoursite.com/2018/03/23/thymeleaflayout/</a>
                     </p>
                 </blockquote>
         
@@ -494,11 +621,27 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
+        <a href="/2018/03/23/Iderror/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2018/03/23/thymeleafcommon/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -698,6 +841,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

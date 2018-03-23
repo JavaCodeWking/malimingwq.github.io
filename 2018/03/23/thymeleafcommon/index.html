@@ -45,7 +45,7 @@
     
     <title>
         
-            about me | 
+            thymeleaf的简单用法-常用标签 | 
         
         Jack&#39;s blog
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="This is Jack&#39;s blog">
-    <meta name="keywords" content="maliming&#39;s blog">
+    <meta name="keywords" content="maliming&#39;s blog,thymeleaf,常用标签">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -212,7 +212,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jack&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/about/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/23/thymeleafcommon/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jack&#39;s blog">
@@ -231,13 +231,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/about/">
+    <meta property="og:url" content="http://yoursite.com/2018/03/23/thymeleafcommon/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="about me | Jack&#39;s blog">
+    <meta property="og:title" content="thymeleaf的简单用法-常用标签 | Jack&#39;s blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="This is Jack&#39;s blog">
-    
+    <meta property="og:article:tag" content="thymeleaf"> <meta property="og:article:tag" content="常用标签"> 
 
+    
+        <meta property="article:published_time" content="Fri Mar 23 2018 14:52:08 GMT+0800">
+        <meta property="article:modified_time" content="Fri Mar 23 2018 15:43:18 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -245,13 +248,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/about/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/23/thymeleafcommon/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/23/thymeleafcommon/index.html",
+    "headline": "thymeleaf的简单用法-常用标签",
+    "datePublished": "Fri Mar 23 2018 14:52:08 GMT+0800",
+    "dateModified": "Fri Mar 23 2018 15:43:18 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "maliming-Jack",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/maliming.jpg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jack&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",thymeleaf,常用标签maliming&#39;s blog",
+    "description": "This is Jack&#39;s blog",
+}
+</script>
 
 
     
@@ -287,6 +320,39 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一-常用标签的用法"><span class="post-toc-number">1.</span> <span class="post-toc-text">一.常用标签的用法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-th-text-用于文本的显示-并且可以进行简单的计算。"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.1 th:text 用于文本的显示,并且可以进行简单的计算。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-th-utext-用于html的文本替换-常用于富文本编辑器编辑后的内容显示到前台页面上。"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">1.2 th:utext 用于html的文本替换,常用于富文本编辑器编辑后的内容显示到前台页面上。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-3-th-if-用于判断条件-还可以多条件-and-or-二元操作符-，-not非-一元操作符-。"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">1.3 th:if 用于判断条件,还可以多条件 and,or(二元操作符)，!,not非(一元操作符)。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-4-th-unless-用于判断条件，与th-if作用相反。"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">1.4 th:unless 用于判断条件，与th:if作用相反。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-5-th-switch-th-case-用于多个同等级相同目的判断-多选一时使用。"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">1.5 th:switch th:case 用于多个同等级相同目的判断,多选一时使用。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-6-th-action-用于定义后台控制器的路径，表单的提交地址，相当于标签的action属性。"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">1.6 th:action 用于定义后台控制器的路径，表单的提交地址，相当于标签的action属性。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-7-th-each-用于遍历集合中的对象，相当于jstl中的-lt-c-forEach-gt-标签。"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">1.7 th:each 用于遍历集合中的对象，相当于jstl中的&lt;c:forEach&gt;标签。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-List集合循环遍历"><span class="post-toc-number">1.7.1.</span> <span class="post-toc-text">(1)List集合循环遍历</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-Map集合循环遍历"><span class="post-toc-number">1.7.2.</span> <span class="post-toc-text">(2)Map集合循环遍历</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-数组循环遍历"><span class="post-toc-number">1.7.3.</span> <span class="post-toc-text">(3)数组循环遍历</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-8-th-value-用于属性赋值。"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">1.8 th:value 用于属性赋值。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-9-th-src-用于外部资源的引入，例如图片，js文件。"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">1.9 th:src 用于外部资源的引入，例如图片，js文件。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-10-th-href-用于定义超链接-相当于标签的href属性。"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">1.10 th:href 用于定义超链接,相当于标签的href属性。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-11-th-remove-用于删除。可以表达式传参。"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">1.11 th:remove 用于删除。可以表达式传参。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-12-th-selected-用于选择框设置选中值。通常和th-each一起使用。"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">1.12 th:selected 用于选择框设置选中值。通常和th:each一起使用。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-13-th-object-用于表单数据对象绑定，后台controller中参数保持一致，和选择-星号-表达式。"><span class="post-toc-number">1.13.</span> <span class="post-toc-text">1.13 th:object 用于表单数据对象绑定，后台controller中参数保持一致，和选择(星号)表达式。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-14-th-attr-用于设置任意属性"><span class="post-toc-number">1.14.</span> <span class="post-toc-text">1.14 th:attr 用于设置任意属性</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二-Thymeleaf中的内置对象"><span class="post-toc-number">2.</span> <span class="post-toc-text">二.Thymeleaf中的内置对象</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -301,10 +367,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/Anime-aboutme.jpg)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/page/thymeleaf.png)">
     
             <p class="article-headline-p">
-                about me
+                thymeleaf的简单用法-常用标签
             </p>
         </div>
 
@@ -323,7 +389,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>maliming-Jack</strong>
-        <span>3月 21, 2018</span>
+        <span>3月 23, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -345,13 +411,22 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB5klEQVR42u3aSW7DMAwF0Nz/0u22QFH7k1KRWHxeBZnM5wUhDq+vI64XBgYGBgYGBsbHMF7x9fP7v3/716fXd+nFgIGBMZNxk9pawVX/J48BAwNjMiNJsj3AdbjNGDAwMDDi5Jiz80SMgYGBsSvhXodVKEcxMDAwthaxeWma8N5Wi2NgYDyQsTIY2PX6zfMNDAyMD2aUVxyC492uJPuPOyMYGBiPYiTLE9et/14avTn2XUaFgYGBUS1Be0OCHNnsGmJgYBzE2NXWr/KqKbt8wsXAwDiIkY8q8xtUi+HqYREDA2MaI//T68ZZtdGfpN2boyoGBsYwRhJuNU33HkphFIGBgTGGkS+P9hZbe8sczZ0RDAyMMYwkoPUSd6V8xcDAwIjGh8WyNj8UYmBgYOQjzN7r6spF/rAwMDAmM1aOeknxudKkKwwGMDAwjmYkB8FdDbUkERciwcDAGMbIb1ZdqugNALbtjGBgYBzEyK9qqZmXtUsjTAwMjKMZ64e5lRCTgrnQbsPAwDia0RsVrCfWlfcxMDBmMnqLqjeDxuLixbb5BgYGxmBGdUi5axiwOeFiYGAMY+SJMvm00ObDwMAYyVhZsKg2znrfxMDAmMxYX+TKH0c1aAwMDIznXhgYGBgYGBgYb72+AbJ8fYK7oQRsAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACaklEQVR42u3aS5LDMAgFwNz/0jMHSDl5CIk4qdYq5fGvvQAN8Pj76fXAw8PDw8PDw8O7Ge8Rr8vbPZ3zfH7y19fH83fDw8PDm+G9CbUX57zGvybl96++Gx4eHt4k7yrgdn4nKSS/Z5SE8PDw8L6E108MyXPx8PDwvpeXlBs6aQAPDw/vW3h5iM8f9qZwEJczhmoteHh4eDEvbzLN/x7t7+Hh4eEFvOpa214nm+ZdCw8PD+80Lw/Ea5vjPNkkx6MhMDw8PLwRXvK6neGqtXPyj4WHh4c3yUseWW1o7R1ByPF4eHh4M7zCZUXqWvMsTwmt/xjw8PDw2rzqS3eCeP4RczYeHh7ep3h5CK62vpIQX22PLdZa8PDw8Lbyqm2tvH2VX5W32QrFCDw8PLwDvP7IVCes59e2ai14eHh4m3jVkms/eeRPz4sXeHh4eJO86iM7ITsJ+nmhBA8PD+8OvLzEkKSEPKB3RhDKkxF4eHh4bV4h4DYGoda27NWyLx4eHt48Ly+5roXyvBxcTVF4eHh4k7wT4wJJ6M8TT/kIHh4e3od4e0u3nQJueVQLDw8Pb5yXbItzZF6urW6s8fDw8O7Aq26Ik3JD3gyrbsE3jw7g4eHhxbzqqhZz87BeTTCX98HDw8M7zOsE5WqJIRlWqCabaEuNh4eHd4CXl1/XNtnVD7o5MeDh4eEd41UHAvK22drQ1eKwFx4eHt4teXl5Innp6rjA8cSAh4eHN5IY1sYO8q12/nQ8PDy8SV5eqE3aV0mjKy8TF87Hw8PDG+GtlQA6Rdt+E+5Ifw8PDw8v4P3ewsPDw8PDw8PDu8H6B8paFhEXpsbbAAAAAElFTkSuQmCC">
     
 </ul>
 
     
 
     <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/thymeleaf/">thymeleaf</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/常用标签/">常用标签</a>
+    </ul>
     
 
     <!-- Share -->
@@ -378,7 +453,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=about me&url=http://yoursite.com/about/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=thymeleaf的简单用法-常用标签&url=http://yoursite.com/2018/03/23/thymeleafcommon/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -387,7 +462,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=about me&url=http://yoursite.com/about/index.html&via=maliming-Jack" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=thymeleaf的简单用法-常用标签&url=http://yoursite.com/2018/03/23/thymeleafcommon/index.html&via=maliming-Jack" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -396,7 +471,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/23/thymeleafcommon/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -405,7 +480,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/23/thymeleafcommon/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -417,7 +492,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=about me&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=thymeleaf的简单用法-常用标签&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/03/23/thymeleafcommon/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -436,8 +511,68 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="about-me"><a href="#about-me" class="headerlink" title="about me"></a>about me</h2><p><strong>my name is maliming,English is called Jack<br>我比较喜欢宅在一个自己感到温暖的地方,喜欢面食,辣椒<br>喜欢看小说(名著,网文都可以),喜欢听音乐,最喜欢音乐是——Break Me Up: <a href="http://music.163.com/#/song?id=30590268" title="Break Me Up" target="_blank" rel="noopener">Break Me Up</a>。<br>喜欢轻松,自在的感觉,也喜欢跑步,喜欢动漫-龙珠,梦想就是能在夜晚下雨中的小湖上画船听雨眠٩(๑❛ᴗ❛๑)۶</strong></p>
-<h2 id="contact-me-联系我"><a href="#contact-me-联系我" class="headerlink" title="contact me(联系我)"></a>contact me(联系我)</h2><p><strong>email：<a href="mailto:wqmlm1365413148@outlook.com" title="email" target="_blank" rel="noopener">邮箱</a></strong><br><strong>GitHub： <a href="https://github.com/malimingwq/" title="GitHub" target="_blank" rel="noopener">GitHub</a></strong><br><strong>网易云：<a href="http://music.163.com/#/user/home?id=384456184" title="music" target="_blank" rel="noopener">网易云</a></strong><br><strong>QQ：1365413148</strong></p>
+        <h3 id="一-常用标签的用法"><a href="#一-常用标签的用法" class="headerlink" title="一.常用标签的用法"></a>一.常用标签的用法</h3><h4 id="1-1-th-text-用于文本的显示-并且可以进行简单的计算。"><a href="#1-1-th-text-用于文本的显示-并且可以进行简单的计算。" class="headerlink" title="1.1 th:text 用于文本的显示,并且可以进行简单的计算。"></a>1.1 th:text 用于文本的显示,并且可以进行简单的计算。</h4><pre><code>&lt;td  th:text=&quot;${username}&quot;&gt;mlm&lt;/td&gt; -&gt; &lt;td&gt;maliming&lt;/td&gt;
+&lt;td  th:text=&quot;9+7&quot;&gt;2018&lt;/td&gt; -&gt; &lt;td&gt;16&lt;/td&gt;
+</code></pre><h4 id="1-2-th-utext-用于html的文本替换-常用于富文本编辑器编辑后的内容显示到前台页面上。"><a href="#1-2-th-utext-用于html的文本替换-常用于富文本编辑器编辑后的内容显示到前台页面上。" class="headerlink" title="1.2 th:utext 用于html的文本替换,常用于富文本编辑器编辑后的内容显示到前台页面上。"></a>1.2 th:utext 用于html的文本替换,常用于富文本编辑器编辑后的内容显示到前台页面上。</h4><pre><code>&lt;p th:utext=&quot;${article.content}&quot;&gt;&lt;/p&gt; -&gt; &lt;p&gt;my name is &lt;b&gt;maliming&lt;/b&gt;&lt;/p&gt;
+</code></pre><h4 id="1-3-th-if-用于判断条件-还可以多条件-and-or-二元操作符-，-not非-一元操作符-。"><a href="#1-3-th-if-用于判断条件-还可以多条件-and-or-二元操作符-，-not非-一元操作符-。" class="headerlink" title="1.3 th:if 用于判断条件,还可以多条件 and,or(二元操作符)，!,not非(一元操作符)。"></a>1.3 th:if 用于判断条件,还可以多条件 and,or(二元操作符)，!,not非(一元操作符)。</h4><pre><code>&lt;div th:if=&quot;${user} != null&quot;&gt;show&lt;/div&gt;如果user对象为空则不显示，不为空则显示 -&gt; &lt;div&gt;show&lt;/div&gt;
+&lt;div th:if=&quot;${user} != null and ${otherUser} != null&quot;&gt;show&lt;/div&gt;
+</code></pre><p><strong> 运算符还可以写在${}里,如：</strong><br>        <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:if</span>=<span class="string">"$&#123;user.number &gt; 100&#125;"</span>&gt;</span>show<span class="tag">&lt;/<span class="name">div</span>&gt;</span> -&gt; <span class="tag">&lt;<span class="name">div</span>&gt;</span>show<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong> 运算符放在了 {} 内部, 此时整个 {} 内的表达式用 ognl/spel 引擎计算; 如果运算符放在外部, 那么 thymeleaf 引擎负责计算。</strong></p>
+<h4 id="1-4-th-unless-用于判断条件，与th-if作用相反。"><a href="#1-4-th-unless-用于判断条件，与th-if作用相反。" class="headerlink" title="1.4 th:unless 用于判断条件，与th:if作用相反。"></a>1.4 th:unless 用于判断条件，与th:if作用相反。</h4><pre><code>&lt;div th:if=&quot;${user} != null&quot;&gt;show&lt;/div&gt;如果user对象不为空则不显示，为空则显示 -&gt; &lt;div&gt;show&lt;/div&gt;
+</code></pre><h4 id="1-5-th-switch-th-case-用于多个同等级相同目的判断-多选一时使用。"><a href="#1-5-th-switch-th-case-用于多个同等级相同目的判断-多选一时使用。" class="headerlink" title="1.5 th:switch th:case 用于多个同等级相同目的判断,多选一时使用。"></a>1.5 th:switch th:case 用于多个同等级相同目的判断,多选一时使用。</h4><pre><code>&lt;div th:switch=&quot;${user.name}&quot;&gt;
+    &lt;p th:case=&quot;maliming&quot;&gt;first&lt;/p&gt;若${user.name}中的值为maliming则显示，否则不显示
+    &lt;p th:case=&quot;${otherUser.name}&quot;&gt;second&lt;/p&gt;
+&lt;/div&gt;
+</code></pre><h4 id="1-6-th-action-用于定义后台控制器的路径，表单的提交地址，相当于标签的action属性。"><a href="#1-6-th-action-用于定义后台控制器的路径，表单的提交地址，相当于标签的action属性。" class="headerlink" title="1.6 th:action 用于定义后台控制器的路径，表单的提交地址，相当于标签的action属性。"></a>1.6 th:action 用于定义后台控制器的路径，表单的提交地址，相当于<form>标签的action属性。</form></h4><pre><code>&lt;form th:action=&quot;@{user/login}&quot; method=&quot;post&quot;&gt;&lt;/form&gt;
+</code></pre><h4 id="1-7-th-each-用于遍历集合中的对象，相当于jstl中的-lt-c-forEach-gt-标签。"><a href="#1-7-th-each-用于遍历集合中的对象，相当于jstl中的-lt-c-forEach-gt-标签。" class="headerlink" title="1.7 th:each 用于遍历集合中的对象，相当于jstl中的&lt;c:forEach&gt;标签。"></a>1.7 th:each 用于遍历集合中的对象，相当于jstl中的&lt;c:forEach&gt;标签。</h4><h5 id="1-List集合循环遍历"><a href="#1-List集合循环遍历" class="headerlink" title="(1)List集合循环遍历"></a>(1)List集合循环遍历</h5><pre><code>&lt;tr th:each=&quot;user,userStat:${messages.list}&quot;&gt;
+    &lt;td th:text=&quot;${user.name}&quot;&gt;&lt;/td&gt;
+    &lt;td th:text=&quot;userStat.index&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+</code></pre><p><strong> 其中的user是临时变量，相当于for(User user : users)中的user，userStat称为状态变量，属性有index:当前迭代对象的index(从0开始计算),count: 当前迭代对象的index(从1开始计算), size:被迭代对象的大小,current:当前迭代变量,even/odd:布尔值，当前循环是否是偶数/奇数(从0开始计算), first:布尔值，当前循环是否是第一个,last:布尔值，当前循环是否是最后一个。</strong></p>
+<h5 id="2-Map集合循环遍历"><a href="#2-Map集合循环遍历" class="headerlink" title="(2)Map集合循环遍历"></a>(2)Map集合循环遍历</h5><pre><code>&lt;div th:each=&quot;map:${maps}&quot; th:text=&quot;${map}&quot;&gt;&lt;/div&gt;
+</code></pre><h5 id="3-数组循环遍历"><a href="#3-数组循环遍历" class="headerlink" title="(3)数组循环遍历"></a>(3)数组循环遍历</h5><pre><code>&lt;tr&gt;
+    &lt;td th:each=&quot;array:${arrays}&quot; th:text=&quot;${array}&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+</code></pre><h4 id="1-8-th-value-用于属性赋值。"><a href="#1-8-th-value-用于属性赋值。" class="headerlink" title="1.8 th:value 用于属性赋值。"></a>1.8 th:value 用于属性赋值。</h4><pre><code>&lt;option th:value=&quot;${user.name}&quot;&gt;&lt;/option&gt; -&gt; &lt;option value=&quot;maliming&quot;&gt;&lt;/option&gt;
+</code></pre><h4 id="1-9-th-src-用于外部资源的引入，例如图片，js文件。"><a href="#1-9-th-src-用于外部资源的引入，例如图片，js文件。" class="headerlink" title="1.9 th:src 用于外部资源的引入，例如图片，js文件。"></a>1.9 th:src 用于外部资源的引入，例如图片，js文件。</h4><pre><code>&lt;img th:src=&quot;@{../images/myself.jpg}&quot;/&gt;或&lt;script th:src=&quot;@{../static/login.js}&quot;&gt;&lt;/script&gt;
+</code></pre><h4 id="1-10-th-href-用于定义超链接-相当于标签的href属性。"><a href="#1-10-th-href-用于定义超链接-相当于标签的href属性。" class="headerlink" title="1.10 th:href 用于定义超链接,相当于标签的href属性。"></a>1.10 th:href 用于定义超链接,相当于<a></a>标签的href属性。</h4><pre><code>&lt;a th:href=&quot;@{/user/selectUser?(currentPage=1,reTypeid=${reTypeid},inquiry=${inquiry})}&quot;&gt;&lt;/a&gt; 传参。
+</code></pre><h4 id="1-11-th-remove-用于删除。可以表达式传参。"><a href="#1-11-th-remove-用于删除。可以表达式传参。" class="headerlink" title="1.11 th:remove 用于删除。可以表达式传参。"></a>1.11 th:remove 用于删除。可以表达式传参。</h4><pre><code>&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+          &lt;tr&gt;
+             &lt;th&gt;编号&lt;/th&gt;
+             &lt;th&gt;用户名&lt;/th&gt;
+             &lt;th&gt;姓名&lt;/th&gt;
+             &lt;th&gt;性别&lt;/th&gt;
+          &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody th:remove=&quot;all-but-first&quot; 或者表达式th:remove=&quot;${choice}? all : all-but-first&quot;&gt;
+          &lt;tr&gt;
+             &lt;td&gt;1&lt;/td&gt;
+             &lt;td&gt;xxxxxxxx@qq.com&lt;/td&gt;
+             &lt;td&gt;Tom&lt;/td&gt;
+             &lt;td&gt;男&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+             &lt;td&gt;3&lt;/td&gt;
+             &lt;td&gt;xxxxxxxx@qq.com&lt;/td&gt;
+             &lt;td&gt;Lucy13&lt;/td&gt;
+             &lt;td&gt;女&lt;/td&gt;
+           &lt;/tr&gt;
+     &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre><p><strong>这里的<tbody></tbody>标签中有th:remove=”all-but-first”，意思是只保留<tbody></tbody>标签中的第一个字标签，也就是name为Tom的所在<tr></tr>,其他的子标签则会删除，th:remove有五个属性值。</strong><br><strong> <font color="#FF0033">all：删除所在标签和内容及其所属的所有子标签。body：删除所在标签的内容及其所属的所有子标签。tag：删除所在标签，不删除任何所属的子标签。all-but-first：删除除第一个子标签外的其他子标签。none：不起作用，什么也不做。</font></strong></p>
+<h4 id="1-12-th-selected-用于选择框设置选中值。通常和th-each一起使用。"><a href="#1-12-th-selected-用于选择框设置选中值。通常和th-each一起使用。" class="headerlink" title="1.12 th:selected 用于选择框设置选中值。通常和th:each一起使用。"></a>1.12 th:selected 用于选择框设置选中值。通常和th:each一起使用。</h4><pre><code>&lt;select&gt;
+    &lt;option th:selected=&quot;${user.name} == ${otherUser.name}&quot;&gt;&lt;/option&gt; 若相等就默认选中此&lt;option&gt;&lt;/option&gt;
+&lt;/select&gt;
+</code></pre><h4 id="1-13-th-object-用于表单数据对象绑定，后台controller中参数保持一致，和选择-星号-表达式。"><a href="#1-13-th-object-用于表单数据对象绑定，后台controller中参数保持一致，和选择-星号-表达式。" class="headerlink" title="1.13 th:object 用于表单数据对象绑定，后台controller中参数保持一致，和选择(星号)表达式。"></a>1.13 th:object 用于表单数据对象绑定，后台controller中参数保持一致，和选择(星号)表达式。</h4><pre><code>&lt;form th:object=&quot;${user}&quot;&gt;
+    &lt;input th:value=&quot;*{name}&quot;/&gt; *号代替了${user}
+&lt;/form&gt;
+</code></pre><p><strong> public ModelAndView addUser(@RequestParam(value = “user”) User user，ModelMap model){} </strong></p>
+<h4 id="1-14-th-attr-用于设置任意属性"><a href="#1-14-th-attr-用于设置任意属性" class="headerlink" title="1.14 th:attr 用于设置任意属性"></a>1.14 th:attr 用于设置任意属性</h4><pre><code>&lt;input th:attr=&quot;value=${user.name}&quot;/&gt; 设置单个属性。
+&lt;input th:attr=&quot;value=${user.username},name=username&quot;/&gt; 设置多个属性之间用逗号隔开。
+</code></pre><h3 id="二-Thymeleaf中的内置对象"><a href="#二-Thymeleaf中的内置对象" class="headerlink" title="二.Thymeleaf中的内置对象"></a>二.Thymeleaf中的内置对象</h3><font color="#FF0033">#dates：日期格式化内置对象，具体方法可以参照java.util.Date；<br>                     #calendars：类似于#dates，但是是java.util.Calendar类的方法；<br>                     #numbers： 数字格式化；<br>                     #strings：字符串格式化，具体方法可以参照java.lang.String，如startsWith、contains等；<br>                     #objects：参照java.lang.Object；<br>                     #bools：判断boolean类型的工具；<br>                     #arrays：数组操作的工具；<br>                     #lists：列表操作的工具，参照java.util.List；<br>                     #sets：Set操作工具，参照java.util.Set；<br>                     #maps：Map操作工具，参照java.util.Map；<br>                     #aggregates：操作数组或集合的工具；<br>                     #messages：操作消息的工具。</font>
+
+<p><strong> 若是哪里有理解错误的或写错的地方，望各位读者评论或者私信指正，不胜感激。 </strong></p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -446,7 +581,7 @@
                             未经作者允许,禁止转载
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="http://yoursite.com/about/index.html">http://yoursite.com/about/index.html</a>
+                        <strong>本文链接：</strong><a href="http://yoursite.com/2018/03/23/thymeleafcommon/">http://yoursite.com/2018/03/23/thymeleafcommon/</a>
                     </p>
                 </blockquote>
         
@@ -494,11 +629,27 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
+        <a href="/2018/03/23/thymeleaflayout/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2018/03/23/md5/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -698,6 +849,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

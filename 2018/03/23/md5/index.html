@@ -45,7 +45,7 @@
     
     <title>
         
-            归档 | 
+            MD5信息摘要算法的简单理解 | 
         
         Jack&#39;s blog
     </title>
@@ -212,7 +212,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jack&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/archives/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/23/md5/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jack&#39;s blog">
@@ -231,13 +231,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/archives/">
+    <meta property="og:url" content="http://yoursite.com/2018/03/23/md5/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档 | Jack&#39;s blog">
+    <meta property="og:title" content="MD5信息摘要算法的简单理解 | Jack&#39;s blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="This is Jack&#39;s blog">
     
 
+    
+        <meta property="article:published_time" content="Fri Mar 23 2018 11:30:32 GMT+0800">
+        <meta property="article:modified_time" content="Fri Mar 23 2018 19:44:48 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -245,13 +248,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/23/md5/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/23/md5/index.html",
+    "headline": "MD5信息摘要算法的简单理解",
+    "datePublished": "Fri Mar 23 2018 11:30:32 GMT+0800",
+    "dateModified": "Fri Mar 23 2018 19:44:48 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "maliming-Jack",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/maliming.jpg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jack&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "maliming&#39;s blog",
+    "description": "This is Jack&#39;s blog",
+}
+</script>
 
 
     
@@ -285,626 +318,303 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一-MD5的简单理解"><span class="post-toc-number">1.</span> <span class="post-toc-text">一.MD5的简单理解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-摘要"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.1.摘要</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-加密"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">1.2.加密</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二-MD5算法的特点"><span class="post-toc-number">2.</span> <span class="post-toc-text">二.MD5算法的特点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1-压缩性"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">2.1.压缩性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-易于计算"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.2.易于计算</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-细微性"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">2.3.细微性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-4-不可逆性"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">2.4.不可逆性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-5-弱相同性"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">2.5.弱相同性</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三-MD5破解讲解"><span class="post-toc-number">3.</span> <span class="post-toc-text">三.MD5破解讲解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四-MD5的加盐"><span class="post-toc-number">4.</span> <span class="post-toc-text">四.MD5的加盐</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#五-MD5值的位数"><span class="post-toc-number">5.</span> <span class="post-toc-text">五.MD5值的位数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#六-MD5工具类（java）"><span class="post-toc-number">6.</span> <span class="post-toc-text">六.MD5工具类（java）</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/NetEase.png">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/page/md5.jpg)">
+    
+            <p class="article-headline-p">
+                MD5信息摘要算法的简单理解
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/maliming.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>maliming-Jack</strong>
+        <span>3月 23, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACcElEQVR42u3awW7rIBQE0Pz/T7fbSi3ODGBiVcerp5QQjhfAm3tfX//6eeHh4eHh4eHh4T2M94qfn+NHM4zG/B5/PcPc2vDw8PBO8t5stYOlj747Wuj1nO1rGs6Mh4eHd5DXHgb59t2+jqW14eHh4T2MV1xtF44HPDw8vP/Eux452tyTkcn1HQ8PD+9pvLng9fpCnMyf8A5lLXh4eHgxby5QOPPvj9X38PDw8Aa89lm/TO89SP6YBw8PD+9mXhKkXn8+dzluy2zJavHw8PDO8PIfW9/05xoFkv8A4OHh4Z3kzW3fych2/snoAQ8PD+9DvPUgYBesbSaIwgg8PDy8rbx2ojZEaGFtIIKHh4f3Kd6uYv/KJ20sgoeHh/cEXgtoL7tt8awtueHh4eGd5yWLy6PbaClxOFv8FQ8PD+9m3lwhf25Z+dafRxJ4eHh4T+Alpfq8qN+2+M/Fu3h4eHjneW2oOvfz7dHSfhcPDw/vDC8vU62X+etSVnnw4OHh4Z3hJS1NbVNpG0+0L+JNcQ4PDw/vCK+ND1Yu33PX6+ITPDw8vJt5+Ta9Hh+0oW2+Kjw8PLzzvLmyVs5OXuLcBTqKcfHw8PC28pJFRK1OcbNU+8o2xLh4eHh4W3ntk8e1ycj2W5PnHh4eHt5WXrsprzdptW1bdaCMh4eHd4S3Euzmke7cFXkpxsXDw8O7mZeXo9pS1t4w4s2LwMPDw3sYr/3JvC1grsFr88GAh4eHdxsvnyFvLFg/EvDw8PDO8/KiVwLIj4eVFq7NWQseHh5ezGuDgLZpIDlm2jLbjfU9PDw8vK1NV89/8PDw8PDw8PDwHvB8A2WH41+RL8IzAAAAAElFTkSuQmCC">
+    
+</ul>
+
     
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/23/NetEaseShortMessage/">Java使用网易云信发送短信验证码</a></p>
-    </div>
+    <!-- Tags (bookmark) -->
+    
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
         
-            一.注册登...
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
         
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/23/NetEaseShortMessage/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/JavaWeb/">JavaWeb</a>
-              </span>
-            
+    
 
-            
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=MD5信息摘要算法的简单理解&url=http://yoursite.com/2018/03/23/md5/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
 
-            
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=MD5信息摘要算法的简单理解&url=http://yoursite.com/2018/03/23/md5/index.html&via=maliming-Jack" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/23/md5/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/23/md5/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=MD5信息摘要算法的简单理解&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/03/23/md5/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
 </div>
 
-            
-            
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p><strong> 最近在做一个微项目的时候用到了MD5信息摘要算法，所以就简单的了解了一下，我把我的了解写下来，用作以后的学习。</strong></p>
+<h3 id="一-MD5的简单理解"><a href="#一-MD5的简单理解" class="headerlink" title="一.MD5的简单理解"></a>一.MD5的简单理解</h3><p><strong> MD5的全称是Message-Digest Algorithm 5(信息摘要算法)，它面向的是32位的电脑，MD5算法会获得一个随机的长度的信息并产生一个128位的信息摘要，(也就是说可以生成一个固定长度为128bit的二进制串)。它是一个信息摘要算法，而摘要和加密是有区别的。</strong></p>
+<h4 id="1-1-摘要"><a href="#1-1-摘要" class="headerlink" title="1.1.摘要"></a>1.1.摘要</h4><p><strong> <font color="#FF0033">摘要是哈希值，我们可以通过散列算法比如MD5算法得到哈希值。它只是用于验证数据完整性和唯一性的哈希值，<br>不管原始数据是什么样的，得到的哈希值都是固定长度并且并不是直接由原始数据加密后的密文，只是根据原始数据生成了一个验证身份的令牌。所以我们无法通过摘要解密得到原始数据。</font> </strong></p>
+<h4 id="1-2-加密"><a href="#1-2-加密" class="headerlink" title="1.2.加密"></a>1.2.加密</h4><p><strong> <font color="#FF0033"> 加密是加密算法直接由明文加密成为密文，我们可以通过秘钥和解密算法将密文准确的还原成明文。</font></strong></p>
+<h3 id="二-MD5算法的特点"><a href="#二-MD5算法的特点" class="headerlink" title="二.MD5算法的特点"></a>二.MD5算法的特点</h3><h4 id="2-1-压缩性"><a href="#2-1-压缩性" class="headerlink" title="2.1.压缩性"></a>2.1.压缩性</h4><p><strong> 任意长度的数据计算出的MD5值得长度都是固定的。存储和管理比较方便。 </strong></p>
+<h4 id="2-2-易于计算"><a href="#2-2-易于计算" class="headerlink" title="2.2.易于计算"></a>2.2.易于计算</h4><p><strong> 数据计算出MD5值很容易，易于使用者的理解和使用 。 </strong></p>
+<h4 id="2-3-细微性"><a href="#2-3-细微性" class="headerlink" title="2.3.细微性"></a>2.3.细微性</h4><p><strong> 任意大小的数据，只要经过任何的改变，哪怕只修改某个字节，所得到的MD5值都会有很大的区别，这个特点常被用于文件下载的检验。</strong></p>
+<h4 id="2-4-不可逆性"><a href="#2-4-不可逆性" class="headerlink" title="2.4.不可逆性"></a>2.4.不可逆性</h4><p><strong> 得到一个MD5值，无法反向计算出原数据 </strong></p>
+<h4 id="2-5-弱相同性"><a href="#2-5-弱相同性" class="headerlink" title="2.5.弱相同性"></a>2.5.弱相同性</h4><p><strong> 一个数据对应一个MD5值，一个MD5值可能对应多个原始数据。</strong></p>
+<h3 id="三-MD5破解讲解"><a href="#三-MD5破解讲解" class="headerlink" title="三.MD5破解讲解"></a>三.MD5破解讲解</h3><p> <strong> MD5破解的方式，因为MD5算法是不可逆的，所以破解一般是”撞库破解”，也就是把大量的常用的语句经过MD5”加密”后放入数据库，再把你输入的语句经过MD5”加密”去和数据库中的MD5值对比，然后返回原语句，这样只能找出一些简单的，常用的语句 </strong></p>
+<h3 id="四-MD5的加盐"><a href="#四-MD5的加盐" class="headerlink" title="四.MD5的加盐"></a>四.MD5的加盐</h3><p><strong> 单纯的将数据MD5”加密”后，也有被对比，暴力破解的风险，所以我们需要加盐，通俗来说就是在原数据中加入其他的数据，比如密码（password）,随机数（random number），得到password的MD5值然后加上random number然后再次MD5后，得到这个MD5值，这就是个简单的加盐过程，这样的话就算得到最后的这个MD5值得原数据，也得不到password。 </strong></p>
+<h3 id="五-MD5值的位数"><a href="#五-MD5值的位数" class="headerlink" title="五.MD5值的位数"></a>五.MD5值的位数</h3><p><strong> 前面说了MD5后值为128bit的二进制串，但二进制都是01，会造成用户的使用，理解不便，所以将128bit的二进制串转化为16进制的串，所以就输出的MD5值为32位。16位的MD5值是从32位的MD5值抽取出来的，32位MD5值去掉前后的八位，得到的值就是16位的MD5值。 </strong></p>
+<h3 id="六-MD5工具类（java）"><a href="#六-MD5工具类（java）" class="headerlink" title="六.MD5工具类（java）"></a>六.MD5工具类（java）</h3><p><strong> public class MD5Util {<br>    private final static char hexDigits[] = {<br>            ‘0’, ‘1’, ‘2’, ‘3’, ‘4’, ‘5’, ‘6’, ‘7’, ‘8’, ‘9’, ‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’<br>    };<br>    //MD5加密的普通方式<br>    public static String getMD5(String key){<br>        try {<br>            byte[] btInput = key.getBytes();<br>            // 获得MD5摘要算法的 MessageDigest 对象<br>            MessageDigest mdInst = MessageDigest.getInstance(“MD5”);<br>            // 使用指定的字节更新摘要<br>            mdInst.update(btInput);<br>            // 获得密文<br>            byte[] md = mdInst.digest();<br>            // 把密文转换成十六进制的字符串形式<br>            int j = md.length;<br>            char str[] = new char[j * 2];<br>            int k = 0;<br>            for (int i = 0; i &lt; j; i++) {<br>                byte byte0 = md[i];<br>                str[k++] = hexDigits[byte0 &gt;&gt;&gt; 4 &amp; 0xf];<br>                str[k++] = hexDigits[byte0 &amp; 0xf];<br>            }<br>            return new String(str);<br>        } catch (Exception e) {<br>            return null;<br>        }<br>    }<br>    //MD5加密的另一种方式<br>    public static String getOtherMD5(String key) {<br>        MessageDigest messageDigest = null;<br>        try {<br>            messageDigest = MessageDigest.getInstance(“MD5”);<br>            messageDigest.reset();<br>            messageDigest.update(key.getBytes(“UTF-8”));<br>        } catch (NoSuchAlgorithmException e) {<br>            e.printStackTrace();<br>        } catch (UnsupportedEncodingException e) {<br>        }<br>        byte[] byteArray = messageDigest.digest();<br>        StringBuffer md5StrBuff = new StringBuffer();<br>        for (int i = 0; i &lt; byteArray.length; i++) {<br>            if (Integer.toHexString(0xFF &amp; byteArray[i]).length() == 1)<br>                md5StrBuff.append(“0”).append(Integer.toHexString(0xFF &amp; byteArray[i]));<br>            else<br>                md5StrBuff.append(Integer.toHexString(0xFF &amp; byteArray[i]));<br>        }<br>        return md5StrBuff.toString();<br>    }<br>    // 加密后解密，一次是加密，两次解密<br>    public static String encrypt(String key) {<br>        char[] a = key.toCharArray();<br>        for (int i = 0; i &lt; a.length; i++) {<br>            a[i] = (char) (a[i] ^ ‘t’);<br>        }<br>        String k = new String(a);<br>        return k;<br>    }<br>} </strong></p>
+<p><strong> 或者使用commons-codecjar包，我这里因为是maven项目，所以使用的是依赖 </strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-codec<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-codec<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.10<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong> <font color="#FF0033">使用方式 String md5 = DigestUtils.md5Hex(“123456”);就可以了。</font><br>若是哪里有理解错误的或写错的地方，望各位读者评论或者私信指正，不胜感激。</strong></p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            未经作者允许,禁止转载
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://yoursite.com/2018/03/23/md5/">http://yoursite.com/2018/03/23/md5/</a>
+                    </p>
+                </blockquote>
         
     
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
     
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/Iderror.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/23/Iderror/">No identifier specified for entity 报错</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            最近在使用Springboot和SpringData-jpa的时候使用junit测试的时候出现了问题
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/23/Iderror/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/JavaWebErrors/">JavaWebErrors</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
 </div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/thymeleaf.png">
-    
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/23/thymeleaflayout/">thymeleaf的简单用法-布局标签</a></p>
-    </div>
+                
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-             最近简单学习使用了thymeleaf模板引擎，现在把一些理解写出来，可能理解的很浅或者有偏差，希望读者理解，并评论对我指正，让我能...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/23/thymeleaflayout/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/thymeleaf/">thymeleaf</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 gitcoment -->
+<div id="gitment-comment">
+    <!-- Gitment 评论框 -->
+<div id="container"></div>
 </div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/thymeleaf.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/23/thymeleafcommon/">thymeleaf的简单用法-常用标签</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/23/thymeleafcommon/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/thymeleaf/">thymeleaf</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/md5.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/23/md5/">MD5信息摘要算法的简单理解</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-             最近在做一个微项目的时候用到了MD5信息摘要算法，所以就简单的了解了一下，我把我的了解写下来，用作以后的学习。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/23/md5/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/JavaWeb/">JavaWeb</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/phoneorcomputer.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/23/phoneorcomputer/">java判断手机端和PC电脑端</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-             这几天一直在想如何用Java判断Http请求是来自手机端还是PC电脑端，想做一个网站签到功能(不允许手机端签到)于是去搜索...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/23/phoneorcomputer/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/JavaWeb/">JavaWeb</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/idea.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/23/IDEAdeadline/">查看 IntelliJ IDEA 使用期限</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-             首先打开IDEA，选择上面的选项help，然后help-&gt;Register…或者...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/23/IDEAdeadline/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/IDEA/">IDEA</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/wangEditor3.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/22/wangEditor2/">wangEditor2上传图片</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-             我用的是myeclipse 2017,spring boot+thymeleaf项目,wangEditor2与wangeditor...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/22/wangEditor2/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 22, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/wangEditor/">wangEditor</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/wangEditor3.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/21/wangEditor3/">wangEditor3上传图片</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-             我用的是myeclipse 2017,spring boot+thymeleaf项目,wangEditor3与wangeditor...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/21/wangEditor3/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 21, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/wangEditor/">wangEditor</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/21/hello-world/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/21/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 21, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
+<style>
+    #gitment-comment{
+        background-color: #eee;
+        padding: 2pc;
     }
+</style>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        //id: '页面 ID', // 可选。默认为 location.href
+        owner: 'malimingwq',
+        repo: 'malimingwq.github.io',
+        oauth: {
+            client_id: '6d5ae07bed3f6aae099f',
+            client_secret: 'e02cddc9ff5ae3667c5137df2adcf384ef9d3108',
+        },
+    })
+    gitment.render('container')
 </script>
 
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
     
-</div>
+        <a href="/2018/03/23/thymeleafcommon/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/03/23/phoneorcomputer/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: '页面 ID', // 可选。默认为 location.href
+        owner: 'malimingwq',
+        repo: 'malimingwq.github.io',
+        oauth: {
+            client_id: '6d5ae07bed3f6aae099f',
+            client_secret: 'e02cddc9ff5ae3667c5137df2adcf384ef9d3108',
+        },
+    })
+    gitment.render('container')
+</script>
+
 
 
                     

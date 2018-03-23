@@ -45,7 +45,7 @@
     
     <title>
         
-            about me | 
+            wangEditor2上传图片 | 
         
         Jack&#39;s blog
     </title>
@@ -212,7 +212,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jack&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/about/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/22/wangEditor2/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jack&#39;s blog">
@@ -231,13 +231,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/about/">
+    <meta property="og:url" content="http://yoursite.com/2018/03/22/wangEditor2/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="about me | Jack&#39;s blog">
+    <meta property="og:title" content="wangEditor2上传图片 | Jack&#39;s blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="This is Jack&#39;s blog">
     
 
+    
+        <meta property="article:published_time" content="Thu Mar 22 2018 01:54:23 GMT+0800">
+        <meta property="article:modified_time" content="Fri Mar 23 2018 19:44:48 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -245,13 +248,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/about/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/22/wangEditor2/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/22/wangEditor2/index.html",
+    "headline": "wangEditor2上传图片",
+    "datePublished": "Thu Mar 22 2018 01:54:23 GMT+0800",
+    "dateModified": "Fri Mar 23 2018 19:44:48 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "maliming-Jack",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/maliming.jpg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jack&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "maliming&#39;s blog",
+    "description": "This is Jack&#39;s blog",
+}
+</script>
 
 
     
@@ -287,6 +320,39 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一-下载，创建编辑器以及配置"><span class="post-toc-number">1.</span> <span class="post-toc-text">一.下载，创建编辑器以及配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-下载wangEditor2的GitHub网址："><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.1 下载wangEditor2的GitHub网址：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-选取下载的文件夹中的dist，导入项目中。"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">1.2 选取下载的文件夹中的dist，导入项目中。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-3-创建编辑器："><span class="post-toc-number">1.3.</span> <span class="post-toc-text">1.3 创建编辑器：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-5-如果你用的thymeleaf，则执行修改功能时，可使用th-utext给创建富文本编辑器的div直接赋值-你添加到数据库中的编辑器内容"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">1.5 如果你用的thymeleaf，则执行修改功能时，可使用th:utext给创建富文本编辑器的div直接赋值(你添加到数据库中的编辑器内容)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二-Java-上传图片并回显"><span class="post-toc-number">2.</span> <span class="post-toc-text">二.Java 上传图片并回显</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1-返回结果的数据格式-上传图片的url地址，这和wangEditor3要求的json格式不同。"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">2.1 返回结果的数据格式:上传图片的url地址，这和wangEditor3要求的json格式不同。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-根据返回结果写Java上传类，返回图片的url"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.2 根据返回结果写Java上传类，返回图片的url</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -301,10 +367,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/Anime-aboutme.jpg)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/page/wangEditor3.png)">
     
             <p class="article-headline-p">
-                about me
+                wangEditor2上传图片
             </p>
         </div>
 
@@ -323,7 +389,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>maliming-Jack</strong>
-        <span>3月 21, 2018</span>
+        <span>3月 22, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -345,7 +411,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB5klEQVR42u3aSW7DMAwF0Nz/0u22QFH7k1KRWHxeBZnM5wUhDq+vI64XBgYGBgYGBsbHMF7x9fP7v3/716fXd+nFgIGBMZNxk9pawVX/J48BAwNjMiNJsj3AdbjNGDAwMDDi5Jiz80SMgYGBsSvhXodVKEcxMDAwthaxeWma8N5Wi2NgYDyQsTIY2PX6zfMNDAyMD2aUVxyC492uJPuPOyMYGBiPYiTLE9et/14avTn2XUaFgYGBUS1Be0OCHNnsGmJgYBzE2NXWr/KqKbt8wsXAwDiIkY8q8xtUi+HqYREDA2MaI//T68ZZtdGfpN2boyoGBsYwRhJuNU33HkphFIGBgTGGkS+P9hZbe8sczZ0RDAyMMYwkoPUSd6V8xcDAwIjGh8WyNj8UYmBgYOQjzN7r6spF/rAwMDAmM1aOeknxudKkKwwGMDAwjmYkB8FdDbUkERciwcDAGMbIb1ZdqugNALbtjGBgYBzEyK9qqZmXtUsjTAwMjKMZ64e5lRCTgrnQbsPAwDia0RsVrCfWlfcxMDBmMnqLqjeDxuLixbb5BgYGxmBGdUi5axiwOeFiYGAMY+SJMvm00ObDwMAYyVhZsKg2znrfxMDAmMxYX+TKH0c1aAwMDIznXhgYGBgYGBgYb72+AbJ8fYK7oQRsAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACaElEQVR42u3aQXLEIAwEwP3/p5MHbK0zIwzlTTWnVGIbmgMikl4//3q88PDw8PDw8PDwHsZ7xeP9rfcvvP/10/Of1nDD2vDw8PCO8P44akfPJG9dPzmcFw8PD+8g79OBe/1MDlsJIcna8PDw8L6X14aK2bx4eHh438hLkgv51uQpDzw8PLzn8JJ/+HN28p02tGzPteDh4eHFvLzIdP7no/U9PDw8vIBXtzTFV9tZIMnLZh9XiIeHh7eZlx/E16WsPDGRJCna9eDh4eGd5OWpgfyau5LOSLavSOPi4eHhHeG1LQIzdtu2laeM8fDw8J7Amx30LTuZMQpCeHh4eEd4SSr2XnB76CfBCQ8PD+88Ly9lzX6fNyUsbQQeHh7eZt71C3mxKv9aftwn6Y9hfQ8PDw/vJl4+Zo2ksyBxW2cEHh4e3k289hKcT5+naGdtBEXrAB4eHt6tvCQFsJKSuKt4VlzT8fDw8Dbz2tLXrNifhJNZKIqu1Hh4eHhHeO3EebJgls4oGmHx8PDwjvDWk615eaw99PPZ8fDw8M7w6peDxeWBpD70Z7kWPDw8vA28lQTESrGqbRQYBgY8PDy8zbykWJUXvfIvtIEBDw8P7wm864/miYM8zOTIYQEMDw8PbwOvHbPL7izRkG8BHh4e3kleW8Jvy12z1oQ2IOHh4eGd57UJhVmqd+mivBIY8PDw8LbxVq7Ls4CRt3nl24GHh4f3TF7bDtUuN38XDw8P71t4s8t3myBur914eHh453nJomctBS2jLZ7h4eHhnefdkAIoR7tNeVIDDw8Pbzfv/w08PDw8PDw8PLwHjF+uFx/rOMotBQAAAABJRU5ErkJggg==">
     
 </ul>
 
@@ -378,7 +444,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=about me&url=http://yoursite.com/about/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=wangEditor2上传图片&url=http://yoursite.com/2018/03/22/wangEditor2/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -387,7 +453,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=about me&url=http://yoursite.com/about/index.html&via=maliming-Jack" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=wangEditor2上传图片&url=http://yoursite.com/2018/03/22/wangEditor2/index.html&via=maliming-Jack" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -396,7 +462,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/22/wangEditor2/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -405,7 +471,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/22/wangEditor2/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -417,7 +483,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=about me&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=wangEditor2上传图片&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/03/22/wangEditor2/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -436,8 +502,15 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="about-me"><a href="#about-me" class="headerlink" title="about me"></a>about me</h2><p><strong>my name is maliming,English is called Jack<br>我比较喜欢宅在一个自己感到温暖的地方,喜欢面食,辣椒<br>喜欢看小说(名著,网文都可以),喜欢听音乐,最喜欢音乐是——Break Me Up: <a href="http://music.163.com/#/song?id=30590268" title="Break Me Up" target="_blank" rel="noopener">Break Me Up</a>。<br>喜欢轻松,自在的感觉,也喜欢跑步,喜欢动漫-龙珠,梦想就是能在夜晚下雨中的小湖上画船听雨眠٩(๑❛ᴗ❛๑)۶</strong></p>
-<h2 id="contact-me-联系我"><a href="#contact-me-联系我" class="headerlink" title="contact me(联系我)"></a>contact me(联系我)</h2><p><strong>email：<a href="mailto:wqmlm1365413148@outlook.com" title="email" target="_blank" rel="noopener">邮箱</a></strong><br><strong>GitHub： <a href="https://github.com/malimingwq/" title="GitHub" target="_blank" rel="noopener">GitHub</a></strong><br><strong>网易云：<a href="http://music.163.com/#/user/home?id=384456184" title="music" target="_blank" rel="noopener">网易云</a></strong><br><strong>QQ：1365413148</strong></p>
+        <p><strong> 我用的是myeclipse 2017,spring boot+thymeleaf项目,wangEditor2与wangeditor3的配置方式不同，切记看文档，最下方是官方文档。这是我早期写的博客：ssh使用wangEditor2：<a href="https://blog.csdn.net/malimingwq/article/details/76214865" title="wangEditor2" target="_blank" rel="noopener">wangEditor2</a> </strong></p>
+<h3 id="一-下载，创建编辑器以及配置"><a href="#一-下载，创建编辑器以及配置" class="headerlink" title="一.下载，创建编辑器以及配置"></a>一.下载，创建编辑器以及配置</h3><h4 id="1-1-下载wangEditor2的GitHub网址："><a href="#1-1-下载wangEditor2的GitHub网址：" class="headerlink" title="1.1 下载wangEditor2的GitHub网址："></a>1.1 下载wangEditor2的GitHub网址：</h4><p><a href="https://github.com/wangfupeng1988/wangEditor/releases" target="_blank" rel="noopener">https://github.com/wangfupeng1988/wangEditor/releases</a><br><strong>选取版本2的下载。</strong></p>
+<h4 id="1-2-选取下载的文件夹中的dist，导入项目中。"><a href="#1-2-选取下载的文件夹中的dist，导入项目中。" class="headerlink" title="1.2 选取下载的文件夹中的dist，导入项目中。"></a>1.2 选取下载的文件夹中的dist，导入项目中。</h4><h4 id="1-3-创建编辑器："><a href="#1-3-创建编辑器：" class="headerlink" title="1.3 创建编辑器："></a>1.3 创建编辑器：</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span> <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/dist/css/wangEditor.min.css&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">link</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 编辑器编辑，提交时执行js，获得编辑器的内容，赋值给textarea，用于向后台提交存入数据库 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">   function modifyContent() &#123;</span></span><br><span class="line"><span class="undefined">   	var content = document.getElementById("content");</span></span><br><span class="line"><span class="undefined">    content.value = editor.$txt.html();</span></span><br><span class="line"><span class="undefined">   &#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"@&#123;/admin/addUser&#125;"</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">onsubmit</span>=<span class="string">"modifyContent()"</span>&gt;</span></span><br><span class="line">		 <span class="comment">&lt;!-- 设置全屏功能的两个js文件，必须先引入jquery-1.10.2.min.js(1.7版本以上)，在引入wangEditor.min.js --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">th:src</span>=<span class="string">"@&#123;/dist/js/lib/jquery-1.10.2.min.js&#125;"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">th:src</span>=<span class="string">"@&#123;/dist/js/wangEditor.min.js&#125;"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- wangEditor2自带了全屏功能，但是自定义大小需要用父容器来控制 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"width:500px;height:400px;"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">textarea</span> <span class="attr">rows</span>=<span class="string">"5"</span> <span class="attr">cols</span>=<span class="string">"100"</span> <span class="attr">name</span>=<span class="string">"content"</span> <span class="attr">style</span>=<span class="string">"display:none;"</span> <span class="attr">id</span>=<span class="string">"content"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"editor"</span> <span class="attr">style</span>=<span class="string">"width:100%;height:400px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">	                        var E = window.wangEditor</span></span><br><span class="line"><span class="undefined">	                        var editor = new E('editor')</span></span><br><span class="line"><span class="undefined">	                        /* 这里是controller中上传图片方法的路径 */</span></span><br><span class="line"><span class="undefined">	     	                editor.config.uploadImgUrl = '/admin/uploadImage'</span></span><br><span class="line"><span class="undefined">	     	                /* 上传图片的默认名字 */</span></span><br><span class="line"><span class="undefined">	     	                editor.config.uploadImgFileName = 'myFileName'</span></span><br><span class="line"><span class="undefined">	                        editor.create()</span></span><br><span class="line"><span class="undefined">	    	         </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="1-5-如果你用的thymeleaf，则执行修改功能时，可使用th-utext给创建富文本编辑器的div直接赋值-你添加到数据库中的编辑器内容"><a href="#1-5-如果你用的thymeleaf，则执行修改功能时，可使用th-utext给创建富文本编辑器的div直接赋值-你添加到数据库中的编辑器内容" class="headerlink" title="1.5 如果你用的thymeleaf，则执行修改功能时，可使用th:utext给创建富文本编辑器的div直接赋值(你添加到数据库中的编辑器内容)"></a>1.5 如果你用的thymeleaf，则执行修改功能时，可使用th:utext给创建富文本编辑器的div直接赋值(你添加到数据库中的编辑器内容)</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"editor"</span> <span class="attr">th:utext</span>=<span class="string">"$&#123;users.content&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong> 若是使用的其他，如jsp，则可以使用编辑器的设置内容功能：editor.$txt.html(‘${users.content}’) </strong></p>
+<h3 id="二-Java-上传图片并回显"><a href="#二-Java-上传图片并回显" class="headerlink" title="二.Java 上传图片并回显"></a>二.Java 上传图片并回显</h3><h4 id="2-1-返回结果的数据格式-上传图片的url地址，这和wangEditor3要求的json格式不同。"><a href="#2-1-返回结果的数据格式-上传图片的url地址，这和wangEditor3要求的json格式不同。" class="headerlink" title="2.1 返回结果的数据格式:上传图片的url地址，这和wangEditor3要求的json格式不同。"></a>2.1 返回结果的数据格式:上传图片的url地址，这和wangEditor3要求的json格式不同。</h4><h4 id="2-2-根据返回结果写Java上传类，返回图片的url"><a href="#2-2-根据返回结果写Java上传类，返回图片的url" class="headerlink" title="2.2 根据返回结果写Java上传类，返回图片的url"></a>2.2 根据返回结果写Java上传类，返回图片的url</h4><p><strong> WangEditorController.java (为了方便，省去了service层，serviceImpl层，dao层) </strong></p>
+<p><strong>import java.io.File;<br>import java.io.IOException;<br>import java.util.UUID;<br>import javax.servlet.http.HttpServletRequest;<br>import javax.servlet.http.HttpServletResponse;<br>import javax.servlet.http.HttpSession;<br>import org.springframework.web.bind.annotation.RequestMapping;<br>import org.springframework.web.bind.annotation.RestController;<br>import org.springframework.web.multipart.MultipartFile;<br>import org.springframework.web.servlet.ModelAndView; </strong></p>
+<p><strong> @RequestMapping(“admin”)<br>@RestController<br>public class WangEditorController {<br>    //转到wangEditor2的界面<br>    @RequestMapping(value = “/wangEditor2”)<br>    public ModelAndView wangEditor2() {<br>        return new ModelAndView(“login”);//login.html<br>    }<br>    //上传图片并返回图片url，接收的图片名和wangEditor定义的图片名保持一致<br>    @RequestMapping(“uploadImage”)<br>    public void uploadImage(MultipartFile myFileName, HttpSession session, HttpServletRequest request,<br>            HttpServletResponse response) throws IOException {<br>        String realName = “”;<br>        if (myFileName != null) {<br>            String fileName = myFileName.getOriginalFilename();<br>            String fileNameExtension = fileName.substring(fileName.indexOf(“.”), fileName.length() - 1);<br>            // 生成实际存储的真实文件名<br>            realName = UUID.randomUUID().toString() + fileNameExtension;<br>            String realPath = session.getServletContext().getRealPath(“/upload/“);<br>            File uploadFile = new File(realPath, realName);<br>            myFileName.transferTo(uploadFile);<br>        }//upload是你保存上传图片的文件夹<br>        response.getWriter().write(request.getContextPath() + “/upload/“ + realName);<br>    }<br>} </strong><br><strong> 2.3 wangEditor2官方文档网址：<a href="https://www.kancloud.cn/wangfupeng/wangeditor2" target="_blank" rel="noopener">https://www.kancloud.cn/wangfupeng/wangeditor2</a><br>2.4 wangEditor的demo例子：<a href="http://www.wangeditor.com/" title="wangeditor3" target="_blank" rel="noopener">wangeditor3</a> </strong></p>
+<p><strong><font color="#FF0033">因为编辑器的缘故Java代码没有层次，所以复制到你用的IDE中,用IDE的代码规范功能规范一下</font><br>若是哪里有理解错误的或写错的地方，望各位读者评论或者私信指正，不胜感激。 </strong></p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -446,7 +519,7 @@
                             未经作者允许,禁止转载
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="http://yoursite.com/about/index.html">http://yoursite.com/about/index.html</a>
+                        <strong>本文链接：</strong><a href="http://yoursite.com/2018/03/22/wangEditor2/">http://yoursite.com/2018/03/22/wangEditor2/</a>
                     </p>
                 </blockquote>
         
@@ -494,11 +567,27 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
+        <a href="/2018/03/23/IDEAdeadline/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2018/03/21/wangEditor3/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -698,6 +787,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-22T14:37:34.179Z</updated>
+  <updated>2018-03-23T16:17:30.300Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,221 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Java使用网易云信发送短信验证码</title>
+    <link href="http://yoursite.com/2018/03/23/NetEaseShortMessage/"/>
+    <id>http://yoursite.com/2018/03/23/NetEaseShortMessage/</id>
+    <published>2018-03-23T14:45:17.000Z</published>
+    <updated>2018-03-23T16:17:30.300Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;一-注册登录&quot;&gt;&lt;a href=&quot;#一-注册登录&quot; class=&quot;headerlink&quot; title=&quot;一.注册登录&quot;&gt;&lt;/a&gt;一.注册登录&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;  1.1 网易云信网址:&lt;a href=&quot;https://netease.im/sms&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="JavaWeb" scheme="http://yoursite.com/categories/JavaWeb/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="shortmessage" scheme="http://yoursite.com/tags/shortmessage/"/>
+    
+      <category term="网易云信" scheme="http://yoursite.com/tags/%E7%BD%91%E6%98%93%E4%BA%91%E4%BF%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>No identifier specified for entity 报错</title>
+    <link href="http://yoursite.com/2018/03/23/Iderror/"/>
+    <id>http://yoursite.com/2018/03/23/Iderror/</id>
+    <published>2018-03-23T14:16:36.000Z</published>
+    <updated>2018-03-23T15:56:55.288Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;最近在使用Springboot和SpringData-jpa的时候使用junit测试的时候出现了问题&lt;/strong&gt;&lt;br&gt;&lt;strong&gt; &lt;font color=&quot;#FF0033&quot;&gt;报错为No identifier specified for
+        
+      
+    
+    </summary>
+    
+      <category term="JavaWebErrors" scheme="http://yoursite.com/categories/JavaWebErrors/"/>
+    
+    
+      <category term="No identifier specified for entity" scheme="http://yoursite.com/tags/No-identifier-specified-for-entity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>thymeleaf的简单用法-布局标签</title>
+    <link href="http://yoursite.com/2018/03/23/thymeleaflayout/"/>
+    <id>http://yoursite.com/2018/03/23/thymeleaflayout/</id>
+    <published>2018-03-23T07:54:30.000Z</published>
+    <updated>2018-03-23T13:41:43.071Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt; 最近简单学习使用了thymeleaf模板引擎，现在把一些理解写出来，可能理解的很浅或者有偏差，希望读者理解，并评论对我指正，让我能够有所进步，并改正偏差。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="thymeleaf" scheme="http://yoursite.com/categories/thymeleaf/"/>
+    
+    
+      <category term="thymeleaf" scheme="http://yoursite.com/tags/thymeleaf/"/>
+    
+      <category term="布局标签" scheme="http://yoursite.com/tags/%E5%B8%83%E5%B1%80%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>thymeleaf的简单用法-常用标签</title>
+    <link href="http://yoursite.com/2018/03/23/thymeleafcommon/"/>
+    <id>http://yoursite.com/2018/03/23/thymeleafcommon/</id>
+    <published>2018-03-23T06:52:08.000Z</published>
+    <updated>2018-03-23T07:43:18.637Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;一-常用标签的用法&quot;&gt;&lt;a href=&quot;#一-常用标签的用法&quot; class=&quot;headerlink&quot; title=&quot;一.常用标签的用法&quot;&gt;&lt;/a&gt;一.常用标签的用法&lt;/h3&gt;&lt;h4 id=&quot;1-1-th-text-用于文本的显示-并且可以进行简单的计算。&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="thymeleaf" scheme="http://yoursite.com/categories/thymeleaf/"/>
+    
+    
+      <category term="thymeleaf" scheme="http://yoursite.com/tags/thymeleaf/"/>
+    
+      <category term="常用标签" scheme="http://yoursite.com/tags/%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MD5信息摘要算法的简单理解</title>
+    <link href="http://yoursite.com/2018/03/23/md5/"/>
+    <id>http://yoursite.com/2018/03/23/md5/</id>
+    <published>2018-03-23T03:30:32.000Z</published>
+    <updated>2018-03-23T11:44:48.294Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt; 最近在做一个微项目的时候用到了MD5信息摘要算法，所以就简单的了解了一下，我把我的了解写下来，用作以后的学习。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;一-MD5的简单理解&quot;&gt;&lt;a href=&quot;#一-MD5的简单理解&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="JavaWeb" scheme="http://yoursite.com/categories/JavaWeb/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>java判断手机端和PC电脑端</title>
+    <link href="http://yoursite.com/2018/03/23/phoneorcomputer/"/>
+    <id>http://yoursite.com/2018/03/23/phoneorcomputer/</id>
+    <published>2018-03-23T02:35:16.000Z</published>
+    <updated>2018-03-23T03:19:33.539Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt; 这几天一直在想如何用Java判断Http请求是来自手机端还是PC电脑端，想做一个网站签到功能(不允许手机端签到)&lt;br&gt;于是去搜索了一下，发现在请求头中有个属性叫User-Agent(用户代理)，我们可以取得User-Agent的值，然后进行筛选判断
+        
+      
+    
+    </summary>
+    
+      <category term="JavaWeb" scheme="http://yoursite.com/categories/JavaWeb/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>查看 IntelliJ IDEA 使用期限</title>
+    <link href="http://yoursite.com/2018/03/23/IDEAdeadline/"/>
+    <id>http://yoursite.com/2018/03/23/IDEAdeadline/</id>
+    <published>2018-03-22T18:08:48.000Z</published>
+    <updated>2018-03-22T18:30:54.623Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt; &lt;font color=&quot;#FF0033&quot;&gt;首先打开IDEA，选择上面的选项help，然后help-&amp;gt;Register…或者help-&amp;gt;About&lt;br&gt;看图，有图有真相&lt;/font&gt; &lt;/strong&gt;&lt;br&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="IDEA" scheme="http://yoursite.com/categories/IDEA/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>wangEditor2上传图片</title>
+    <link href="http://yoursite.com/2018/03/22/wangEditor2/"/>
+    <id>http://yoursite.com/2018/03/22/wangEditor2/</id>
+    <published>2018-03-21T17:54:23.000Z</published>
+    <updated>2018-03-23T11:44:48.280Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt; 我用的是myeclipse 2017,spring boot+thymeleaf项目,wangEditor2与wangeditor3的配置方式不同，切记看文档，最下方是官方文档。这是我早期写的博客：ssh使用wangEditor2：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="wangEditor" scheme="http://yoursite.com/categories/wangEditor/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>wangEditor3上传图片</title>
     <link href="http://yoursite.com/2018/03/21/wangEditor3/"/>
     <id>http://yoursite.com/2018/03/21/wangEditor3/</id>
     <published>2018-03-21T04:54:23.000Z</published>
-    <updated>2018-03-22T14:37:34.179Z</updated>
+    <updated>2018-03-23T11:44:48.261Z</updated>
     
     <summary type="html">
     
