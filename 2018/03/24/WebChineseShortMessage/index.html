@@ -45,7 +45,7 @@
     
     <title>
         
-            归档: 2018 | 
+            Java使用中国网建发送短信验证码 | 
         
         Jack&#39;s blog
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="This is Jack&#39;s blog">
-    <meta name="keywords" content="maliming&#39;s blog">
+    <meta name="keywords" content="maliming&#39;s blog,java,shortmessage,中国网建">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -212,7 +212,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jack&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/archives/2018/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/24/WebChineseShortMessage/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jack&#39;s blog">
@@ -231,13 +231,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/archives/2018/">
+    <meta property="og:url" content="http://yoursite.com/2018/03/24/WebChineseShortMessage/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2018 | Jack&#39;s blog">
+    <meta property="og:title" content="Java使用中国网建发送短信验证码 | Jack&#39;s blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="This is Jack&#39;s blog">
-    
+    <meta property="og:article:tag" content="java"> <meta property="og:article:tag" content="shortmessage"> <meta property="og:article:tag" content="中国网建"> 
 
+    
+        <meta property="article:published_time" content="Sat Mar 24 2018 08:39:19 GMT+0800">
+        <meta property="article:modified_time" content="Sat Mar 24 2018 09:26:16 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -245,13 +248,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/2018/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/24/WebChineseShortMessage/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/24/WebChineseShortMessage/index.html",
+    "headline": "Java使用中国网建发送短信验证码",
+    "datePublished": "Sat Mar 24 2018 08:39:19 GMT+0800",
+    "dateModified": "Sat Mar 24 2018 09:26:16 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "maliming-Jack",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/maliming.jpg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jack&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",java,shortmessage,中国网建maliming&#39;s blog",
+    "description": "This is Jack&#39;s blog",
+}
+</script>
 
 
     
@@ -285,634 +318,306 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一-注册，登录以及注意事项。"><span class="post-toc-number">1.</span> <span class="post-toc-text">一.注册，登录以及注意事项。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二-Java示例。"><span class="post-toc-number">2.</span> <span class="post-toc-text">二.Java示例。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1-接口地址"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">2.1 接口地址</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-短信发送后返回值以及意义"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.2 短信发送后返回值以及意义</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-Java示例"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">2.3 Java示例</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/neteaseemail.jpg">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/page/NetEase.png)">
+    
+            <p class="article-headline-p">
+                Java使用中国网建发送短信验证码
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/maliming.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>maliming-Jack</strong>
+        <span>3月 24, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC1UlEQVR42u3aQXLjMAwEQP//09kPxPIAkLOS0Dq5UrbIZg4oDPj6Wfm8sLGxsbGxsbGxsS/JfsXPLy86/Obxbz9s8c3bJnvGxsbGfjY72UTy97dLnsro7RkbGxt7AztZ5rhEHW/o+DiSMtnbMzY2NjZ2Qn1H6rUfH5oKbGxsbOwvFLBvPEkhxMbGxsauBjTJMCAvQknZu0SWho2NjX15di+a/7+f/3S+jY2NjX1h9jcu01Qv9HxoIQZXf7CxsbE3sPPC0LuyU42Hjj/39omNjY29gZ3AqsXmrAHt8VrJMWFjY2PvYSdRfi/WnyDnbQ82Njb2HvZZzUbyzl6Ry6MlbGxs7D3sfBiQBP0JL79wk6yVtDfY2NjYG9gJI28VesPdvB2qxk/Y2NjYe9jV5qFa2Caj3LwolgsYNjY29s3Zeemqjg3yUlRdJR8AY2NjY+9h94a7efBUvbIzD5WwsbGx97AnA93jb+ZHlu+n91tsbGzsZ7Orkc3kMk3vncmBnhYqYWNjY9+QnQf3ebg/oVb/Jcm62NjY2M9mTwa089A/H1S8gufDQWBjY2M/mt0b+laPowrLV8TGxsbezM7biV4jUb24Uw2bTguVsLGxsW/Ono9gq0dQHUXk44FCloaNjY39CHbeHlRj+jz0z8tedSCNjY2NvY1dLV3z48sHutUBAzY2NvZmdm8MnAf6eUnLr2BGhRMbGxt7ATsf3FYLWDWESt5TDcWwsbGxd7LzkjMZAPTCpvKYARsbG/uh7BMKQ1CE8qal9/5oXIGNjY39UHa1MOSweenqjRMKoRI2Njb2g9h50TorEpoUwmQIMRr0YmNjY9+WnRSeasDUW2vyNLM0bGxsbOxW3FNdpdfeYGNjY2OfEOjEh9VDJi0NNjY29gZ2PtydDHon+GRsXC5g2NjY2I9gV8Oa6mC4+pfeBaAvzrexsbGxL8ze82BjY2NjY2NjY2Nf5vkHzS7NgDCib/MAAAAASUVORK5CYII=">
+    
+</ul>
+
     
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/24/NetEaseEmail/">Java使用网易Email发邮件</a></p>
-    </div>
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/java/">java</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/shortmessage/">shortmessage</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/中国网建/">中国网建</a>
+    </ul>
+    
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
         
-            
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
         
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/24/NetEaseEmail/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 24, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/JavaWeb/">JavaWeb</a>
-              </span>
-            
+    
 
-            
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Java使用中国网建发送短信验证码&url=http://yoursite.com/2018/03/24/WebChineseShortMessage/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
 
-            
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Java使用中国网建发送短信验证码&url=http://yoursite.com/2018/03/24/WebChineseShortMessage/index.html&via=maliming-Jack" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/24/WebChineseShortMessage/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/24/WebChineseShortMessage/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=Java使用中国网建发送短信验证码&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/03/24/WebChineseShortMessage/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
 </div>
 
-            
-            
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="一-注册，登录以及注意事项。"><a href="#一-注册，登录以及注意事项。" class="headerlink" title="一.注册，登录以及注意事项。"></a>一.注册，登录以及注意事项。</h3><p><strong> 1.1 中国网建网址：<a href="http://www.smschinese.cn" title="中国网建" target="_blank" rel="noopener">http://www.smschinese.cn</a> </strong></p>
+<p><strong> 1.2 注册时用户名，以及姓名都可以随便写，邮箱只会验证存在与否，不会发验证码验证，手机号填自己的(接收自己的初始密码)。 </strong></p>
+<p><strong> 1.3 登录到用户首页，有快捷菜单，发送短信；发送彩信；Excel短信，先点击发送短信，一定要先设置签名(否则无法发送短信)。 </strong></p>
+<p><strong> 1.4 在旁边的菜单中有修改短信密钥，记录下短信密钥。 </strong></p>
+<h3 id="二-Java示例。"><a href="#二-Java示例。" class="headerlink" title="二.Java示例。"></a>二.Java示例。</h3><h4 id="2-1-接口地址"><a href="#2-1-接口地址" class="headerlink" title="2.1 接口地址"></a>2.1 接口地址</h4><p><strong> <font color="#FF0033">GBK编码发送接口地址：<br><a href="http://gbk.api.smschinese.cn/?Uid=本站用户名&amp;Key=短信密钥&amp;smsMob=手机号码&amp;smsText=短信内容" target="_blank" rel="noopener">http://gbk.api.smschinese.cn/?Uid=本站用户名&amp;Key=短信密钥&amp;smsMob=手机号码&amp;smsText=短信内容</a><br>UTF-8编码发送接口地址：<br><a href="http://utf8.api.smschinese.cn/?Uid=本站用户名&amp;Key=短信密钥&amp;smsMob=手机号码&amp;smsText=短信内容" target="_blank" rel="noopener">http://utf8.api.smschinese.cn/?Uid=本站用户名&amp;Key=短信密钥&amp;smsMob=手机号码&amp;smsText=短信内容</a><br>获取短信数量接口地址(UTF-8)：<br><a href="http://www.smschinese.cn/web_api/SMS/?Action=SMS_Num&amp;Uid=本站用户名&amp;Key=短信密钥" target="_blank" rel="noopener">http://www.smschinese.cn/web_api/SMS/?Action=SMS_Num&amp;Uid=本站用户名&amp;Key=短信密钥</a><br>获取短信数量接口地址(GBK)：<br><a href="http://www.smschinese.cn/web_api/SMS/GBK/?Action=SMS_Num&amp;Uid=本站用户名&amp;Key=短信密钥" target="_blank" rel="noopener">http://www.smschinese.cn/web_api/SMS/GBK/?Action=SMS_Num&amp;Uid=本站用户名&amp;Key=短信密钥</a></font> </strong></p>
+<h4 id="2-2-短信发送后返回值以及意义"><a href="#2-2-短信发送后返回值以及意义" class="headerlink" title="2.2 短信发送后返回值以及意义"></a>2.2 短信发送后返回值以及意义</h4><p><strong><font color="#FF0033"> -1（没有该账户）；-2（短信密钥错误）；-3（短信数量不足）；-4（手机号不正确）；-6（IP被限制）；-14（短信内容出现非法字符）；-21（MD5接口密钥加密不正确）；-41（手机号为空）；-42（短信内容为空）；-51（短信签名格式不正确<br>接口签名格式为：【签名内容】）。</font> </strong></p>
+<h4 id="2-3-Java示例"><a href="#2-3-Java示例" class="headerlink" title="2.3 Java示例"></a>2.3 Java示例</h4><p><strong> import java.io.IOException;<br>import org.apache.commons.httpclient.Header;<br>import org.apache.commons.httpclient.HttpClient;<br>import org.apache.commons.httpclient.HttpException;<br>import org.apache.commons.httpclient.NameValuePair;<br>import org.apache.commons.httpclient.methods.PostMethod; </strong></p>
+<p><strong> public class SendMsg {<br>    private static final String SERVER_URL = “<a href="http://utf8.api.smschinese.cn&quot;" target="_blank" rel="noopener">http://utf8.api.smschinese.cn&quot;</a>;<br>    private static final String USERNAME = “你的用户名”;<br>    private static final String KEY = “短信密钥”;<br>    public static void main(String[] args) throws Exception {<br>        String phone = “被发送的短信的手机号”;<br>        String smsText = “短信发送的内容”;<br>        String result = SendMessage(phone, smsText);<br>        int allResult = Integer.valueOf(result).intValue();<br>        if (allResult &gt; 0) {<br>            System.out.println(“发送成功”);<br>        } else {<br>            System.out.println(“发送失败”);<br>        }<br>    }<br>    public static String SendMessage(String phone, String smsText) throws HttpException, IOException {<br>        HttpClient client = new HttpClient();<br>        PostMethod post = new PostMethod(SERVER_URL);<br>        post.addRequestHeader(“Content-Type”, “application/x-www-form-urlencoded;charset=utf-8”);// 在头文件中设置转码<br>        NameValuePair[] data = { new NameValuePair(“Uid”, USERNAME), new NameValuePair(“Key”, KEY),<br>                new NameValuePair(“smsMob”, phone), new NameValuePair(“smsText”, smsText) };<br>        post.setRequestBody(data);<br>        client.executeMethod(post);<br>        // 请求头信息<br>        Header[] headers = post.getResponseHeaders();<br>        // 输出请求头信息<br>        // for (Header h : headers) { System.out.println(h.toString()); }<br>        // http状态码<br>        int statusCode = post.getStatusCode();<br>        System.out.println(“statusCode:” + statusCode);<br>        String result = new String(post.getResponseBodyAsString().getBytes(“utf-8”));<br>        System.out.println(result); // 打印返回消息状态<br>        post.releaseConnection();<br>        return result;<br>    }<br>} </strong></p>
+<p><strong><font color="#FF0033">因为编辑器的缘故Java代码没有层次，所以复制到你用的IDE中,用IDE的代码规范功能规范一下</font><br>若是哪里有理解错误的或写错的地方，望各位读者评论或者私信指正，不胜感激。 </strong></p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            未经作者允许,禁止转载
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://yoursite.com/2018/03/24/WebChineseShortMessage/">http://yoursite.com/2018/03/24/WebChineseShortMessage/</a>
+                    </p>
+                </blockquote>
         
     
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
     
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/qqemail.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/24/QQEmail/">Java使用QQEmail发邮件</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-             我们在做项目的时候，经常会遇到使用邮箱发送验证码,图片,附件等需求,一般国内主要使用qq 邮箱与网易邮箱，这里选用qq邮箱
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/24/QQEmail/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 24, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/JavaWeb/">JavaWeb</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
 </div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/NetEase.png">
-    
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/24/WebChineseShortMessage/">Java使用中国网建发送短信验证码</a></p>
-    </div>
+                
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/24/WebChineseShortMessage/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 24, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/JavaWeb/">JavaWeb</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 gitcoment -->
+<div id="gitment-comment">
+    <!-- Gitment 评论框 -->
+<div id="container"></div>
 </div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/NetEase.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/23/NetEaseShortMessage/">Java使用网易云信发送短信验证码</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            一.注册登...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/23/NetEaseShortMessage/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/JavaWeb/">JavaWeb</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/Iderror.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/23/Iderror/">No identifier specified for entity 报错</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            最近在使用Springboot和SpringData-jpa的时候使用junit测试的时候出现了问题
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/23/Iderror/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/JavaWebErrors/">JavaWebErrors</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/thymeleaf.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/23/thymeleaflayout/">thymeleaf的简单用法-布局标签</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-             最近简单学习使用了thymeleaf模板引擎，现在把一些理解写出来，可能理解的很浅或者有偏差，希望读者理解，并评论对我指正，让我能...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/23/thymeleaflayout/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/thymeleaf/">thymeleaf</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/thymeleaf.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/23/thymeleafcommon/">thymeleaf的简单用法-常用标签</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/23/thymeleafcommon/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/thymeleaf/">thymeleaf</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/md5.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/23/md5/">MD5信息摘要算法的简单理解</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-             最近在做一个微项目的时候用到了MD5信息摘要算法，所以就简单的了解了一下，我把我的了解写下来，用作以后的学习。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/23/md5/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/JavaWeb/">JavaWeb</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/phoneorcomputer.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/23/phoneorcomputer/">java判断手机端和PC电脑端</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-             这几天一直在想如何用Java判断Http请求是来自手机端还是PC电脑端，想做一个网站签到功能(不允许手机端签到)于是去搜索...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/23/phoneorcomputer/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/JavaWeb/">JavaWeb</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/page/idea.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/23/IDEAdeadline/">查看 IntelliJ IDEA 使用期限</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-             首先打开IDEA，选择上面的选项help，然后help-&gt;Register…或者...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/23/IDEAdeadline/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/maliming.jpg" width="44px" height="44px" alt="maliming-Jack's avatar">
-            </div>
-            <div>
-                <strong>maliming-Jack</strong>
-                <span>3月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/IDEA/">IDEA</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/page/2/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
+<style>
+    #gitment-comment{
+        background-color: #eee;
+        padding: 2pc;
     }
+</style>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        //id: '页面 ID', // 可选。默认为 location.href
+        owner: 'malimingwq',
+        repo: 'malimingwq.github.io',
+        oauth: {
+            client_id: '6d5ae07bed3f6aae099f',
+            client_secret: 'e02cddc9ff5ae3667c5137df2adcf384ef9d3108',
+        },
+    })
+    gitment.render('container')
 </script>
 
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
     
-</div>
+        <a href="/2018/03/24/QQEmail/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/03/23/NetEaseShortMessage/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: '页面 ID', // 可选。默认为 location.href
+        owner: 'malimingwq',
+        repo: 'malimingwq.github.io',
+        oauth: {
+            client_id: '6d5ae07bed3f6aae099f',
+            client_secret: 'e02cddc9ff5ae3667c5137df2adcf384ef9d3108',
+        },
+    })
+    gitment.render('container')
+</script>
+
 
 
                     

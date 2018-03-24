@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-23T16:17:30.300Z</updated>
+  <updated>2018-03-24T09:22:43.932Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,97 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java使用网易Email发邮件</title>
+    <link href="http://yoursite.com/2018/03/24/NetEaseEmail/"/>
+    <id>http://yoursite.com/2018/03/24/NetEaseEmail/</id>
+    <published>2018-03-24T08:50:02.000Z</published>
+    <updated>2018-03-24T09:22:43.932Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;一-开启网易邮箱-POP3-IMAP-SMTP服务&quot;&gt;&lt;a href=&quot;#一-开启网易邮箱-POP3-IMAP-SMTP服务&quot; class=&quot;headerlink&quot; title=&quot;一.开启网易邮箱 POP3/IMAP/SMTP服务&quot;&gt;&lt;/a&gt;一.开启网易邮箱
+        
+      
+    
+    </summary>
+    
+      <category term="JavaWeb" scheme="http://yoursite.com/categories/JavaWeb/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="email" scheme="http://yoursite.com/tags/email/"/>
+    
+      <category term="网易邮箱" scheme="http://yoursite.com/tags/%E7%BD%91%E6%98%93%E9%82%AE%E7%AE%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java使用QQEmail发邮件</title>
+    <link href="http://yoursite.com/2018/03/24/QQEmail/"/>
+    <id>http://yoursite.com/2018/03/24/QQEmail/</id>
+    <published>2018-03-24T02:59:43.000Z</published>
+    <updated>2018-03-24T08:26:57.096Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt; 我们在做项目的时候，经常会遇到使用邮箱发送验证码,图片,附件等需求,一般国内主要使用qq 邮箱与网易邮箱，这里选用qq邮箱&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;一-开启qq邮箱POP3-SMTP服务&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="JavaWeb" scheme="http://yoursite.com/categories/JavaWeb/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="email" scheme="http://yoursite.com/tags/email/"/>
+    
+      <category term="QQ邮箱" scheme="http://yoursite.com/tags/QQ%E9%82%AE%E7%AE%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java使用中国网建发送短信验证码</title>
+    <link href="http://yoursite.com/2018/03/24/WebChineseShortMessage/"/>
+    <id>http://yoursite.com/2018/03/24/WebChineseShortMessage/</id>
+    <published>2018-03-24T00:39:19.000Z</published>
+    <updated>2018-03-24T01:26:16.851Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;一-注册，登录以及注意事项。&quot;&gt;&lt;a href=&quot;#一-注册，登录以及注意事项。&quot; class=&quot;headerlink&quot; title=&quot;一.注册，登录以及注意事项。&quot;&gt;&lt;/a&gt;一.注册，登录以及注意事项。&lt;/h3&gt;&lt;p&gt;&lt;strong&gt; 1.1
+        
+      
+    
+    </summary>
+    
+      <category term="JavaWeb" scheme="http://yoursite.com/categories/JavaWeb/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="shortmessage" scheme="http://yoursite.com/tags/shortmessage/"/>
+    
+      <category term="中国网建" scheme="http://yoursite.com/tags/%E4%B8%AD%E5%9B%BD%E7%BD%91%E5%BB%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>Java使用网易云信发送短信验证码</title>

@@ -45,7 +45,7 @@
     
     <title>
         
-            MD5信息摘要算法的简单理解 | 
+            Java使用网易Email发邮件 | 
         
         Jack&#39;s blog
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="This is Jack&#39;s blog">
-    <meta name="keywords" content="maliming&#39;s blog">
+    <meta name="keywords" content="maliming&#39;s blog,java,email,网易邮箱">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -212,7 +212,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jack&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/23/md5/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/24/NetEaseEmail/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jack&#39;s blog">
@@ -231,16 +231,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/03/23/md5/">
+    <meta property="og:url" content="http://yoursite.com/2018/03/24/NetEaseEmail/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="MD5信息摘要算法的简单理解 | Jack&#39;s blog">
+    <meta property="og:title" content="Java使用网易Email发邮件 | Jack&#39;s blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="This is Jack&#39;s blog">
-    
+    <meta property="og:article:tag" content="java"> <meta property="og:article:tag" content="email"> <meta property="og:article:tag" content="网易邮箱"> 
 
     
-        <meta property="article:published_time" content="Fri Mar 23 2018 11:30:32 GMT+0800">
-        <meta property="article:modified_time" content="Fri Mar 23 2018 19:44:48 GMT+0800">
+        <meta property="article:published_time" content="Sat Mar 24 2018 16:50:02 GMT+0800">
+        <meta property="article:modified_time" content="Sat Mar 24 2018 17:22:43 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -248,7 +248,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/03/23/md5/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/24/NetEaseEmail/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -260,10 +260,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/03/23/md5/index.html",
-    "headline": "MD5信息摘要算法的简单理解",
-    "datePublished": "Fri Mar 23 2018 11:30:32 GMT+0800",
-    "dateModified": "Fri Mar 23 2018 19:44:48 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/24/NetEaseEmail/index.html",
+    "headline": "Java使用网易Email发邮件",
+    "datePublished": "Sat Mar 24 2018 16:50:02 GMT+0800",
+    "dateModified": "Sat Mar 24 2018 17:22:43 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "maliming-Jack",
@@ -281,7 +281,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": "maliming&#39;s blog",
+    "keywords": ",java,email,网易邮箱maliming&#39;s blog",
     "description": "This is Jack&#39;s blog",
 }
 </script>
@@ -347,7 +347,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一-MD5的简单理解"><span class="post-toc-number">1.</span> <span class="post-toc-text">一.MD5的简单理解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-摘要"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.1.摘要</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-加密"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">1.2.加密</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二-MD5算法的特点"><span class="post-toc-number">2.</span> <span class="post-toc-text">二.MD5算法的特点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1-压缩性"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">2.1.压缩性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-易于计算"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.2.易于计算</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-细微性"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">2.3.细微性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-4-不可逆性"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">2.4.不可逆性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-5-弱相同性"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">2.5.弱相同性</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三-MD5破解讲解"><span class="post-toc-number">3.</span> <span class="post-toc-text">三.MD5破解讲解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四-MD5的加盐"><span class="post-toc-number">4.</span> <span class="post-toc-text">四.MD5的加盐</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#五-MD5值的位数"><span class="post-toc-number">5.</span> <span class="post-toc-text">五.MD5值的位数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#六-MD5工具类（java）"><span class="post-toc-number">6.</span> <span class="post-toc-text">六.MD5工具类（java）</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一-开启网易邮箱-POP3-IMAP-SMTP服务"><span class="post-toc-number">1.</span> <span class="post-toc-text">一.开启网易邮箱 POP3/IMAP/SMTP服务</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-登录网易163邮箱，点击上方设置中的POP3-IMAP-SMTP，然后把全部服务勾选，保存，再点击左侧的客户端授权密码，设置自己邮箱的授权密码"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.1 登录网易163邮箱，点击上方设置中的POP3/IMAP/SMTP，然后把全部服务勾选，保存，再点击左侧的客户端授权密码，设置自己邮箱的授权密码</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二-Java发送纯文本邮件示例"><span class="post-toc-number">2.</span> <span class="post-toc-text">二.Java发送纯文本邮件示例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三-Java发送图片附件邮件示例"><span class="post-toc-number">3.</span> <span class="post-toc-text">三.Java发送图片附件邮件示例</span></a></li></ol>
     </ul>
     
 
@@ -367,10 +367,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/page/md5.jpg)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/page/neteaseemail.jpg)">
     
             <p class="article-headline-p">
-                MD5信息摘要算法的简单理解
+                Java使用网易Email发邮件
             </p>
         </div>
 
@@ -389,7 +389,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>maliming-Jack</strong>
-        <span>3月 23, 2018</span>
+        <span>3月 24, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -411,13 +411,22 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACcElEQVR42u3awW7rIBQE0Pz/T7fbSi3ODGBiVcerp5QQjhfAm3tfX//6eeHh4eHh4eHh4T2M94qfn+NHM4zG/B5/PcPc2vDw8PBO8t5stYOlj747Wuj1nO1rGs6Mh4eHd5DXHgb59t2+jqW14eHh4T2MV1xtF44HPDw8vP/Eux452tyTkcn1HQ8PD+9pvLng9fpCnMyf8A5lLXh4eHgxby5QOPPvj9X38PDw8Aa89lm/TO89SP6YBw8PD+9mXhKkXn8+dzluy2zJavHw8PDO8PIfW9/05xoFkv8A4OHh4Z3kzW3fych2/snoAQ8PD+9DvPUgYBesbSaIwgg8PDy8rbx2ojZEaGFtIIKHh4f3Kd6uYv/KJ20sgoeHh/cEXgtoL7tt8awtueHh4eGd5yWLy6PbaClxOFv8FQ8PD+9m3lwhf25Z+dafRxJ4eHh4T+Alpfq8qN+2+M/Fu3h4eHjneW2oOvfz7dHSfhcPDw/vDC8vU62X+etSVnnw4OHh4Z3hJS1NbVNpG0+0L+JNcQ4PDw/vCK+ND1Yu33PX6+ITPDw8vJt5+Ta9Hh+0oW2+Kjw8PLzzvLmyVs5OXuLcBTqKcfHw8PC28pJFRK1OcbNU+8o2xLh4eHh4W3ntk8e1ycj2W5PnHh4eHt5WXrsprzdptW1bdaCMh4eHd4S3Euzmke7cFXkpxsXDw8O7mZeXo9pS1t4w4s2LwMPDw3sYr/3JvC1grsFr88GAh4eHdxsvnyFvLFg/EvDw8PDO8/KiVwLIj4eVFq7NWQseHh5ezGuDgLZpIDlm2jLbjfU9PDw8vK1NV89/8PDw8PDw8PDwHvB8A2WH41+RL8IzAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACcUlEQVR42u3bQVKEQAwF0Ln/pXVrlQ7+34EGrcfKQmj6sSCpJPP6+NfHCw8PDw8PDw8P72G8V3x8v/7rmbcPe/Pf47vW9oaHh4e3k5c8Jjnz7pFrz1rcGx4eHt5G3nEwyD/0x4HkOMAk6xzvBw8PD+9pvCQMJGuetQ4eHh7e3+K1JYMkPODh4eH9LV5bIMg/6JP1t9Za8PDw8GJe2wDb+fcN/T08PDy8Q97iYFM5QJA31dp1flgZDw8P72Je3tzKH7xWemjHFBZrLXh4eHhjXv6hn5cY2uGA/Ho8PDy8nby8TdUWdidjW3najYeHh3cXb5IQHw+etuusvTI8PDy8u3j58FMCS6iT13RyrQUPDw8v5iU35EXevKgxT6AXRwfw8PDwLqhztltPPtx5iTbfyWKtBQ8PD2/Ma9v/+TVF+SBIyovGGx4eHt7FvLa40KbjyUbbF/TLa8XDw8O7mNcGg3YTa8l3O0yAh4eHt5O3tkTbGJvfVbwCPDw8vFt5ObUuto6HrvDw8PDu4rUbbVPtljcpheDh4eHt5K0NhubljHxwP2+GFYEBDw8P71RePhLatrKO12mT9SLk4OHh4V3MO6sNNmmYrQUYPDw8vLt4k9Q2T46TD/rxyqMqNR4eHt6pvLOKs+3AQVLGXUy48fDw8C7mveIjaVwlwSN/KW1ZBA8PD28nLw8G8/OTnwFEAQYPDw9vI28ybNo2vZIAszb4hYeHh/dMXluwSEqx8/FWPDw8vGfy2pGpFpNfj4eHh/cEXl6MaAcL2kQ8b5sVKTUeHh7eqby2AdY2/lvG2pp4eHh4e3j/78DDw8PDw8PDw3vA8QmmvDtOiZYBLgAAAABJRU5ErkJggg==">
     
 </ul>
 
     
 
     <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/email/">email</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/java/">java</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/网易邮箱/">网易邮箱</a>
+    </ul>
     
 
     <!-- Share -->
@@ -444,7 +453,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=MD5信息摘要算法的简单理解&url=http://yoursite.com/2018/03/23/md5/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Java使用网易Email发邮件&url=http://yoursite.com/2018/03/24/NetEaseEmail/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -453,7 +462,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=MD5信息摘要算法的简单理解&url=http://yoursite.com/2018/03/23/md5/index.html&via=maliming-Jack" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Java使用网易Email发邮件&url=http://yoursite.com/2018/03/24/NetEaseEmail/index.html&via=maliming-Jack" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -462,7 +471,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/23/md5/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/24/NetEaseEmail/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -471,7 +480,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/23/md5/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/24/NetEaseEmail/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -483,7 +492,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=MD5信息摘要算法的简单理解&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/03/23/md5/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=Java使用网易Email发邮件&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/03/24/NetEaseEmail/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -502,21 +511,28 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p><strong> 最近在做一个微项目的时候用到了MD5信息摘要算法，所以就简单的了解了一下，我把我的了解写下来，用作以后的学习。</strong></p>
-<h3 id="一-MD5的简单理解"><a href="#一-MD5的简单理解" class="headerlink" title="一.MD5的简单理解"></a>一.MD5的简单理解</h3><p><strong> MD5的全称是Message-Digest Algorithm 5(信息摘要算法)，它面向的是32位的电脑，MD5算法会获得一个随机的长度的信息并产生一个128位的信息摘要，(也就是说可以生成一个固定长度为128bit的二进制串)。它是一个信息摘要算法，而摘要和加密是有区别的。</strong></p>
-<h4 id="1-1-摘要"><a href="#1-1-摘要" class="headerlink" title="1.1.摘要"></a>1.1.摘要</h4><p><strong> <font color="#FF0033">摘要是哈希值，我们可以通过散列算法比如MD5算法得到哈希值。它只是用于验证数据完整性和唯一性的哈希值，<br>不管原始数据是什么样的，得到的哈希值都是固定长度并且并不是直接由原始数据加密后的密文，只是根据原始数据生成了一个验证身份的令牌。所以我们无法通过摘要解密得到原始数据。</font> </strong></p>
-<h4 id="1-2-加密"><a href="#1-2-加密" class="headerlink" title="1.2.加密"></a>1.2.加密</h4><p><strong> <font color="#FF0033"> 加密是加密算法直接由明文加密成为密文，我们可以通过秘钥和解密算法将密文准确的还原成明文。</font></strong></p>
-<h3 id="二-MD5算法的特点"><a href="#二-MD5算法的特点" class="headerlink" title="二.MD5算法的特点"></a>二.MD5算法的特点</h3><h4 id="2-1-压缩性"><a href="#2-1-压缩性" class="headerlink" title="2.1.压缩性"></a>2.1.压缩性</h4><p><strong> 任意长度的数据计算出的MD5值得长度都是固定的。存储和管理比较方便。 </strong></p>
-<h4 id="2-2-易于计算"><a href="#2-2-易于计算" class="headerlink" title="2.2.易于计算"></a>2.2.易于计算</h4><p><strong> 数据计算出MD5值很容易，易于使用者的理解和使用 。 </strong></p>
-<h4 id="2-3-细微性"><a href="#2-3-细微性" class="headerlink" title="2.3.细微性"></a>2.3.细微性</h4><p><strong> 任意大小的数据，只要经过任何的改变，哪怕只修改某个字节，所得到的MD5值都会有很大的区别，这个特点常被用于文件下载的检验。</strong></p>
-<h4 id="2-4-不可逆性"><a href="#2-4-不可逆性" class="headerlink" title="2.4.不可逆性"></a>2.4.不可逆性</h4><p><strong> 得到一个MD5值，无法反向计算出原数据 </strong></p>
-<h4 id="2-5-弱相同性"><a href="#2-5-弱相同性" class="headerlink" title="2.5.弱相同性"></a>2.5.弱相同性</h4><p><strong> 一个数据对应一个MD5值，一个MD5值可能对应多个原始数据。</strong></p>
-<h3 id="三-MD5破解讲解"><a href="#三-MD5破解讲解" class="headerlink" title="三.MD5破解讲解"></a>三.MD5破解讲解</h3><p> <strong> MD5破解的方式，因为MD5算法是不可逆的，所以破解一般是”撞库破解”，也就是把大量的常用的语句经过MD5”加密”后放入数据库，再把你输入的语句经过MD5”加密”去和数据库中的MD5值对比，然后返回原语句，这样只能找出一些简单的，常用的语句 </strong></p>
-<h3 id="四-MD5的加盐"><a href="#四-MD5的加盐" class="headerlink" title="四.MD5的加盐"></a>四.MD5的加盐</h3><p><strong> 单纯的将数据MD5”加密”后，也有被对比，暴力破解的风险，所以我们需要加盐，通俗来说就是在原数据中加入其他的数据，比如密码（password）,随机数（random number），得到password的MD5值然后加上random number然后再次MD5后，得到这个MD5值，这就是个简单的加盐过程，这样的话就算得到最后的这个MD5值得原数据，也得不到password。 </strong></p>
-<h3 id="五-MD5值的位数"><a href="#五-MD5值的位数" class="headerlink" title="五.MD5值的位数"></a>五.MD5值的位数</h3><p><strong> 前面说了MD5后值为128bit的二进制串，但二进制都是01，会造成用户的使用，理解不便，所以将128bit的二进制串转化为16进制的串，所以就输出的MD5值为32位。16位的MD5值是从32位的MD5值抽取出来的，32位MD5值去掉前后的八位，得到的值就是16位的MD5值。 </strong></p>
-<h3 id="六-MD5工具类（java）"><a href="#六-MD5工具类（java）" class="headerlink" title="六.MD5工具类（java）"></a>六.MD5工具类（java）</h3><p><strong> public class MD5Util {<br>    private final static char hexDigits[] = {<br>            ‘0’, ‘1’, ‘2’, ‘3’, ‘4’, ‘5’, ‘6’, ‘7’, ‘8’, ‘9’, ‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’<br>    };<br>    //MD5加密的普通方式<br>    public static String getMD5(String key){<br>        try {<br>            byte[] btInput = key.getBytes();<br>            // 获得MD5摘要算法的 MessageDigest 对象<br>            MessageDigest mdInst = MessageDigest.getInstance(“MD5”);<br>            // 使用指定的字节更新摘要<br>            mdInst.update(btInput);<br>            // 获得密文<br>            byte[] md = mdInst.digest();<br>            // 把密文转换成十六进制的字符串形式<br>            int j = md.length;<br>            char str[] = new char[j * 2];<br>            int k = 0;<br>            for (int i = 0; i &lt; j; i++) {<br>                byte byte0 = md[i];<br>                str[k++] = hexDigits[byte0 &gt;&gt;&gt; 4 &amp; 0xf];<br>                str[k++] = hexDigits[byte0 &amp; 0xf];<br>            }<br>            return new String(str);<br>        } catch (Exception e) {<br>            return null;<br>        }<br>    }<br>    //MD5加密的另一种方式<br>    public static String getOtherMD5(String key) {<br>        MessageDigest messageDigest = null;<br>        try {<br>            messageDigest = MessageDigest.getInstance(“MD5”);<br>            messageDigest.reset();<br>            messageDigest.update(key.getBytes(“UTF-8”));<br>        } catch (NoSuchAlgorithmException e) {<br>            e.printStackTrace();<br>        } catch (UnsupportedEncodingException e) {<br>        }<br>        byte[] byteArray = messageDigest.digest();<br>        StringBuffer md5StrBuff = new StringBuffer();<br>        for (int i = 0; i &lt; byteArray.length; i++) {<br>            if (Integer.toHexString(0xFF &amp; byteArray[i]).length() == 1)<br>                md5StrBuff.append(“0”).append(Integer.toHexString(0xFF &amp; byteArray[i]));<br>            else<br>                md5StrBuff.append(Integer.toHexString(0xFF &amp; byteArray[i]));<br>        }<br>        return md5StrBuff.toString();<br>    }<br>    // 加密后解密，一次是加密，两次解密<br>    public static String encrypt(String key) {<br>        char[] a = key.toCharArray();<br>        for (int i = 0; i &lt; a.length; i++) {<br>            a[i] = (char) (a[i] ^ ‘t’);<br>        }<br>        String k = new String(a);<br>        return k;<br>    }<br>} </strong></p>
-<p><strong> 或者使用commons-codecjar包，我这里因为是maven项目，所以使用的是依赖 </strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-codec<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-codec<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.10<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p><strong> <font color="#FF0033">使用方式 String md5 = DigestUtils.md5Hex(“123456”);就可以了。</font><br>若是哪里有理解错误的或写错的地方，望各位读者评论或者私信指正，不胜感激。</strong></p>
+        <h3 id="一-开启网易邮箱-POP3-IMAP-SMTP服务"><a href="#一-开启网易邮箱-POP3-IMAP-SMTP服务" class="headerlink" title="一.开启网易邮箱 POP3/IMAP/SMTP服务"></a>一.开启网易邮箱 POP3/IMAP/SMTP服务</h3><h4 id="1-1-登录网易163邮箱，点击上方设置中的POP3-IMAP-SMTP，然后把全部服务勾选，保存，再点击左侧的客户端授权密码，设置自己邮箱的授权密码"><a href="#1-1-登录网易163邮箱，点击上方设置中的POP3-IMAP-SMTP，然后把全部服务勾选，保存，再点击左侧的客户端授权密码，设置自己邮箱的授权密码" class="headerlink" title="1.1 登录网易163邮箱，点击上方设置中的POP3/IMAP/SMTP，然后把全部服务勾选，保存，再点击左侧的客户端授权密码，设置自己邮箱的授权密码"></a>1.1 登录网易163邮箱，点击上方设置中的POP3/IMAP/SMTP，然后把全部服务勾选，保存，再点击左侧的客户端授权密码，设置自己邮箱的授权密码</h4><p><img src="/img/page/neteaseset.png" alt="Alt text"><br><img src="/img/page/neteaseserver.png" alt="Alt text"></p>
+<h3 id="二-Java发送纯文本邮件示例"><a href="#二-Java发送纯文本邮件示例" class="headerlink" title="二.Java发送纯文本邮件示例"></a>二.Java发送纯文本邮件示例</h3><p><strong> import java.util.Date;<br>import java.util.Properties;<br>import javax.mail.Message;<br>import javax.mail.Session;<br>import javax.mail.Transport;<br>import javax.mail.internet.InternetAddress;<br>import javax.mail.internet.MimeMessage;<br>import javax.mail.internet.MimeUtility; </strong></p>
+<p><strong> public class Email {<br>    // 发件人的邮箱账号,授权码,发件人网易邮箱的 SMTP 服务器地址<br>    public static String fromEmail = “<a href="mailto:xxxxxxxx@163.com" target="_blank" rel="noopener">xxxxxxxx@163.com</a>“;<br>    public static String password = “xxxxxxx”;<br>    public static String emailSMTPHost = “smtp.163.com”; </strong></p>
+<p><strong> public static void sendMail(String from, String toMail, String mailTitle, String mailContent) throws Exception {<br>Properties props = new Properties();// 创建参数配置, 用于连接邮件服务器的参数配置<br>props.put(“mail.smtp.host”, emailSMTPHost);// 存储发送邮件服务器的信息,qq为例，如果是163则是smtp.163.com<br>props.put(“mail.transport.protocol”, “smtp”);// 使用smtp简单邮件传输协议<br>props.put(“mail.smtp.auth”, “true”);// 是否需要身份验证<br>// props.put(“ mail.smtp.timeout “, “25000”); //传输超时时间<br>Session session = Session.getInstance(props);<br>session.setDebug(true);// 开启Session的debug模式，这样就可以查看到程序发送Email的运行状态 </strong></p>
+<p><strong> MimeMessage message = new MimeMessage(session);// 由邮件会话创建一个扩展信息对象，包装信息格式，可以只是简单文本<br>// 发件人的自定义昵称<br>String nick = MimeUtility.encodeText(from);// 防止乱码<br>message.setFrom(new InternetAddress(nick + “&lt;” + fromEmail + “&gt;”));// 设置发件人的地址<br>message.setRecipient(Message.RecipientType.TO, new InternetAddress(toMail));// 设置收件人，并设置其接受类型为to<br>message.setSubject(mailTitle);// 设置标题<br>message.setContent(mailContent, “text/html;charset=UTF-8”);// 设置为html格式，可以发送多种样式<br>message.setSentDate(new Date()); // 设置发信时间<br>message.saveChanges(); // 存储邮件信息 </strong></p>
+<p><strong> Transport tran = session.getTransport(“smtp”);<br>// 使用smtp协议获取session环境的Transprot对象来发送邮件, javamial使用Transport对象来管理发送邮件服务<br>tran.connect(props.getProperty(“mail.smtp.host”), fromEmail, password);// 链接邮箱服务器，发送邮件的邮箱，以及授权码<br>tran.sendMessage(message, message.getAllRecipients());// 发送邮件，getAllRecipients()是所有已设好的收件人地址<br>tran.close();<br>} </strong></p>
+<p><strong> public static void main(String[] args) throws Exception {<br>//昵称，接收人，邮件主题，文件内容<br>sendMail(“mlm”, “<a href="mailto:1365413148@qq.com" target="_blank" rel="noopener">1365413148@qq.com</a>“, “title”, “<span style="color:red;">maliming</span>“);<br>}<br>}</strong></p>
+<h3 id="三-Java发送图片附件邮件示例"><a href="#三-Java发送图片附件邮件示例" class="headerlink" title="三.Java发送图片附件邮件示例"></a>三.Java发送图片附件邮件示例</h3><p><strong> import java.util.Date;<br>import java.util.Properties;<br>import javax.activation.DataHandler;<br>import javax.activation.FileDataSource;<br>import javax.mail.Message;<br>import javax.mail.Session;<br>import javax.mail.Transport;<br>import javax.mail.internet.InternetAddress;<br>import javax.mail.internet.MimeBodyPart;<br>import javax.mail.internet.MimeMessage;<br>import javax.mail.internet.MimeMultipart;<br>import javax.mail.internet.MimeUtility; </strong></p>
+<p><strong> public class Email {<br>    // 发件人的邮箱账号,授权码,发件人网易邮箱的 SMTP 服务器地址<br>    public static String fromEmail = “<a href="mailto:xxxxxxxx@163.com" target="_blank" rel="noopener">xxxxxxxx@163.com</a>“;<br>    public static String password = “xxxxxxxx”;<br>    public static String emailSMTPHost = “smtp.163.com”; </strong></p>
+<p><strong> public static void main(String[] args) throws Exception {<br>//昵称，接收人，邮件标题，邮件文本内容，图片URL，文件URL<br>sendMessage(“mlm”, “<a href="mailto:1365413148@qq.com" target="_blank" rel="noopener">1365413148@qq.com</a>“, “测试邮件”, “my name is maliming”, “D:\qqemail.png”, “D:\mlm.txt”);<br>} </strong></p>
+<p><strong> public static void sendMessage(String nickname, String toMail, String mailTitle, String mailContent,String imageUrl, String fileUrl) throws Exception {<br>Properties props = new Properties();// 创建参数配置, 用于连接邮件服务器的参数配置<br>props.setProperty(“mail.transport.protocol”, “smtp”);// 使用smtp简单邮件传输协议<br>props.setProperty(“mail.smtp.host”, emailSMTPHost);// 发件人的邮箱的 SMTP 服务器地址<br>props.setProperty(“mail.smtp.auth”, “true”);// 是否需要身份验证 </strong></p>
+<p><strong> // 根据配置创建会话对象, 用于和邮件服务器交互<br>Session session = Session.getInstance(props);<br>session.setDebug(true);// 开启Session的debug模式，这样就可以查看到程序发送Email的详细 log<br>// 创建图片文件<br>FileDataSource imageFile = new FileDataSource(imageUrl);<br>FileDataSource file = new FileDataSource(fileUrl);<br>MimeMessage message = createMessage(session, nickname, mailTitle, mailContent, fromEmail, toMail, imageFile,file); </strong></p>
+<p><strong> Transport tran = session.getTransport(“smtp”);<br>// 使用smtp协议获取session环境的Transprot对象来发送邮件, javamial使用Transport对象来管理发送邮件服务<br>tran.connect(props.getProperty(“mail.smtp.host”), fromEmail, password);// 连接邮箱服务器，发送邮件的邮箱，以及授权码<br>tran.sendMessage(message, message.getAllRecipients());// 发送邮件，getAllRecipients()是所有已设好的收件人地址<br>tran.close();// 关闭连接<br>} </strong></p>
+<p><strong> public static MimeMessage createMessage(Session session, String nickname, String mailTitle, String mailContent,String sendMail, String toMail, FileDataSource imageFile, FileDataSource file) throws Exception {<br>// 由邮件会话创建一个扩展信息对象，包装信息格式，可以只是简单文本<br>MimeMessage message = new MimeMessage(session);<br>// 发件人的自定义昵称<br>String nick = MimeUtility.encodeText(nickname);// 防止乱码<br>message.setFrom(new InternetAddress(nick + “&lt;” + sendMail + “&gt;”));// 设置发件人的地址<br>message.setRecipient(Message.RecipientType.TO, new InternetAddress(toMail));// 设置收件人，并设置其接受类型为to<br>message.setSubject(mailTitle);// 设置邮件标题<br>// 设置邮件内容<br>// 创建图片“节点”<br>MimeBodyPart image = new MimeBodyPart();<br>DataHandler dataHandler = new DataHandler(imageFile);// 读取图片文件<br>image.setDataHandler(dataHandler);// 将图片数据添加到“节点”<br>image.setContentID(“image”);// 为“节点”设置一个唯一的任意编号（方便引用）</strong></p>
+<p><strong> // 创建文本“节点”<br>MimeBodyPart text = new MimeBodyPart();<br>// 这里添加图片的方式是将整个图片包含到邮件内容中,也可以以 http 链接的形式添加网络图片，设置为html格式<br>text.setContent(mailContent + “ </strong><br><strong> <font color="#FF0033">//此处因为markdown会解析HTML代码，所以只能放入代码块中，复制时需要注意去掉1</font> </strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">br</span>/&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">'cid:image'</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong> “, “text/html;charset=UTF-8”); </strong></p>
+<p><strong> // （文本+图片）设置 文本 和 图片 “节点”的关系（将 文本 和 图片 “节点”合成一个混合“节点”）<br>MimeMultipart textAndImage = new MimeMultipart();<br>textAndImage.addBodyPart(text);<br>textAndImage.addBodyPart(image);<br>textAndImage.setSubType(“related”);// 关联关系 </strong></p>
+<p><strong> // 将 文本+图片 的混合“节点”封装成一个普通“节点”<br>// 最终添加到邮件的 Content 是由多个 BodyPart 组成的 Multipart, 所以我们需要的是 BodyPart,<br>// 上面的 textAndImage 并非 BodyPart, 所有要把 textAndImage 封装成一个 BodyPart<br>MimeBodyPart text_image = new MimeBodyPart();<br>text_image.setContent(textAndImage); </strong></p>
+<p><strong> // 创建附件“节点”<br>MimeBodyPart attachment = new MimeBodyPart();<br>DataHandler dataHandler2 = new DataHandler(file);// 读取文件<br>attachment.setDataHandler(dataHandler2);// 将附件数据添加到“节点”<br>attachment.setFileName(MimeUtility.encodeText(dataHandler2.getName()));// 设置附件的文件名（需要编码） </strong></p>
+<p><strong> // 设置（文本+图片）和 附件 的关系（合成一个大的混合“节点” / Multipart ）<br>MimeMultipart mimeMultipart = new MimeMultipart();<br>mimeMultipart.addBodyPart(text_image);<br>mimeMultipart.addBodyPart(attachment);// 如果有多个附件，可以创建多个多次添加<br>mimeMultipart.setSubType(“mixed”);// 混合关系 </strong></p>
+<p><strong> // 设置整个邮件的关系（将最终的混合“节点”作为邮件的内容添加到邮件对象）<br>message.setContent(mimeMultipart);<br>// 设置发件时间<br>message.setSentDate(new Date());<br>// 保存上面的所有设置<br>message.saveChanges();<br>return message;<br>}<br>} </strong></p>
+<p><strong><font color="#FF0033">因为编辑器的缘故Java代码没有层次，所以复制到你用的IDE中,用IDE的代码规范功能规范一下</font><br>若是哪里有理解错误的或写错的地方，望各位读者评论或者私信指正，不胜感激。 </strong></p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -525,7 +541,7 @@
                             未经作者允许,禁止转载
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="http://yoursite.com/2018/03/23/md5/">http://yoursite.com/2018/03/23/md5/</a>
+                        <strong>本文链接：</strong><a href="http://yoursite.com/2018/03/24/NetEaseEmail/">http://yoursite.com/2018/03/24/NetEaseEmail/</a>
                     </p>
                 </blockquote>
         
@@ -573,21 +589,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/03/23/thymeleafcommon/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/03/23/phoneorcomputer/" id="post_nav-older" class="next-content">
+        <a href="/2018/03/24/QQEmail/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
