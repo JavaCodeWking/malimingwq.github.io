@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-24T09:22:43.932Z</updated>
+  <updated>2018-03-25T17:47:15.286Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cookie的简单理解</title>
+    <link href="http://yoursite.com/2018/03/25/Cookie/"/>
+    <id>http://yoursite.com/2018/03/25/Cookie/</id>
+    <published>2018-03-25T01:57:34.000Z</published>
+    <updated>2018-03-25T17:47:15.286Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt; 我们开发网站或登录网站的时候有时候会实现或使用记住密码或自动登录的功能，我们都知道这是靠Cookie来实现的，但是我们真的了解Cookie吗？ &lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;一-Cookie的大小和个数限制&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="JavaWeb" scheme="http://yoursite.com/categories/JavaWeb/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Java使用网易Email发邮件</title>
@@ -225,7 +250,7 @@
     <link href="http://yoursite.com/2018/03/23/md5/"/>
     <id>http://yoursite.com/2018/03/23/md5/</id>
     <published>2018-03-23T03:30:32.000Z</published>
-    <updated>2018-03-23T11:44:48.294Z</updated>
+    <updated>2018-03-25T00:18:07.399Z</updated>
     
     <summary type="html">
     

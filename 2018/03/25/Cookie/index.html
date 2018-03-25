@@ -45,7 +45,7 @@
     
     <title>
         
-            Java使用中国网建发送短信验证码 | 
+            Cookie的简单理解 | 
         
         Jack&#39;s blog
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="This is Jack&#39;s blog">
-    <meta name="keywords" content="maliming&#39;s blog,java,shortmessage,中国网建">
+    <meta name="keywords" content="maliming&#39;s blog">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -212,7 +212,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jack&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/24/WebChineseShortMessage/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/25/Cookie/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jack&#39;s blog">
@@ -231,16 +231,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/03/24/WebChineseShortMessage/">
+    <meta property="og:url" content="http://yoursite.com/2018/03/25/Cookie/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Java使用中国网建发送短信验证码 | Jack&#39;s blog">
+    <meta property="og:title" content="Cookie的简单理解 | Jack&#39;s blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="This is Jack&#39;s blog">
-    <meta property="og:article:tag" content="java"> <meta property="og:article:tag" content="shortmessage"> <meta property="og:article:tag" content="中国网建"> 
+    
 
     
-        <meta property="article:published_time" content="Sat Mar 24 2018 08:39:19 GMT+0800">
-        <meta property="article:modified_time" content="Sat Mar 24 2018 09:26:16 GMT+0800">
+        <meta property="article:published_time" content="Sun Mar 25 2018 09:57:34 GMT+0800">
+        <meta property="article:modified_time" content="Mon Mar 26 2018 01:47:15 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -248,7 +248,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/03/24/WebChineseShortMessage/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/25/Cookie/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -260,10 +260,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/03/24/WebChineseShortMessage/index.html",
-    "headline": "Java使用中国网建发送短信验证码",
-    "datePublished": "Sat Mar 24 2018 08:39:19 GMT+0800",
-    "dateModified": "Sat Mar 24 2018 09:26:16 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/25/Cookie/index.html",
+    "headline": "Cookie的简单理解",
+    "datePublished": "Sun Mar 25 2018 09:57:34 GMT+0800",
+    "dateModified": "Mon Mar 26 2018 01:47:15 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "maliming-Jack",
@@ -281,7 +281,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",java,shortmessage,中国网建maliming&#39;s blog",
+    "keywords": "maliming&#39;s blog",
     "description": "This is Jack&#39;s blog",
 }
 </script>
@@ -347,7 +347,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一-注册，登录以及注意事项。"><span class="post-toc-number">1.</span> <span class="post-toc-text">一.注册，登录以及注意事项。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二-Java示例。"><span class="post-toc-number">2.</span> <span class="post-toc-text">二.Java示例。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1-接口地址"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">2.1 接口地址</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-短信发送后返回值以及意义"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.2 短信发送后返回值以及意义</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-Java示例"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">2.3 Java示例</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一-Cookie的大小和个数限制"><span class="post-toc-number">1.</span> <span class="post-toc-text">一.Cookie的大小和个数限制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二-Cookie的详细理解"><span class="post-toc-number">2.</span> <span class="post-toc-text">二.Cookie的详细理解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1-什么是Cookie？"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">2.1 什么是Cookie？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-Cookie的工作原理是什么？"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.2 Cookie的工作原理是什么？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-Cookie的属性"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">2.3 Cookie的属性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-4-Cookie的不可跨域名性"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">2.4 Cookie的不可跨域名性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-5-Cookie的路径"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">2.5 Cookie的路径</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-6-Cookie的安全性"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">2.6 Cookie的安全性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-7-Cookie的有效时间"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">2.7 Cookie的有效时间</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-8-Cookie的修改-删除"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">2.8 Cookie的修改,删除</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-9-Cookie的优缺点"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">2.9 Cookie的优缺点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-10-Cookie的默认使用规范"><span class="post-toc-number">2.10.</span> <span class="post-toc-text">2.10 Cookie的默认使用规范</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -367,10 +367,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/page/NetEase.png)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/page/cookie.jpg)">
     
             <p class="article-headline-p">
-                Java使用中国网建发送短信验证码
+                Cookie的简单理解
             </p>
         </div>
 
@@ -389,7 +389,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>maliming-Jack</strong>
-        <span>3月 24, 2018</span>
+        <span>3月 25, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -411,22 +411,13 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC1UlEQVR42u3aQXLjMAwEQP//09kPxPIAkLOS0Dq5UrbIZg4oDPj6Wfm8sLGxsbGxsbGxsS/JfsXPLy86/Obxbz9s8c3bJnvGxsbGfjY72UTy97dLnsro7RkbGxt7AztZ5rhEHW/o+DiSMtnbMzY2NjZ2Qn1H6rUfH5oKbGxsbOwvFLBvPEkhxMbGxsauBjTJMCAvQknZu0SWho2NjX15di+a/7+f/3S+jY2NjX1h9jcu01Qv9HxoIQZXf7CxsbE3sPPC0LuyU42Hjj/39omNjY29gZ3AqsXmrAHt8VrJMWFjY2PvYSdRfi/WnyDnbQ82Njb2HvZZzUbyzl6Ry6MlbGxs7D3sfBiQBP0JL79wk6yVtDfY2NjYG9gJI28VesPdvB2qxk/Y2NjYe9jV5qFa2Caj3LwolgsYNjY29s3Zeemqjg3yUlRdJR8AY2NjY+9h94a7efBUvbIzD5WwsbGx97AnA93jb+ZHlu+n91tsbGzsZ7Orkc3kMk3vncmBnhYqYWNjY9+QnQf3ebg/oVb/Jcm62NjY2M9mTwa089A/H1S8gufDQWBjY2M/mt0b+laPowrLV8TGxsbezM7biV4jUb24Uw2bTguVsLGxsW/Ono9gq0dQHUXk44FCloaNjY39CHbeHlRj+jz0z8tedSCNjY2NvY1dLV3z48sHutUBAzY2NvZmdm8MnAf6eUnLr2BGhRMbGxt7ATsf3FYLWDWESt5TDcWwsbGxd7LzkjMZAPTCpvKYARsbG/uh7BMKQ1CE8qal9/5oXIGNjY39UHa1MOSweenqjRMKoRI2Njb2g9h50TorEpoUwmQIMRr0YmNjY9+WnRSeasDUW2vyNLM0bGxsbOxW3FNdpdfeYGNjY2OfEOjEh9VDJi0NNjY29gZ2PtydDHon+GRsXC5g2NjY2I9gV8Oa6mC4+pfeBaAvzrexsbGxL8ze82BjY2NjY2NjY2Nf5vkHzS7NgDCib/MAAAAASUVORK5CYII=">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACX0lEQVR42u3aQZKDMAwEwPz/07sPSC07Y4EhqfYpB3DcHGSVpNfPV68XHh4eHh4eHh7ew3iveLVvvT///vt9txPOhoeHh7eF90+oDZ7560DHOxzvvHY2PDw8vJ285HBJiJ+wj/8r2gEPDw/vkby/0tn2mfn/4uHh4X0Kby0hTsoNk7Ph4eHh7eclB51cDJNPuanWgoeHhxfz8ibT/t9b+3t4eHh4Aa8eaYpLsXlK3bbZiqErPDw8vAt4eSDOywrHu7XpdXIePDw8vJ285CiTwkSyw/HO9bWEh4eHt5GXMPIS8FkjCPl58PDw8HbyJmMBbYkhT6DzcjMeHh7eTl5CSkYE1krASdBPPgceHh7evbz5GFY7mNW21vDw8PCewJuUDCYXSTvUFV1jeHh4eBt57SXRjp/mIwV5CQMPDw/vCbw8WOdjBxe2u/KUGg8PD+8kXp7sTt5aKxYvFizw8PDwLublQb8N8WtXRX45FcUIPDw8vFN5k1GANcwklT9hpgwPDw9vCy8P4m1Bth0RiMYa8PDw8C7mJUG5HQuYt9NGb+Hh4eFt4eVF2DbZnY8X1OVgPDw8vO289hrIRwTO3b9IqfHw8PAu5rWBvl3HaXH7Lh4eHt5+XrvWUvD82sg/AR4eHt5dvHlAzwvB89GB6EPg4eHhbeFNLoO1FlrbJMuHCfDw8PB28vIAPWmb5a2vxaEuPDw8vEfy8hCflx5qBh4eHt5H8fJUuBiWGlwGeHh4eHfxksPlb7VJc1vwxcPDw7uXNx+0mhxubaTgkv4eHh4eXsD7voWHh4eHh4eHh/eA9Qu2CK9bohVxRgAAAABJRU5ErkJggg==">
     
 </ul>
 
     
 
     <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/java/">java</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/shortmessage/">shortmessage</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/中国网建/">中国网建</a>
-    </ul>
     
 
     <!-- Share -->
@@ -453,7 +444,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Java使用中国网建发送短信验证码&url=http://yoursite.com/2018/03/24/WebChineseShortMessage/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Cookie的简单理解&url=http://yoursite.com/2018/03/25/Cookie/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -462,7 +453,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Java使用中国网建发送短信验证码&url=http://yoursite.com/2018/03/24/WebChineseShortMessage/index.html&via=maliming-Jack" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Cookie的简单理解&url=http://yoursite.com/2018/03/25/Cookie/index.html&via=maliming-Jack" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -471,7 +462,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/24/WebChineseShortMessage/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/25/Cookie/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -480,7 +471,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/24/WebChineseShortMessage/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/25/Cookie/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -492,7 +483,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=Java使用中国网建发送短信验证码&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/03/24/WebChineseShortMessage/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=Cookie的简单理解&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/03/25/Cookie/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -511,15 +502,108 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="一-注册，登录以及注意事项。"><a href="#一-注册，登录以及注意事项。" class="headerlink" title="一.注册，登录以及注意事项。"></a>一.注册，登录以及注意事项。</h3><p><strong> 1.1 中国网建网址：<a href="http://www.smschinese.cn" title="中国网建" target="_blank" rel="noopener">http://www.smschinese.cn</a> </strong></p>
-<p><strong> 1.2 注册时用户名，以及姓名都可以随便写，邮箱只会验证存在与否，不会发验证码验证，手机号填自己的(接收自己的初始密码)。 </strong></p>
-<p><strong> 1.3 登录到用户首页，有快捷菜单，发送短信；发送彩信；Excel短信，先点击发送短信，一定要先设置签名(否则无法发送短信)。 </strong></p>
-<p><strong> 1.4 在旁边的菜单中有修改短信密钥，记录下短信密钥。 </strong></p>
-<h3 id="二-Java示例。"><a href="#二-Java示例。" class="headerlink" title="二.Java示例。"></a>二.Java示例。</h3><h4 id="2-1-接口地址"><a href="#2-1-接口地址" class="headerlink" title="2.1 接口地址"></a>2.1 接口地址</h4><p><strong> <font color="#FF0033">GBK编码发送接口地址：<br><a href="http://gbk.api.smschinese.cn/?Uid=本站用户名&amp;Key=短信密钥&amp;smsMob=手机号码&amp;smsText=短信内容" target="_blank" rel="noopener">http://gbk.api.smschinese.cn/?Uid=本站用户名&amp;Key=短信密钥&amp;smsMob=手机号码&amp;smsText=短信内容</a><br>UTF-8编码发送接口地址：<br><a href="http://utf8.api.smschinese.cn/?Uid=本站用户名&amp;Key=短信密钥&amp;smsMob=手机号码&amp;smsText=短信内容" target="_blank" rel="noopener">http://utf8.api.smschinese.cn/?Uid=本站用户名&amp;Key=短信密钥&amp;smsMob=手机号码&amp;smsText=短信内容</a><br>获取短信数量接口地址(UTF-8)：<br><a href="http://www.smschinese.cn/web_api/SMS/?Action=SMS_Num&amp;Uid=本站用户名&amp;Key=短信密钥" target="_blank" rel="noopener">http://www.smschinese.cn/web_api/SMS/?Action=SMS_Num&amp;Uid=本站用户名&amp;Key=短信密钥</a><br>获取短信数量接口地址(GBK)：<br><a href="http://www.smschinese.cn/web_api/SMS/GBK/?Action=SMS_Num&amp;Uid=本站用户名&amp;Key=短信密钥" target="_blank" rel="noopener">http://www.smschinese.cn/web_api/SMS/GBK/?Action=SMS_Num&amp;Uid=本站用户名&amp;Key=短信密钥</a></font> </strong></p>
-<h4 id="2-2-短信发送后返回值以及意义"><a href="#2-2-短信发送后返回值以及意义" class="headerlink" title="2.2 短信发送后返回值以及意义"></a>2.2 短信发送后返回值以及意义</h4><p><strong><font color="#FF0033"> -1（没有该账户）；-2（短信密钥错误）；-3（短信数量不足）；-4（手机号不正确）；-6（IP被限制）；-14（短信内容出现非法字符）；-21（MD5接口密钥加密不正确）；-41（手机号为空）；-42（短信内容为空）；-51（短信签名格式不正确<br>接口签名格式为：【签名内容】）。</font> </strong></p>
-<h4 id="2-3-Java示例"><a href="#2-3-Java示例" class="headerlink" title="2.3 Java示例"></a>2.3 Java示例</h4><p><strong> import java.io.IOException;<br>import org.apache.commons.httpclient.Header;<br>import org.apache.commons.httpclient.HttpClient;<br>import org.apache.commons.httpclient.HttpException;<br>import org.apache.commons.httpclient.NameValuePair;<br>import org.apache.commons.httpclient.methods.PostMethod; </strong></p>
-<p><strong> public class SendMsg {<br>    private static final String SERVER_URL = “<a href="http://utf8.api.smschinese.cn&quot;" target="_blank" rel="noopener">http://utf8.api.smschinese.cn&quot;</a>;<br>    private static final String USERNAME = “你的用户名”;<br>    private static final String KEY = “短信密钥”;<br>    public static void main(String[] args) throws Exception {<br>        String phone = “被发送的短信的手机号”;<br>        String smsText = “短信发送的内容”;<br>        String result = SendMessage(phone, smsText);<br>        int allResult = Integer.valueOf(result).intValue();<br>        if (allResult &gt; 0) {<br>            System.out.println(“发送成功”);<br>        } else {<br>            System.out.println(“发送失败”);<br>        }<br>    }<br>    public static String SendMessage(String phone, String smsText) throws HttpException, IOException {<br>        HttpClient client = new HttpClient();<br>        PostMethod post = new PostMethod(SERVER_URL);<br>        post.addRequestHeader(“Content-Type”, “application/x-www-form-urlencoded;charset=utf-8”);// 在头文件中设置转码<br>        NameValuePair[] data = { new NameValuePair(“Uid”, USERNAME), new NameValuePair(“Key”, KEY),<br>                new NameValuePair(“smsMob”, phone), new NameValuePair(“smsText”, smsText) };<br>        post.setRequestBody(data);<br>        client.executeMethod(post);<br>        // 请求头信息<br>        Header[] headers = post.getResponseHeaders();<br>        // 输出请求头信息<br>        // for (Header h : headers) { System.out.println(h.toString()); }<br>        // http状态码<br>        int statusCode = post.getStatusCode();<br>        System.out.println(“statusCode:” + statusCode);<br>        String result = new String(post.getResponseBodyAsString().getBytes(“utf-8”));<br>        System.out.println(result); // 打印返回消息状态<br>        post.releaseConnection();<br>        return result;<br>    }<br>} </strong></p>
-<p><strong><font color="#FF0033">因为编辑器的缘故Java代码没有层次，所以复制到你用的IDE中,用IDE的代码规范功能规范一下</font><br>若是哪里有理解错误的或写错的地方，望各位读者评论或者私信指正，不胜感激。 </strong></p>
+        <p><strong> 我们开发网站或登录网站的时候有时候会实现或使用记住密码或自动登录的功能，我们都知道这是靠Cookie来实现的，但是我们真的了解Cookie吗？ </strong></p>
+<h3 id="一-Cookie的大小和个数限制"><a href="#一-Cookie的大小和个数限制" class="headerlink" title="一.Cookie的大小和个数限制"></a>一.Cookie的大小和个数限制</h3><table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">IE8.0以上</th>
+<th style="text-align:right">Chrome</th>
+<th style="text-align:right">Firefox</th>
+<th style="text-align:right">Opera</th>
+<th style="text-align:right">Safari</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cookie个数</td>
+<td style="text-align:center">50个/域</td>
+<td style="text-align:right">53个/域</td>
+<td style="text-align:right">50个/域</td>
+<td style="text-align:right">30个/域</td>
+<td style="text-align:right">无限制</td>
+</tr>
+<tr>
+<td>cookie大小</td>
+<td style="text-align:center">4095个字节</td>
+<td style="text-align:right">4097个字节</td>
+<td style="text-align:right">4097个字节</td>
+<td style="text-align:right">4096个字节</td>
+<td style="text-align:right">4097个字节</td>
+</tr>
+</tbody>
+</table>
+<p><strong> 在所有浏览器中，如果cookie大小超过它的限制大小，则这个cookie被忽略，永远不会被设置，如果cookie的个数超出浏览器的所限制，则浏览器会自动清除老的cookie为新来的cookie腾处位置 </strong></p>
+<h3 id="二-Cookie的详细理解"><a href="#二-Cookie的详细理解" class="headerlink" title="二.Cookie的详细理解"></a>二.Cookie的详细理解</h3><p><strong> Web应用程序是使用HTTP协议传输数据的。而<font color="#FF0033">HTTP协议是无状态的协议</font>。一旦数据交换完毕，客户端与服务器端的连接就会关闭，再次交换数据需要建立新的连接。这就意味着服务器无法从连接上跟踪会话，无法辨别这个请求是哪一个用户发出的，这样的话就会造成数据混乱，用户的数据没有安全的保障，整个程序处于混乱的状态，这显然是不行的——于是会话跟踪技术应运而生，弥补了HTTP协议的不足之处。</strong></p>
+<p><strong>会话跟踪是web程序中最常用的技术，通过跟踪用户的整个会话，来辨别是否是同一用户，用于确认用户的身份，保证用户所有的请求操作都属于同一个会话，保证了用户信息的安全私密性，也使得程序井然有序，常用的会话跟踪技术有两种Cookie和Session，这里我们讲Cookie </strong></p>
+<h4 id="2-1-什么是Cookie？"><a href="#2-1-什么是Cookie？" class="headerlink" title="2.1 什么是Cookie？"></a>2.1 什么是Cookie？</h4><p><strong> 首先Cookie是通过在客户端记录信息确定用户身份，Cookies是服务器在客户端上存储的小段文本并随每一个请求发送至同一个服务器，客户端请求服务器，服务器使用response向客户端浏览器发送Cookies，在客户终端，浏览器解析这些Cookies并将它们保存在客户端的本地，当客户端再次请求该服务器，它会自动将请求和Cookies一同发送给该服务器，服务器解析Cookies，以此来辨别是哪个用户，用户当前状态，然后再把修改后的Cookies再次发送到客户端保存下来。</strong></p>
+<h4 id="2-2-Cookie的工作原理是什么？"><a href="#2-2-Cookie的工作原理是什么？" class="headerlink" title="2.2 Cookie的工作原理是什么？"></a>2.2 Cookie的工作原理是什么？</h4><p><strong> Cookies的工作原理是：由于服务器从连接上不能辨别用户，所以引入的Cookie，而Cookie就好像一个用户独有的身份令牌，当客户端进行第一次请求，服务器就会生成一个”<font color="#FF0033">身份令牌</font>“给这个客户端，当客户端再次请求(请求+“身份令牌”)，服务器从“身份令牌”上辨认出，这就是xx用户的请求，这样的话我们就可以辨别每个请求对应的用户身份，不会造成数据混乱。(Cookie的工作原理与基于 Token 的身份验证方法有些相同) </strong></p>
+<h4 id="2-3-Cookie的属性"><a href="#2-3-Cookie的属性" class="headerlink" title="2.3 Cookie的属性"></a>2.3 Cookie的属性</h4><table>
+<thead>
+<tr>
+<th>属性名称</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String name</td>
+<td style="text-align:center">Cookie的名称。Cookie一旦创建，不可更改其名字</td>
+</tr>
+<tr>
+<td>Object value</td>
+<td style="text-align:center">Cookie的值</td>
+</tr>
+<tr>
+<td>int maxAge</td>
+<td style="text-align:center">Cookie失效的时间，单位秒</td>
+</tr>
+<tr>
+<td>boolean secure</td>
+<td style="text-align:center">Cookie是否使用安全协议传输</td>
+</tr>
+<tr>
+<td>String path</td>
+<td style="text-align:center">访问该Cookie的路径</td>
+</tr>
+<tr>
+<td>String domain</td>
+<td style="text-align:center">可以访问该Cookie的域名</td>
+</tr>
+<tr>
+<td>boolean HttpOnly</td>
+<td style="text-align:center">Cookie是否禁止js等对其的操作</td>
+</tr>
+<tr>
+<td>String comment</td>
+<td style="text-align:center">Cookie的用处说明</td>
+</tr>
+<tr>
+<td>int version</td>
+<td style="text-align:center">Cookie使用的版本号。0表示遵循Netscape的Cookie规范，1表示遵循W3C的RFC 2109规范</td>
+</tr>
+</tbody>
+</table>
+<p><strong>从客户端读取Cookie时，包括maxAge(有效时间)在内的其他属性都是不可读的，也不会被提交。浏览器提交Cookie时只会提交name与value属性。maxAge属性只被浏览器用来判断Cookie是否过期。 </strong></p>
+<h4 id="2-4-Cookie的不可跨域名性"><a href="#2-4-Cookie的不可跨域名性" class="headerlink" title="2.4 Cookie的不可跨域名性"></a>2.4 Cookie的不可跨域名性</h4><p><strong> 我们每天使用的网站那么多，那么他们的Cookie会不会共用呢？会不会造成混乱呢？这当然不会，开发人员早就想到这一点(Cookie有隐私安全机制来规避这种Cookie混乱)，每个人域名只能使用管理携带自己本域名的Cookies(比如我们同时进行再京东购物和天猫购物，我们请求京东服务器会携带京东域名的Cookies,不会携带天猫域名下的Cookies，反之亦然)，保证用户隐私安全和程序正确性</strong></p>
+<p><strong>说到这里有人就开始疑问了(比如zhidao.baidu.com和wenku.baidu.com，它们是两个二级域名，它们为什么能够公用Cookies？)，正常情况下它们也是不能公用Cookies的，但是我们的伟大的开发人员也早就料到这一点，让我们可以设置同一个一级域名下的二级域名可以公用Cookies，这就需要用到Cookie的domain属性了 </strong></p>
+<p><strong> <font color="#FF0033">Cookie cookie = new Cookie(“time”,”20180324”);// 新建Cookie<br>cookie.setDomain(“.baidu.com”);/ 设置域名<br>cookie.setPath(“/“);// 设置路径<br>cookie.setMaxAge(Integer.MAX_VALUE);// 设置有效期<br>response.addCookie(cookie);// 输出到客户端 </font> </strong></p>
+<p><strong> 设置二级域名共用Cookies的规则如下：一个Cookie要是在多个二级域名中共享，需要设置domain为顶级域名，这样就可以在所有二级域名里面对这个Cookie进行操作，但二级域名自己的Cookies还是不能够共享的，不能读取其他二级域名的Cookie,顶级域名只能对domain设置为顶级域名的Cookie进行操作，domain设置为其他子级域名则无法获取和操作。 </strong></p>
+<h4 id="2-5-Cookie的路径"><a href="#2-5-Cookie的路径" class="headerlink" title="2.5 Cookie的路径"></a>2.5 Cookie的路径</h4><p><strong> 在开发中我们服务器生成许多Cookie，但是有时候我们只想让某个路径下的程序使用某一个特定的Cookie，其他的路径都无法访问到(比如登录页面，我们只想要让登录页面使用这个用于登录的Cookie)，我们应该怎么做呢？，这就需要用到Cookie里面的path属性，来指定访问路径：比如只允许“xxxx/login/”路径下的页面使用这个Cookie，我们需要这样设置： </strong></p>
+<p><strong> <font color="#FF0033">Cookie cookie = new Cookie(“time”,”20180324”);// 新建Cookie<br>cookie.setPath(“/login/“); // 设置访问路径<br>response.addCookie(cookie); // 输出到客户端</font> </strong></p>
+<p><strong>这样我们这个Cookie只能由“xxxx/login/”下的页面访问，对其进行操作 </strong></p>
+<h4 id="2-6-Cookie的安全性"><a href="#2-6-Cookie的安全性" class="headerlink" title="2.6 Cookie的安全性"></a>2.6 Cookie的安全性</h4><p><strong> 众所众知HTTP 协议无法加密数据，所有通信数据都在网络中明文“裸奔”，这就容易导致数据泄露、数据篡改等安全问题。Cookie在HTTP等非安全协议中传输，这显然是及其不安全的，而HTTPS 是用来解决 HTTP 明文协议的缺陷，在 HTTP 的基础上加入 SSL/TLS 协议，依靠 SSL 证书来验证服务器的身份，为客户端和服务器端之间建立“SSL”通道，确保数据运输安全。所以我们可以设置Cookie在HTTPS协议中传输，我们需要这样做： </strong></p>
+<p><strong> <font color="#FF0033">Cookie cookie = new Cookie(“time”, “20180324”); // 新建Cookie<br>cookie.setSecure(true); // 设置安全属性为true，这样Cookie传输就使用HTTPS协议传输<br>response.addCookie(cookie);  // 输出到客户端</font> </strong></p>
+<p><strong> 但是这样保证了Cookie传输过程中的安全性，但是怎么防止XSS攻击呢?(一般指通过js等脚本程序)，防止他们通过脚本获取Cookie呢？所以我们有新增了一个属性HttpOnly，我们需要这样做: </strong></p>
+<p><strong> <font color="#FF0033">Cookie cookie = new Cookie(“time”, “20180324”); // 新建Cookie<br>cookie .setHttpOnly(true); // 设置属性为true，这样Cookie就能有效防止XSS攻击<br>response.addCookie(cookie);  // 输出到客户端</font> </strong></p>
+<h4 id="2-7-Cookie的有效时间"><a href="#2-7-Cookie的有效时间" class="headerlink" title="2.7 Cookie的有效时间"></a>2.7 Cookie的有效时间</h4><p><strong> Cookie的maxAge决定着Cookie的有效期，单位为秒（Second）。Cookie中通过getMaxAge()方法与setMaxAge(int maxAge)方法来读写maxAge属性。我们需要这样做： </strong></p>
+<p><strong> <font color="#FF0033">Cookie cookie = new Cookie(“username”,”maliming”);   // 新建Cookie<br>cookie.setMaxAge(Integer.MAX_VALUE);// 设置生命周期为MAX_VALUE,设该Cookie为永久<br>response.addCookie(cookie);  // 输出到客户端 </font> </strong></p>
+<p><strong> maxAge属性值有三种：正数，零，负数 </strong></p>
+<p><strong> <font color="#FF0033">(1)正数：表示该Cookie会在你maxAge秒之后自动失效,客户端检测到这个Cookie的有效时间为正数，就会将该Cookie持久化，写入到与之对应的Cookie文件之中，写入后它不在乎客户端的关闭与否，只要在该Cookie的有效时间段内，就会存在，登录与之对应的网站依然有效，反之就销毁，失效。<br>(2)零：因为Cookie没有删除的方法，设置有效时间为零，则就用立即失效表示删除该Cookie，然后客户端会把该失效的Cookie从内存或Cookie文件中删除<br>(3)负数：表示该Cookie不会被持久化，之暂时保存在客户端的内存中，关闭客户端就丢失(失效)，Cookie默认的maxAge值为–1。有效作用仅在该客户端打开的的窗口，关闭就丢失</font> </strong></p>
+<h4 id="2-8-Cookie的修改-删除"><a href="#2-8-Cookie的修改-删除" class="headerlink" title="2.8 Cookie的修改,删除"></a>2.8 Cookie的修改,删除</h4><p><strong> Cookie并没有提供修改删除的方法，但是我们可以用其他的方法实现相同的目的：修改Cookie只能使用一个同名的Cookie来覆盖原来的Cookie；删除时只需要把有效时间设置为0即可。</strong></p>
+<h4 id="2-9-Cookie的优缺点"><a href="#2-9-Cookie的优缺点" class="headerlink" title="2.9 Cookie的优缺点"></a>2.9 Cookie的优缺点</h4><p><strong> 优点：<br>1.不需要占用服务器资源(保存在客户端的本地)，分担了服务器存储的负担<br>2.Cookie 是基于文本的轻量结构，包含简单的键值对(结构简单)。<br>3.可操作性强，数据持久性强(方便用户的操作)<br>4.极高的扩展性和可用性<br>5.用户可选择客户端禁用Cookie </strong></p>
+<p><strong> 缺点：<br>1.大小数量受限(有时不能满足针对没有需求的开发)<br>2.安全性，隐私性不高(因为Cookie保存在客户端本地，这就造成Cookies有可能被盗用或篡改，用户信息会受到损害)<br>3.Cookie的无用性，造成带宽浪费(我们执行某一个操作时，可能有一些Cookie是无用的，但是它还是随着请求发送到服务端)<br>4.为保证Cookie安全性进行加密，解密影响应用程序的性能 </strong></p>
+<h4 id="2-10-Cookie的默认使用规范"><a href="#2-10-Cookie的默认使用规范" class="headerlink" title="2.10 Cookie的默认使用规范"></a>2.10 Cookie的默认使用规范</h4><p><strong> 1.尽量不保存用户个人的私人信息<br>2.通过加密和安全传输技术（SSL），减少Cookie被破解的可能性<br>3.让用户有选择是否保存个人信息的权利<br>4.过大的数据不使用Cookie保存<br>5.控制Cookie的有效时间，减少被恶意的获取到有效的Cookie </strong></p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -528,7 +612,7 @@
                             未经作者允许,禁止转载
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="http://yoursite.com/2018/03/24/WebChineseShortMessage/">http://yoursite.com/2018/03/24/WebChineseShortMessage/</a>
+                        <strong>本文链接：</strong><a href="http://yoursite.com/2018/03/25/Cookie/">http://yoursite.com/2018/03/25/Cookie/</a>
                     </p>
                 </blockquote>
         
@@ -576,21 +660,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/03/24/QQEmail/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/03/23/NetEaseShortMessage/" id="post_nav-older" class="next-content">
+        <a href="/2018/03/24/NetEaseEmail/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
