@@ -45,7 +45,7 @@
     
     <title>
         
-            分类 | 
+            Session的简单理解 | 
         
         Jack&#39;s blog
     </title>
@@ -212,7 +212,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jack&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/categories/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/27/Session/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jack&#39;s blog">
@@ -231,13 +231,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/categories/">
+    <meta property="og:url" content="http://yoursite.com/2018/03/27/Session/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类 | Jack&#39;s blog">
+    <meta property="og:title" content="Session的简单理解 | Jack&#39;s blog">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="This is Jack&#39;s blog">
     
 
+    
+        <meta property="article:published_time" content="Tue Mar 27 2018 01:15:46 GMT+0800">
+        <meta property="article:modified_time" content="Tue Mar 27 2018 01:48:58 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -245,13 +248,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/categories/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/27/Session/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/27/Session/index.html",
+    "headline": "Session的简单理解",
+    "datePublished": "Tue Mar 27 2018 01:15:46 GMT+0800",
+    "dateModified": "Tue Mar 27 2018 01:48:58 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "maliming-Jack",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/maliming.jpg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jack&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "maliming&#39;s blog",
+    "description": "This is Jack&#39;s blog",
+}
+</script>
 
 
     
@@ -287,6 +320,39 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一-什么是Session？"><span class="post-toc-number">1.</span> <span class="post-toc-text">一.什么是Session？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二-Session的工作原理"><span class="post-toc-number">2.</span> <span class="post-toc-text">二.Session的工作原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三-Session的常用方法"><span class="post-toc-number">3.</span> <span class="post-toc-text">三.Session的常用方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四-Session的超时时间设置"><span class="post-toc-number">4.</span> <span class="post-toc-text">四.Session的超时时间设置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#五-Session在客户端禁用Cookie的环境下的使用"><span class="post-toc-number">5.</span> <span class="post-toc-text">五.Session在客户端禁用Cookie的环境下的使用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#六-Session的优缺点"><span class="post-toc-number">6.</span> <span class="post-toc-text">六.Session的优缺点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#七-对Session的容易出错的认知"><span class="post-toc-number">7.</span> <span class="post-toc-text">七.对Session的容易出错的认知</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -300,20 +366,11 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/page/session.jpg)">
     
             <p class="article-headline-p">
-                分类
+                Session的简单理解
             </p>
         </div>
 
@@ -332,7 +389,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>maliming-Jack</strong>
-        <span>3月 22, 2018</span>
+        <span>3月 27, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -354,7 +411,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB9klEQVR42u3aQW7DMAwEwPz/0+21QFF3V3Qb2xqdgsSxNTkwpMjXxyPWCwMDAwMDAwPjMoxXvL5e/8sDvl1//K12DxgYGHsy8m39tLnjR/7EG+0BAwNjS0YSZI9ft2ttDxgYGBjRLQaYPJXEwMDAmDPWrsfAwMCYMNaOz5KjtMvV4hgYGDdkTArOs16/rb+BgYFxecbioENQmq61M/91ZgQDA+MmjCRFy0vQ5FvH7+d7w8DA2IeRhNR8/CIJx8eDGsXPgYGBsRmjbVLm7YE2jOaHehgYGLsx2lCbtwdy9sm1OAYGxuMYSTLXMtoBi1ELEwMDYwNGG1KTRHAyWB99ioGBsQ2jHYXPE8q2AZAP92NgYOzGWLt1ftA2GVpdLGIxMDAexzg3ycuDdR1e8/8NDAyMxzHy462k3J38HG0LAQMDYx/Ga2kloXNtdLUYRMPAwNiGkSdk8/GItXGNemYEAwPjcYzJwVme5OVpZXEHDAyMbRjzcNlSW97ouA0DA+MRjLZwnZSmSbn757U4BgbGbRltkyAfzshDcJ1cYmBgbMmoy8i1wdNB4wEDAwOjTQfbd5JUsmiIYmBgYMQFZ1uatqMbxVgYBgbGBoy8iM2HM/ItJiUuBgbGzoyzGgP5VpJDt7f1NzAwMC7GuO/CwMDAwMDAwHjr+gRNtOQpYxs7fwAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACXklEQVR42u3aQXKEMAwEQP7/6eQDgYxkI5at5kQl5cXtg60a+fj56ufAw8PDw8PDw8P7MN4RP2ej/vjAyd/P/pt8pTA3PDw8vBHeP1vtyYd3jeot0+lX8PDw8AZ5Zxvuyvv1hK6XoDo3PDw8vE/mXRe1vYOh+l08PDy8d/GS7T7Bn43Cw8PDewsvL4KvJ7eXNJq14OHh4cW8vMk0/z7a38PDw8MLeNVnPfZNLiUszRAPDw/vZl6+EScRbfXiVLVMvy7Z8fDw8GZ45ZC0dVF1JQhOFgsPDw9vkpccAEmJ3DtaqoFvNBYPDw/vZl618Z+3r/IoNtn0C5e98PDw8G7m5cVuL6qoHjYr163w8PDwZni9QCHfyqu/0IuG8fDw8CZ5zZ8oRq7Vwr23fHh4eHgzvJUGWC8syBc3X248PDy8SV40oHVI5C2rXbEyHh4e3iQvD1ir+PwCVl6U/zMKDw8P71HeynbfCyPy92Z/Dw8PD28rr1raJgVuHkPkzbByAwwPDw9vK289Vui1/KtlfaFkx8PDw7uZV2gsxZNoxq/xMVMOI/Dw8PBu4PUOg/V4Yu+BhIeHhzfPW5lEvonno5pj8fDw8AZ5yceqV6mq4W8e1xbCCDw8PLytvOqTBxY9ZPWAwcPDw5vnHfFTReZNst4FLDw8PLxneflhkC9EddRKqIGHh4f3FK+6QedldH5FoLp8eHh4eO/i5Q2qvZcG8PDw8N7Ly6eVF+69ZcLDw8N7itdreuXFdLIo1cIaDw8P7yneSgTQm+L60XJLfw8PDw8v4H3fg4eHh4eHh4eH9wHPLx5y2CQFJBUNAAAAAElFTkSuQmCC">
     
 </ul>
 
@@ -387,7 +444,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=分类&url=http://yoursite.com/categories/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Session的简单理解&url=http://yoursite.com/2018/03/27/Session/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -396,7 +453,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=分类&url=http://yoursite.com/categories/index.html&via=maliming-Jack" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Session的简单理解&url=http://yoursite.com/2018/03/27/Session/index.html&via=maliming-Jack" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -405,7 +462,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/categories/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/27/Session/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -414,7 +471,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/categories/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/27/Session/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -426,7 +483,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=分类&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/categories/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Jack&#39;s blog&title=Session的简单理解&summary=This is Jack&#39;s blog&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/03/27/Session/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -445,7 +502,80 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        
+        <p><strong> Web应用程序是使用HTTP协议传输数据的。而HTTP协议是无状态的协议。一旦数据交换完毕，客户端与服务器端的连接就会关闭，再次交换数据需要建立新的连接。这就意味着服务器无法从连接上跟踪会话，无法辨别这个请求是哪一个用户发出的，这样的话就会造成数据混乱，用户的数据没有安全的保障，整个程序处于混乱的状态，这显然是不行的——于是会话跟踪技术应运而生，弥补了HTTP协议的不足之处。 </strong></p>
+<p><strong>会话跟踪是web程序中最常用的技术，通过跟踪用户的整个会话，来辨别是否是同一用户，用于确认用户的身份，保证用户所有的请求操作都属于同一个会话，保证了用户信息的安全私密性，也使得程序井然有序，常用的会话跟踪技术有两种Cookie和Session，这里我们讲Session </strong></p>
+<h3 id="一-什么是Session？"><a href="#一-什么是Session？" class="headerlink" title="一.什么是Session？"></a>一.什么是Session？</h3><p><strong> 在WEB开发中，服务器可以为每个用户浏览器创建一个会话对象(Session)，是一种记录客户状态的机制，他不同与Cookie，Session是保存在服务器端，。客户端浏览器访问服务器的时候，服务器把客户端信息以类似散列表的结构形式记录在服务器上。这就是Session。</strong></p>
+<h3 id="二-Session的工作原理"><a href="#二-Session的工作原理" class="headerlink" title="二.Session的工作原理"></a>二.Session的工作原理</h3><p><strong> Session的工作原理是：由于服务器从连接上不能辨别用户和记录用户的操作信息，所以引入的Session，而Session就好像一个用户独有的“信息仓库”，当客户端进行第一次请求，服务器就会生成一个”信息仓库和仓库钥匙”给这个客户端，当客户端再次请求(请求+“仓库钥匙”)，服务器从“仓库钥匙”上辨认出，这就是xx用户的请求打开专有的“信息仓库”，这样的话我们就可以辨别每个请求对应的用户身份和信息，不会造成数据混乱。 </strong></p>
+<p><strong> 当服务器需要为客户端的请求创建一个Session的时候，服务器首先检查这个客户端的请求里是否已包含了Session id，如果Session id存在则说明已经为此客户端创建过Session，服务器就按照Session id把这个Session检索出来使用,r如果没有找到该Session，就会重新创建新的Session，如果客户端请求不包含Session id，则为此客户端创建一个Session并且生成该Session独有的Session id，Session id的值应该是不会重复的24字母组成的的字符串，这个Session id将被在本次请求中返回给客户端保存，用作下次请求进行服务器身份判断，会话状态的保持就是一次次的对接“暗号”中保持进行的。</strong><br><img src="/img/page/setSession.png" alt="Alt text"></p>
+<h3 id="三-Session的常用方法"><a href="#三-Session的常用方法" class="headerlink" title="三.Session的常用方法"></a>三.Session的常用方法</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public void setAttribute(Sting name, Object value)</td>
+<td style="text-align:center">设定指定名字的属性的值，并将它添加到session会话范围内，如果这个属性是会话范围内存在，则更改该属性的值</td>
+</tr>
+<tr>
+<td>public Object getAttribute(Stringname)</td>
+<td style="text-align:center">在会话范围内获取指定名字的属性的值，返回值类型为object，如果该属性不存在，则返回null</td>
+</tr>
+<tr>
+<td>public void removeAttribute(String name)</td>
+<td style="text-align:center">删除指定名字的session属性，若该属性不存在，则出现异常</td>
+</tr>
+<tr>
+<td>public void invalidate()</td>
+<td style="text-align:center">使session失效。可以立即使当前会话失效，原来会话中存储的所有对象都不能再被访问</td>
+</tr>
+<tr>
+<td>public String getId( )</td>
+<td style="text-align:center">获取当前的会话ID。每个会话在服务器端都存在一个唯一的标示Session id，Session对象发送到浏览器的唯一数据就是Session id，它一般存储在Cookie中</td>
+</tr>
+<tr>
+<td>public void setMaxInactiveInterval(intinterval)</td>
+<td style="text-align:center">设置会话的最大持续时间，单位是秒，负数表明会话永不失效</td>
+</tr>
+<tr>
+<td>public int getMaxInActiveInterval()</td>
+<td style="text-align:center">获取会话的最大持续时间</td>
+</tr>
+<tr>
+<td>getCreationTime()</td>
+<td style="text-align:center">获取会话创建的时间，但其返回值是毫秒,需要转换new Date(session.getCreationTime()</td>
+</tr>
+<tr>
+<td>getLastAccessedTime()</td>
+<td style="text-align:center">最后访问的时间，但其返回值是毫秒,需要转换new Date(session.getLastAccessedTime()</td>
+</tr>
+</tbody>
+</table>
+<h3 id="四-Session的超时时间设置"><a href="#四-Session的超时时间设置" class="headerlink" title="四.Session的超时时间设置"></a>四.Session的超时时间设置</h3><p><strong> Tomcat的Session超时时间默认为30分钟(也就是指客户端如果有30的时间没有和服务器保持会话，则服务器就默认为此Session已经无用，会自动清除此Session，释放服务器资源)，在实际项目中通常我们不希望我们的服务器的Session超时时间如此的长，所以我们可以设置Session的超时时间 </strong></p>
+<p><strong> 1.session.setMaxInactiveInterval(600);参数单位是秒，即在客户端与服务端连续10分钟没有进行会话，Session将失效。</strong></p>
+<p><strong> 2.在项目的web.xml中设置,参数单位是分钟，设置为0或-1，则永久不会失效 </strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">session-config</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">session-timeout</span>&gt;</span>1<span class="tag">&lt;/<span class="name">session-timeout</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">session-config</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong> 3.服务器中设置，如Tomcat，找到根目录下conf/web.xml中找到<session-config>，设置参数，单位分钟 </session-config></strong></p>
+<p><strong> 4.人工进行Session销毁：</strong><br><strong> <font color="#FF0033">HttpSession session = request.getSession();<br>session.invalidate();</font> </strong></p>
+<p><strong> 如果前三种方法都设置了，则优先级1&gt;2&gt;3 </strong></p>
+<p><strong> 如若我们要提示用户Session已过期，我们应该在过滤器中进行判断，由request.getSession(); 得到的Session是否为空，jsp页面应该禁用它自己创建Session(这会影响判断用户Session是否超时过期) </strong></p>
+<h3 id="五-Session在客户端禁用Cookie的环境下的使用"><a href="#五-Session在客户端禁用Cookie的环境下的使用" class="headerlink" title="五.Session在客户端禁用Cookie的环境下的使用"></a>五.Session在客户端禁用Cookie的环境下的使用</h3><p> <strong> 一般保存Session id是用Cookie保存，该Cookie为服务器自动生成的，(它的有效时间一般设为–1，表示仅当前浏览器内有效，关闭浏览器就会失效),再次请求由该Cookie携带Session id访问服务器，但客户端有时会禁用Cookie，因此还可以通过URL重写，就是把session id直接附加在URL路径的后面，附加方式也有两种，一种是作为URL路径的附加信息，另一种是作为参数附加在URL后面 </strong></p>
+<p><strong> 当我们把客户端的Cookie功能禁用，这个时候就用到我们的URL重写的技术，response中提供了两个方法进行URL的重写，encodeRedirectURL与encodeURL，它们使用的时候会先判断Session是否超时，是创建新Session，否则进行判断客户端是否禁用Cookie，是则在返回的URL中加上Session id，否则直接返回URL，前者用于重定向，仅与res.sendRedirect一起使用 </strong></p>
+<p><strong> 1.jsp页面使用：</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%=response.encodeURL("</span><span class="attr">http:</span>//<span class="attr">localhost:8080</span>/<span class="attr">school</span>/<span class="attr">selectUser</span>")%&gt;</span>"&gt;查询<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>from表单等用法相同 </strong></p>
+<p><strong> 2.jstl使用：</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;c:url value='http://localhost:8080/school/selectUser'/&gt;"</span>&gt;</span>查询<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong> 3. Java代码使用：<br>(1)response.encodeURL(String url);然后通过jstl，response等方式写到页面上<br>(2) encodeRedirectURL方法用于重定向地址,response.sendRedirect(response.encodeRedirectURL(String url)); </strong></p>
+<p><strong> 4.通过过滤器设置每个请求的URL带Session id参数 </strong></p>
+<p><strong> 5.手动的创建Cookie，把Session id放入Cookie中 </strong></p>
+<p><strong> 6.表单隐藏域使用(极其不推荐)：(&lt;input type=”hidden” name=”JSESSIONID” value=”CDAE18ABD46C4BE442DA8335B85A6536”&gt;) </strong></p>
+<h3 id="六-Session的优缺点"><a href="#六-Session的优缺点" class="headerlink" title="六.Session的优缺点"></a>六.Session的优缺点</h3><p><strong><font color="#FF0033"> 优点：<br>1.Session中能够存取复杂的的数据，比如Java对象，使得数据交流更加简单有效<br>2.Session存储在服务器中，安全性隐私性较高<br>3.Session实例是轻量级的，不需要占用服务器太多资源</font> </strong></p>
+<p><strong> <font color="#FF0033">缺点：<br>1.因为Session保存在服务器，但有大量的Session保存在服务器，会耗费大量服务器内存<br>2.Cookie依赖性，因为Session id存储在Cookie中，Cookie被禁用，就没有Session id，就找不到Session，造成Session失效的假象<br>3.不可跨域性，比如A网站登录访问B网站，它的Session并不能传递过去，不能公用，这就涉及跨域问题(想了解的自行百度)<br>4.Session容易丢失，比如服务器重启</font> </strong></p>
+<h3 id="七-对Session的容易出错的认知"><a href="#七-对Session的容易出错的认知" class="headerlink" title="七.对Session的容易出错的认知"></a>七.对Session的容易出错的认知</h3><p><strong> 1.Session的创建<br>Session不是只要客户端访问服务器就被创建，例如你访问静态资源服务器就不会生成Session，Session的生成与HttpServletRequest.getSession()语句有关，Tomcat服务器生成Session时就会执行这一句，所以当程序执行这个语句Session才被创建(代码中可不写，编译会加上) </strong></p>
+<p><strong> 2.Session关闭浏览器就过时，失效<br>关闭浏览器失效的是存储Session id的Cookie，而Session id对应的Session还在服务器中保存着(除非手动的调用清除Session方法和Session过时)，所以就造成了Session”失效”,”过时”,”被清除”的假象 </strong></p>
+<p><strong> 3.客户端打开两次用的是同一个Session<br>客户端打开两次，一次为A，一次为B，它们的所使用的的Session是不同的 </strong></p>
+<p><strong> 若是哪里有理解错误的或写错的地方，望各位读者评论或者私信指正，不胜感激。 </strong></p>
+
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                     <p><strong>
@@ -453,7 +583,7 @@
                             未经作者允许,禁止转载
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="http://yoursite.com/categories/index.html">http://yoursite.com/categories/index.html</a>
+                        <strong>本文链接：</strong><a href="http://yoursite.com/2018/03/27/Session/">http://yoursite.com/2018/03/27/Session/</a>
                     </p>
                 </blockquote>
         
@@ -506,6 +636,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2018/03/25/Cookie/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -705,6 +843,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

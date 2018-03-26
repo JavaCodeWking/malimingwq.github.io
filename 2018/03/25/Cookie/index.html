@@ -240,7 +240,7 @@
 
     
         <meta property="article:published_time" content="Sun Mar 25 2018 09:57:34 GMT+0800">
-        <meta property="article:modified_time" content="Mon Mar 26 2018 01:47:15 GMT+0800">
+        <meta property="article:modified_time" content="Tue Mar 27 2018 01:36:47 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -263,7 +263,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/03/25/Cookie/index.html",
     "headline": "Cookie的简单理解",
     "datePublished": "Sun Mar 25 2018 09:57:34 GMT+0800",
-    "dateModified": "Mon Mar 26 2018 01:47:15 GMT+0800",
+    "dateModified": "Tue Mar 27 2018 01:36:47 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "maliming-Jack",
@@ -537,7 +537,7 @@
 <h3 id="二-Cookie的详细理解"><a href="#二-Cookie的详细理解" class="headerlink" title="二.Cookie的详细理解"></a>二.Cookie的详细理解</h3><p><strong> Web应用程序是使用HTTP协议传输数据的。而<font color="#FF0033">HTTP协议是无状态的协议</font>。一旦数据交换完毕，客户端与服务器端的连接就会关闭，再次交换数据需要建立新的连接。这就意味着服务器无法从连接上跟踪会话，无法辨别这个请求是哪一个用户发出的，这样的话就会造成数据混乱，用户的数据没有安全的保障，整个程序处于混乱的状态，这显然是不行的——于是会话跟踪技术应运而生，弥补了HTTP协议的不足之处。</strong></p>
 <p><strong>会话跟踪是web程序中最常用的技术，通过跟踪用户的整个会话，来辨别是否是同一用户，用于确认用户的身份，保证用户所有的请求操作都属于同一个会话，保证了用户信息的安全私密性，也使得程序井然有序，常用的会话跟踪技术有两种Cookie和Session，这里我们讲Cookie </strong></p>
 <h4 id="2-1-什么是Cookie？"><a href="#2-1-什么是Cookie？" class="headerlink" title="2.1 什么是Cookie？"></a>2.1 什么是Cookie？</h4><p><strong> 首先Cookie是通过在客户端记录信息确定用户身份，Cookies是服务器在客户端上存储的小段文本并随每一个请求发送至同一个服务器，客户端请求服务器，服务器使用response向客户端浏览器发送Cookies，在客户终端，浏览器解析这些Cookies并将它们保存在客户端的本地，当客户端再次请求该服务器，它会自动将请求和Cookies一同发送给该服务器，服务器解析Cookies，以此来辨别是哪个用户，用户当前状态，然后再把修改后的Cookies再次发送到客户端保存下来。</strong></p>
-<h4 id="2-2-Cookie的工作原理是什么？"><a href="#2-2-Cookie的工作原理是什么？" class="headerlink" title="2.2 Cookie的工作原理是什么？"></a>2.2 Cookie的工作原理是什么？</h4><p><strong> Cookies的工作原理是：由于服务器从连接上不能辨别用户，所以引入的Cookie，而Cookie就好像一个用户独有的身份令牌，当客户端进行第一次请求，服务器就会生成一个”<font color="#FF0033">身份令牌</font>“给这个客户端，当客户端再次请求(请求+“身份令牌”)，服务器从“身份令牌”上辨认出，这就是xx用户的请求，这样的话我们就可以辨别每个请求对应的用户身份，不会造成数据混乱。(Cookie的工作原理与基于 Token 的身份验证方法有些相同) </strong></p>
+<h4 id="2-2-Cookie的工作原理是什么？"><a href="#2-2-Cookie的工作原理是什么？" class="headerlink" title="2.2 Cookie的工作原理是什么？"></a>2.2 Cookie的工作原理是什么？</h4><p><strong> Cookie的工作原理是：由于服务器从连接上不能辨别用户，所以引入的Cookie，而Cookie就好像一个用户独有的身份令牌，当客户端进行第一次请求，服务器就会生成一个”<font color="#FF0033">身份令牌</font>“给这个客户端，当客户端再次请求(请求+“身份令牌”)，服务器从“身份令牌”上辨认出，这就是xx用户的请求，这样的话我们就可以辨别每个请求对应的用户身份，不会造成数据混乱。(Cookie的工作原理与基于 Token 的身份验证方法有些相同) </strong><br><img src="/img/page/setCookie.png" alt="Alt text"></p>
 <h4 id="2-3-Cookie的属性"><a href="#2-3-Cookie的属性" class="headerlink" title="2.3 Cookie的属性"></a>2.3 Cookie的属性</h4><table>
 <thead>
 <tr>
@@ -604,6 +604,7 @@
 <h4 id="2-9-Cookie的优缺点"><a href="#2-9-Cookie的优缺点" class="headerlink" title="2.9 Cookie的优缺点"></a>2.9 Cookie的优缺点</h4><p><strong> 优点：<br>1.不需要占用服务器资源(保存在客户端的本地)，分担了服务器存储的负担<br>2.Cookie 是基于文本的轻量结构，包含简单的键值对(结构简单)。<br>3.可操作性强，数据持久性强(方便用户的操作)<br>4.极高的扩展性和可用性<br>5.用户可选择客户端禁用Cookie </strong></p>
 <p><strong> 缺点：<br>1.大小数量受限(有时不能满足针对没有需求的开发)<br>2.安全性，隐私性不高(因为Cookie保存在客户端本地，这就造成Cookies有可能被盗用或篡改，用户信息会受到损害)<br>3.Cookie的无用性，造成带宽浪费(我们执行某一个操作时，可能有一些Cookie是无用的，但是它还是随着请求发送到服务端)<br>4.为保证Cookie安全性进行加密，解密影响应用程序的性能 </strong></p>
 <h4 id="2-10-Cookie的默认使用规范"><a href="#2-10-Cookie的默认使用规范" class="headerlink" title="2.10 Cookie的默认使用规范"></a>2.10 Cookie的默认使用规范</h4><p><strong> 1.尽量不保存用户个人的私人信息<br>2.通过加密和安全传输技术（SSL），减少Cookie被破解的可能性<br>3.让用户有选择是否保存个人信息的权利<br>4.过大的数据不使用Cookie保存<br>5.控制Cookie的有效时间，减少被恶意的获取到有效的Cookie </strong></p>
+<p><strong> 若是哪里有理解错误的或写错的地方，望各位读者评论或者私信指正，不胜感激。 </strong></p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -659,6 +660,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2018/03/27/Session/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
     
 
     <!-- Section Spacer -->
@@ -773,7 +782,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">14</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">15</span></a>
             </ul>
         </li>
         
@@ -791,7 +800,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/IDEA/">IDEA<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaWeb/">JavaWeb<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaWebErrors/">JavaWebErrors<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/thymeleaf/">thymeleaf<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/wangEditor/">wangEditor<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/IDEA/">IDEA<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaWeb/">JavaWeb<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaWebErrors/">JavaWebErrors<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/thymeleaf/">thymeleaf<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/wangEditor/">wangEditor<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -815,7 +824,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">14</span>
+                <span class="sidebar-badge">15</span>
             </a>
         </li>
         
